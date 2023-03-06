@@ -1,0 +1,913 @@
+INFO:root:factory_1 position: [21 25]
+INFO:root:factory_1 build a heavy robot
+INFO:root:factory_3 position: [25 28]
+INFO:root:factory_3 build a heavy robot
+INFO:root:factory_5 position: [29 31]
+INFO:root:factory_5 build a heavy robot
+INFO:root:factory_7 position: [16 23]
+INFO:root:unit_8 position at initialization: [21 25]
+INFO:root:unit_8 is affiliated to factory_1, will work in ice
+INFO:root:unit_8 is working with factory_1
+it has 510 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 position at initialization: [25 28]
+INFO:root:unit_9 is affiliated to factory_3, will work in ice
+INFO:root:unit_9 is working with factory_3
+it has 510 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 position at initialization: [29 31]
+INFO:root:unit_10 is affiliated to factory_5, will work in ice
+INFO:root:unit_10 is working with factory_5
+it has 510 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 520 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 520 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 520 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 530 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 530 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 530 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 540 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 540 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 540 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 550 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 550 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 550 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 560 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 560 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 560 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 570 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 570 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 570 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 580 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 580 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 580 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 590 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 590 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 590 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 600 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 600 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 600 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 610 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 610 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 610 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 620 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 620 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 620 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 630 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 630 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 630 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 640 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 640 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 640 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 650 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 650 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 650 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 660 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 660 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 660 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 670 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 670 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 670 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 680 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 680 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 680 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 690 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 690 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 690 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 700 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 700 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 700 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 710 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 710 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 710 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 720 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 720 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 720 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 730 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 730 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 730 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 740 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 740 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 740 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 750 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 750 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 750 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 760 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 760 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 760 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 770 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 770 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 770 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 780 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 780 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 780 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 790 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 790 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 790 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 800 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 810 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 810 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 810 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 820 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 820 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 820 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 830 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 830 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 830 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 840 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 840 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 840 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 850 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 850 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 850 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 860 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 860 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 860 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 870 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 870 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 870 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 880 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 880 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 880 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 890 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 890 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 890 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 900 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 900 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 900 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 910 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 910 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 910 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 920 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 920 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 920 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 930 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 930 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 930 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 940 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 940 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 940 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 950 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 950 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 950 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 960 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 960 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 960 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 970 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 970 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 970 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 980 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 980 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 980 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 990 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 990 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 990 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1000 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1000 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1000 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1010 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1010 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1010 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1020 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1020 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1020 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1030 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1030 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1030 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1040 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1040 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1040 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1050 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1050 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1050 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1060 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1060 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1060 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1070 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1070 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1070 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1080 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1080 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1080 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1090 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1090 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1090 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1100 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1110 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1110 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1110 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1120 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1120 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1120 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1130 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1130 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1130 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1140 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1140 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1140 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1150 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1150 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1150 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1160 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1160 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1160 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1170 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1170 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1170 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1180 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1180 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1180 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1190 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1190 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1190 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1200 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1200 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1200 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1210 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1210 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1210 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1220 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1220 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1220 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1230 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1230 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1230 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1240 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1240 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1240 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1250 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1250 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1250 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1260 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1260 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1260 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1270 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1270 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1270 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1280 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1280 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1280 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1290 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1290 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1290 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1300 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1300 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1300 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1310 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1310 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1310 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1320 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1320 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1320 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1330 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1330 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1330 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1340 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1340 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1340 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1350 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1350 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1350 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1360 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1360 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1360 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1370 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1370 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1370 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1380 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1380 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1380 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1390 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1390 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1390 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
+INFO:root:unit_8 is working with factory_1
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [21 25]
+INFO:root:unit_9 is working with factory_3
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [25 28]
+INFO:root:unit_10 is working with factory_5
+it has 1400 power, UnitCargo(ice=0, ore=0, water=0, metal=0) in cargo, at position [29 31]
