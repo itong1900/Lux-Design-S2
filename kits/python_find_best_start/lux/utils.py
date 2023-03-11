@@ -24,3 +24,24 @@ def direction_to(src, target):
             return 3
         else:
             return 1
+        
+def relative_pos(src, target):
+    x_diff = target[0] - src[0]
+    y_diff = target[1] - src[1]
+    if x_diff != 0 and y_diff != 0:
+        print("warning: not adjacent")
+
+    if x_diff != 0:
+        if x_diff < 0:
+            return 4
+        elif x_diff > 0:
+            return 2
+    elif y_diff != 0:
+        if y_diff < 0:
+            return 1
+        elif y_diff > 0:
+            return 3
+    elif x_diff == 0 and y_diff == 0:
+        print("warning: same tile")
+        return 0
+
