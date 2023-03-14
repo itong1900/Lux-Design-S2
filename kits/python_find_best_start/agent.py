@@ -33,15 +33,11 @@ class Agent():
         self.bot_task = {}  ## keep check of the usage of the robot, one of <ice, ore, rubble>; as well as factory group.
         self.bot_affiliations = {}
         self.factory_inventory = {}   ## keep track of total # of bots under each factory
+        self.factory_pos_dict = {}
         self.tile_cost = [] ## 2d array shows the cost of each tile. 
-        self.bot_action_queue = {}
+        self.bot_action_queue = {}  ## store the action to proceed for each bot
+        self.bot_status = {} ## <unit_id: in_progress, going_to_target, going_home>
 
-        # self.factory_pos = {}
-        # self.bots_meta_info = {}
-        # self.factory_bot_map = {}
-
-        # self.factory_queue = {}
-        # self.move_deltas = np.array([[0, 0], [0, -1], [1, 0], [0, 1], [-1, 0]])
 
     def early_setup(self, step: int, obs, remainingOverageTime: int = 60):
         '''
@@ -81,10 +77,9 @@ class Agent():
                 best_loc = start_loc.find_best_resource_loc()
 
                 spawn_loc = best_loc
-                # logging.info(f"factory position: {best_loc}")
                 actions['spawn']=spawn_loc
-                actions['metal']=min(150, metal_left)
-                actions['water']=min(150, metal_left)
+                actions['metal']=min(120, metal_left)
+                actions['water']=min(120, water_left)
             
         return actions
     
@@ -146,135 +141,62 @@ class Agent():
         forward_obs = forward_sim(obs, self.env_cfg, n=2)
         forward_game_states = [obs_to_game_state(step + i, self.env_cfg, f_obs) for i, f_obs in enumerate(forward_obs)]
         """
-        logging.info(f"step in round: {step}")
+        logging.info(f"==========step in round: {step}==========")
 
         game_state = obs_to_game_state(step, self.env_cfg, obs)
-        factories = game_state.factories[self.player]
 
-        factory_tiles, factory_units, factory_ids = [], [], []
-        for unit_id, factory in factories.items():
-            if unit_id not in self.factory_inventory.keys():
-                ## TODO: initiate factory's inventory, declearing total bots, HEAVY/LIGHT, task_distribution,
-                self.factory_inventory[unit_id] = {
-                    "total_bots": 0, 
-                    "heavy_bots": [], 
-                    "light_bots": [], 
-                    "ice": [], 
-                    "ore": [], 
-                    "rubble": []
-                    }
-                logging.info(f"{unit_id} position: {factory.pos}")
-            if factory.power >= self.env_cfg.ROBOTS["HEAVY"].POWER_COST and \
-                factory.cargo.metal >= self.env_cfg.ROBOTS["HEAVY"].METAL_COST:
-                actions[unit_id] = factory.build_heavy()
-                ## TODO: update the 
-                # self.factory_inventory[unit_id]["total_bots"] += 1
-                ## as this bot id is not-known until the next act, will append to "heavy_bots" attribute there.   
-                logging.info(f"{unit_id} build a heavy robot")           
-            if factory.water_cost(game_state) <= factory.cargo.water / 5 - 200:
-                actions[unit_id] = factory.water()
-                logging.info(f"{unit_id} waters the lichen")   
-            factory_tiles += [factory.pos]
-            factory_units += [factory]
-            factory_ids += [unit_id]
-        factory_tiles = np.array(factory_tiles)
-    
-        # factory_tiles, factory_units = factory_act(factories, actions, game_state, self.env_cfg, 
-        #                                            self.bot_usages, self.factory_bot_total, self.factory_bots_counts)
+        ## factory acts
+        ally_factories = game_state.factories[self.player]
+        for factory_id, ally_factory in ally_factories.items():
+            if factory_id not in self.factory_pos_dict:
+                self.factory_pos_dict[factory_id] = ally_factory.pos
+        # enemy_factories = game_state.factories[self.opp_player]
+        # for factory_id, enemy_factory in enemy_factories.items():
+        #     logging.info(f"enemy_factory {factory_id} in position {enemy_factory.pos}")
+        ## allied factories coordinates, facttories 
+        ally_factory_tiles, factory_units, ally_factory_ids = factory_act(ally_factories, self.factory_inventory, actions, game_state, self.env_cfg)
+        
+        LOOKAHEAD = 40
+        BASELINE_HEAVY_BOT_CHARGE = 30 ## per extra recharge made to each heavy robot. 
 
-        units = game_state.units[self.player]
+        TARGET_QUANTITY_HEAVY_BOT = 5
+        ## evaluate the resources needed in the next 50 rounds, 
+        for factory_id, ally_factory in ally_factories.items():
+            waterNeeded = LOOKAHEAD * (ally_factory.water_cost(game_state) + 1)
+            powerNeeded = len(self.factory_inventory[factory_id]["heavy_bots"]) * BASELINE_HEAVY_BOT_CHARGE
+            metalNeeded = (TARGET_QUANTITY_HEAVY_BOT - len(self.factory_inventory[factory_id]["heavy_bots"])) * 100
+            
 
-        ice_map = game_state.board.ice
+            waterExpectToGain = min(ally_factory.cargo.ice, LOOKAHEAD * 100) * 0.25
+            metalExpectToGan = min(ally_factory.cargo.ore, LOOKAHEAD * 50) * 0.2
 
-        ice_tile_locations = np.argwhere(ice_map == 1)
+            waterShortage = waterNeeded - (ally_factory.cargo.water + waterExpectToGain)
+            metalShortage = metalNeeded - (ally_factory.cargo.metal + metalExpectToGan)
+            lichenShortage = getLichenShortage()
+
+            logging.info(f"{factory_id} has waterShortage {waterShortage}, metalShortage {metalShortage}")
+
+            if waterShortage > metalShortage:
+                self.factory_inventory[factory_id]["priority"] = "water"
+            else:
+                self.factory_inventory[factory_id]["priority"] = "metal"
         
 
-        ## initiate the bot's information
-        for unit_id, unit in units.items():
-            move_cost = None
+        ## Robots acts
+        ally_units = game_state.units[self.player]
+        enemy_units = game_state.units[self.opp_player]
 
-            ## if the unit.pos is within factory_tiles && and don't have assigned task, 
-            # that means the bot is just created and pending task assignments. 
-            if unit_id not in self.bot_task and np.any(np.all(unit.pos==factory_tiles, axis=1)):
-                logging.info(f"{unit_id} position at initialization: {unit.pos}")
-                # logging.info(f"factory_tiles for reference: {factory_tiles}")
+        ice_map = game_state.board.ice
+        ice_tile_locations = np.argwhere(ice_map == 1)
 
-                factory_id_initial = factory_ids[np.argwhere(np.all(factory_tiles == unit.pos, axis=1))[0][0]]
+        ore_map = game_state.board.ore
+        ore_tile_locations = np.argwhere(ore_map == 1)
 
-                if unit.unit_type == "HEAVY":
-                    self.factory_inventory[factory_id_initial]["heavy_bots"].append(unit_id)
-                elif unit.unit_type == "LIGHT":
-                    self.factory_inventory[factory_id_initial]["light_bots"].append(unit_id)
-                
-                ## TODO: assign task to the robot based on the factory's inventory
-                if self.factory_inventory[factory_id_initial]["total_bots"] % 4 <= 1:
-                    ## do ice mining if it's 1st or 2nd robot of a cycle.
-                    self.bot_task[unit_id] = "ice"
-                elif self.factory_inventory[factory_id_initial]["total_bots"] % 4 == 2:
-                    self.bot_task[unit_id] = "ore"
-                elif self.factory_inventory[factory_id_initial]["total_bots"] % 4 == 3:
-                    self.bot_task[unit_id] = "rubble"
+        unit_act(ally_units, self.bot_task, self.bot_affiliations, self.bot_status, self.bot_action_queue, 
+                 ally_factory_tiles, self.factory_pos_dict, ally_factory_ids, 
+                 self.factory_inventory, ice_tile_locations, ore_tile_locations, game_state, actions)
 
-                self.factory_inventory[factory_id_initial]["total_bots"] += 1
-                
-                if unit_id not in self.bot_affiliations:
-                    self.bot_affiliations[unit_id] = factory_id_initial
-
-                ## store the meta info from the robot side, so it knows its assignement and home factory. 
-                logging.info(f"{unit_id} is affiliated to {self.bot_affiliations[unit_id]}, will work in {self.bot_task[unit_id]}")
-
-            if unit_id in self.bot_task: 
-                ## TODO: if unit already have task, either dig/go to mine/return to factory
-                ## TODO: some helper function dictate cargo, power, nearest factory, neareast resources info. 
-                ## input: robot pos, factory pos, resources pos, 
-                if self.bot_task[unit_id] == "ice" and unit.cargo.ice < 50:
-                    logging.info(f"{unit_id} is working with {self.bot_affiliations[unit_id]}" + "\n" + 
-                                 f"it has {unit.power} power, {unit.cargo} in cargo, at position {unit.pos}")
-                    ## TODO: Set up another structure to store the status of each bot: pending task, GoToTarget, Digging, GoToHome
-                    ## if pending task, find task
-                    ##   TODO: write a function get the top 3 ice resources closest to the unit, 
-                    ##   another function to calculate the cost of getting there, power, time
-                    ## elif GoToTarget:
-                    ##   check if any emergency happens, if not keep going
-                    ## elif Digging:
-                    ##    check when need to stops, if not keep digging,
-                    ## elif GoToHome:
-                    ##    Keep going. 
-
-                    ## find nearest ice resource, 
-                    ice_distances = np.mean((ice_tile_locations - unit.pos) ** 2, 1)
-                    logging.info(f"Now find the nearest ice resource, ice_distances:")
-
-                    sorted_ice = [ice_tile_locations[k] for k in np.argsort(ice_distances)]
-                    closest_ice = sorted_ice[0]
-
-                    logging.info(f"The cloest ice locates at: {closest_ice}")
-
-                    if unit_id not in self.bot_action_queue:
-                        self.bot_action_queue[unit_id] = []
-
-                    if len(self.bot_action_queue[unit_id]) == 0:
-                        self.bot_action_queue[unit_id] = path_planning(unit.pos, closest_ice, game_state.board)
-
-
-                    if np.all(closest_ice == unit.pos):
-                        if unit.power >= unit.dig_cost(game_state) + unit.action_queue_cost(game_state):
-                            actions[unit_id] = [unit.dig(repeat=False)]
-                    else:
-
-                        direction = self.get_direction(unit, closest_ice, sorted_ice)
-                        move_cost = unit.move_cost(game_state, direction)
-
-                elif self.bot_task[unit_id] == "ore":
-                    pass
-                    
-                elif self.bot_task[unit_id] == "rubble":
-                    pass 
-
-                if move_cost is not None and unit.power >= move_cost + unit.action_queue_cost(game_state):
-                    actions[unit_id] = [unit.move(self.bot_action_queue[unit_id].pop(0), repeat=False)]
-
-        #unit_act(factory_tiles, factory_units, units, ice_tile_locations, actions, game_state)
+        
         return actions
     
 
@@ -294,10 +216,10 @@ def path_planning(startLoc, targetLoc, game_state_board):
     startX_offset, startY_offset = startX - offsetX, startY - offsetY
     endX_offset, endY_offset = endX - offsetX, endY - offsetY
 
-    logging.info(f"startX: {startX_offset}")
-    logging.info(f"startY: {startY_offset}")
-    logging.info(f"endX: {endX_offset}")
-    logging.info(f"endY: {endY_offset}")
+    # logging.info(f"startX: {startX_offset}")
+    # logging.info(f"startY: {startY_offset}")
+    # logging.info(f"endX: {endX_offset}")
+    # logging.info(f"endY: {endY_offset}")
 
 
     logging.info(f"trimmed graph looks like \n {trimmedGraph}")
@@ -308,7 +230,7 @@ def path_planning(startLoc, targetLoc, game_state_board):
     for step in path:
         actual_path.append([step[0]+offsetX, step[1]+offsetY])
 
-    logging.info(f"path: {actual_path}")
+    # logging.info(f"path: {actual_path}")
 
     ## convert path to actions
     action_queues = []
@@ -322,74 +244,253 @@ def path_planning(startLoc, targetLoc, game_state_board):
     return action_queues
 
 
-def factory_act(factories, actions, game_state, env_cfg, bot_usages, factory_bot_total, factory_bots_counts):
-    factory_tiles, factory_units = [], []
-    for unit_id, factory in factories.items():
-        if factory.power >= env_cfg.ROBOTS["HEAVY"].POWER_COST and \
-        factory.cargo.metal >= env_cfg.ROBOTS["HEAVY"].METAL_COST:
-            
-            actions[unit_id] = factory.build_heavy()
+def factory_act(factories, factory_inventory, actions, game_state, env_cfg):
 
-            if unit_id not in factory_bot_total.keys():
-                factory_bot_total[unit_id] = 1
-                factory_bots_counts[unit_id] = {"ice": 1, "ore": 0, "rubble": 0}
-            factory_bot_total[unit_id] += 1
-            if factory_bot_total[unit_id] % 4 <= 1:
-                bot_usages[unit_id] = "ice"
-                factory_bots_counts[unit_id]["ice"] += 1
-            elif factory_bot_total[unit_id] % 4 == 2:
-                bot_usages[unit_id] = "ore"
-                factory_bots_counts[unit_id]["ore"] += 1
-            elif factory_bot_total[unit_id] % 4 == 3:
-                bot_usages[unit_id] = "rubble"
-                factory_bots_counts[unit_id]["rubble"] += 1
-            
-        
-        # if factory.power >= env_cfg.ROBOTS["LIGHT"].POWER_COST and \
-        # factory.cargo.metal >= env_cfg.ROBOTS["LIGHT"].METAL_COST:
-        #     actions[unit_id] = factory.build_light()
-        if factory.water_cost(game_state) <= factory.cargo.water / 5 - 200:
+    factory_tiles, factory_units, factory_ids = [], [], []
+    
+    for unit_id, factory in factories.items():
+        if unit_id not in factory_inventory.keys():
+            ## TODO: initiate factory's inventory, declearing total bots, HEAVY/LIGHT, task_distribution,
+            factory_inventory[unit_id] = {
+                "total_bots": 0, 
+                "heavy_bots": [], 
+                "light_bots": [], 
+                "ice": [], 
+                "ore": [], 
+                "rubble": [],
+                "factory_pos": factory.pos
+                }
+            logging.info(f"{unit_id} position: {factory.pos}")
+        if factory.power >= env_cfg.ROBOTS["HEAVY"].POWER_COST and \
+            factory.cargo.metal >= env_cfg.ROBOTS["HEAVY"].METAL_COST:
+
+            actions[unit_id] = factory.build_heavy()
+            ## TODO: update the 
+            # self.factory_inventory[unit_id]["total_bots"] += 1
+            ## as this bot id is not-known until the next act, will append to "heavy_bots" attribute there.   
+            logging.info(f"{unit_id} build a heavy robot")           
+        elif factory.water_cost(game_state) <= factory.cargo.water - 50:
             actions[unit_id] = factory.water()
+            logging.info(f"{unit_id} waters the lichen")   
         factory_tiles += [factory.pos]
         factory_units += [factory]
+        factory_ids += [unit_id]
     factory_tiles = np.array(factory_tiles)
-    return factory_tiles, factory_units
+
+    return factory_tiles, factory_units, factory_ids
 
 
-def unit_act(factory_tiles, factory_units, units, ice_tile_locations, 
-             actions, game_state):
+def unit_act(units, bot_task, bot_affiliations, bot_status, bot_action_queue, factory_tiles, 
+             factories_pos, factory_ids, factory_inventory, ice_tile_locations, ore_tile_locations, game_state, actions):
+    ## initiate the bot's information
     for unit_id, unit in units.items():
-        # track the closest factory
-        closest_factory = None
-        adjacent_to_factory = False
-        if len(factory_tiles) > 0:
+        ## ===== some basic info for the unit ==============
+        move_cost = None
 
-            factory_distances = np.mean((factory_tiles - unit.pos) ** 2, 1)
-            closest_factory_tile = factory_tiles[np.argmin(factory_distances)]
-            closest_factory = factory_units[np.argmin(factory_distances)]
-            adjacent_to_factory = np.mean((closest_factory_tile - unit.pos) ** 2) == 0
+        ## find nearest ice resource for this unit
+        ice_distances = np.mean((ice_tile_locations - unit.pos) ** 2, 1)
+        sorted_ice = [ice_tile_locations[k] for k in np.argsort(ice_distances)]
+        closest_ice = sorted_ice[0]
 
-            # previous ice mining code, if cargo is not filled up, keep mining
-            if unit.cargo.ice < 50:
-                ice_tile_distances = np.mean((ice_tile_locations - unit.pos) ** 2, 1)
-                closest_ice_tile = ice_tile_locations[np.argmin(ice_tile_distances)]
-                if np.all(closest_ice_tile == unit.pos):
-                    if unit.power >= unit.dig_cost(game_state) + unit.action_queue_cost(game_state):
-                        actions[unit_id] = [unit.dig(repeat=0, n=1)]
-                else:
-                    direction = direction_to(unit.pos, closest_ice_tile)
-                    move_cost = unit.move_cost(game_state, direction)
-                    if move_cost is not None and unit.power >= move_cost + unit.action_queue_cost(game_state):
-                        actions[unit_id] = [unit.move(direction, repeat=0, n=1)]
-            # else if we have enough ice, we go back to the factory and dump it.
-            elif unit.cargo.ice >= 50:
-                direction = direction_to(unit.pos, closest_factory_tile)
-                if adjacent_to_factory:
-                    if unit.power >= unit.action_queue_cost(game_state):
-                        actions[unit_id] = [unit.transfer(direction, 0, unit.cargo.ice, repeat=0)]
-                else:
-                    move_cost = unit.move_cost(game_state, direction)
-                    if move_cost is not None and unit.power >= move_cost + unit.action_queue_cost(game_state):
-                        actions[unit_id] = [unit.move(direction, repeat=0, n=1)]
-        else:
-            print("No factories left")
+        ## ========= ACTIVATION ==========
+        ## if bot not have any affiliations, it means it just got created.
+        if unit_id not in bot_affiliations:
+            ## trace the home factory, then assign affiliation for the bot
+            factory_id_initial = factory_ids[np.argwhere(np.all(factory_tiles == unit.pos, axis=1))[0][0]]
+            bot_affiliations[unit_id] = factory_id_initial
+
+            ## update home factory inventory, when this robt is activated
+            if unit.unit_type == "HEAVY":
+                factory_inventory[factory_id_initial]["heavy_bots"].append(unit_id)
+            elif unit.unit_type == "LIGHT":
+                factory_inventory[factory_id_initial]["light_bots"].append(unit_id)
+
+            factory_inventory[factory_id_initial]["total_bots"] += 1
+
+            bot_status[unit_id] = "pending_mission"
+
+            logging.info(f"{unit_id} is affiliated to {bot_affiliations[unit_id]}, it's activated now.")
+
+        ## one more basic info to add
+        home_factory_coord = factory_inventory[bot_affiliations[unit_id]]["factory_pos"]
+
+        ## ======= STATUS UPDATES ========== after last action, see if status needs change.
+        if bot_status[unit_id] != "pending_mission":
+            
+            logging.info(f"debug message1: {unit_id}'s position {unit.pos}, nearest_ice's pos {closest_ice}")
+            if bot_status[unit_id] == "going_to_target":
+                ## if bot already arrives, change to status to in progress, otherwise keep going to target.
+                logging.info(f"debug message 4: triggered")
+                if np.all(closest_ice == unit.pos):
+                    bot_status[unit_id] = "in_progress"
+            elif bot_status[unit_id] == "in_progress":
+                if unit.cargo.ice > 80: ## if collect enougth resources, change status to go home.
+                    bot_status[unit_id] = "going_home"
+            elif bot_status[unit_id] == "going_home":
+                if np.all(home_factory_coord == unit.pos):  ## if arrives home, change status to offloading.
+                    bot_status[unit_id] = "offloading"
+            elif bot_status[unit_id] == "offloading":
+                if unit.cargo.ice == 0: ## if cargo empty, means offload finishes, mission complete
+                    bot_status[unit_id] = "pending_mission"
+
+        logging.info(f"debug message3: {unit_id} executed status before task assign: {bot_status[unit_id]}")
+        ## ======== TASK ASSIGNMENT ==========
+        ## if unit_id hasn't been involved in tasks(just activated), or finish task. 
+        if bot_status[unit_id] == "pending_mission":
+
+            priority_task_this_factory = "water" ## factory_inventory[bot_affiliations[unit_id]]["priority"]
+            logging.info(f"{unit_id} belongs to {bot_affiliations[unit_id]}, and the top priority is {priority_task_this_factory}")
+
+            ## assign the task to the robot.
+            if priority_task_this_factory == "water":
+                bot_task[unit_id] = "ice"
+                bot_status[unit_id] = "going_to_target"
+            elif priority_task_this_factory == "metal":
+                bot_task[unit_id] = "ore"
+                bot_status[unit_id] = "going_to_target"
+        
+        logging.info(f"debug message2: {unit_id} executed status {bot_status[unit_id]}")
+        ## ======== TASK EXECUTION ==========
+        if bot_status[unit_id] == "going_to_target":
+            if unit_id not in bot_action_queue:
+                bot_action_queue[unit_id] = []
+
+            if len(bot_action_queue[unit_id]) == 0:
+                bot_action_queue[unit_id] = path_planning(unit.pos, closest_ice, game_state.board)
+            else:  
+                move_cost = unit.move_cost(game_state, bot_action_queue[unit_id][0])  ## cost to move on the tile
+                if unit.power >= move_cost + unit.action_queue_cost(game_state):
+                    actions[unit_id] = [unit.move(bot_action_queue[unit_id].pop(0), repeat=False)]
+
+        elif bot_status[unit_id] == "in_progress":
+            if unit.power >= unit.dig_cost(game_state) + unit.action_queue_cost(game_state):
+                actions[unit_id] = [unit.dig(repeat=False)]
+            # do nothing if not enough power
+        elif bot_status[unit_id] == "going_home":
+            if len(bot_action_queue[unit_id]) == 0:
+                bot_action_queue[unit_id] = path_planning(unit.pos, home_factory_coord, game_state.board)
+            else:
+                move_cost = unit.move_cost(game_state, bot_action_queue[unit_id][0])  ## cost to move on the tile
+                if unit.power >= move_cost + unit.action_queue_cost(game_state):
+                    actions[unit_id] = [unit.move(bot_action_queue[unit_id].pop(0), repeat=False)]
+        elif bot_status[unit_id] == "offloading":
+            actions[unit_id] = [unit.transfer(0, 0, unit.cargo.ice, repeat=False)]
+        else: 
+            pass
+            ## TODO: if unit already have task, either dig/go to mine/return to factory
+            ## TODO: some helper function dictate cargo, power, nearest factory, neareast resources info. 
+            ## input: robot pos, factory pos, resources pos, 
+            # if bot_task[unit_id] == "ice":
+            #     # logging.info(f"{unit_id} is working with {bot_affiliations[unit_id]}" + "\n" + 
+            #     #                 f"it has {unit.power} power, {unit.cargo} in cargo, at position {unit.pos}")
+
+            
+            #     if bot_status[unit_id] == "in_progress":
+            #         if unit.power >= unit.dig_cost(game_state) + unit.action_queue_cost(game_state):
+            #             actions[unit_id] = [unit.dig(repeat=False)]
+            #         else:  ## do nothing if not enough power
+            #             pass 
+            #     elif bot_status[unit_id] == "offloading":
+            #         actions[unit_id] = [unit.transfer(0, 0, unit.cargo.ice, repeat=False)]
+            #     elif bot_status[unit_id] == "going_to_target":
+            #         ## initialize the action_queue if not exists.
+            #         if unit_id not in bot_action_queue:
+            #             bot_action_queue[unit_id] = []
+
+            #         if len(bot_action_queue[unit_id]) == 0:
+            #             bot_action_queue[unit_id] = path_planning(unit.pos, closest_ice, game_state.board)
+            #         # if np.all(closest_ice == unit.pos): ## if arrived
+            #         #     logging.info("arrived at the ice")
+            #         #     if unit.power >= unit.dig_cost(game_state) + unit.action_queue_cost(game_state):
+            #         #         actions[unit_id] = [unit.dig(repeat=False)]
+            #         else:  
+            #             move_cost = unit.move_cost(game_state, bot_action_queue[unit_id][0])  ## cost to move on the tile
+            #             if unit.power >= move_cost + unit.action_queue_cost(game_state):
+            #                 actions[unit_id] = [unit.move(bot_action_queue[unit_id].pop(0), repeat=False)]
+            #     elif bot_status[unit_id] == "going_home":
+            #         if len(bot_action_queue[unit_id]) == 0:
+            #             bot_action_queue[unit_id] = path_planning(unit.pos, home_factory_coord, game_state.board)
+            #         else:
+            #             move_cost = unit.move_cost(game_state, bot_action_queue[unit_id][0])  ## cost to move on the tile
+            #             if unit.power >= move_cost + unit.action_queue_cost(game_state):
+            #                 actions[unit_id] = [unit.move(bot_action_queue[unit_id].pop(0), repeat=False)]
+
+                # else:  # go home
+                #     logging.info(f"{unit_id} at {unit.pos} is going home now, home {bot_affiliations[unit_id]} at {factories_pos[bot_affiliations[unit_id]]}")
+                #     if np.all(unit.pos != factories_pos[bot_affiliations[unit_id]]) and len(bot_action_queue[unit_id]) == 0:
+                #         bot_action_queue[unit_id] = path_planning(unit.pos, 
+                #                                                 factories_pos[bot_affiliations[unit_id]], 
+                #                                                 game_state.board)
+                #         logging.info(f"path to home found at {bot_action_queue[unit_id]}")
+                #     else:
+                #         move_cost = unit.move_cost(game_state, 1)
+                #         if np.all(unit.pos == factories_pos[bot_affiliations[unit_id]]):
+                #             actions[unit_id] = None
+                #         else: # unit.power >= move_cost + unit.action_queue_cost(game_state):
+                #             logging.info(f"step drill, queue of {unit_id} {bot_action_queue[unit_id]}")
+                #             if len(bot_action_queue[unit_id]) > 0:
+                #                 actions[unit_id] = [unit.move(bot_action_queue[unit_id].pop(0), repeat=False)]
+                    # move_cost = unit.move_cost(game_state, 1)
+                    # if unit.power >= move_cost + unit.action_queue_cost(game_state):
+            
+            
+            # elif bot_task[unit_id] == "ore":
+            #     pass
+                
+            # elif bot_task[unit_id] == "rubble":
+            #     pass 
+
+
+
+def getLichenShortage():
+    return 0
+
+
+# def 
+
+
+
+
+
+
+
+
+
+
+# def unit_act(factory_tiles, factory_units, units, ice_tile_locations, 
+    #          actions, game_state):
+    # for unit_id, unit in units.items():
+    #     # track the closest factory
+    #     closest_factory = None
+    #     adjacent_to_factory = False
+    #     if len(factory_tiles) > 0:
+
+    #         factory_distances = np.mean((factory_tiles - unit.pos) ** 2, 1)
+    #         closest_factory_tile = factory_tiles[np.argmin(factory_distances)]
+    #         closest_factory = factory_units[np.argmin(factory_distances)]
+    #         adjacent_to_factory = np.mean((closest_factory_tile - unit.pos) ** 2) == 0
+
+    #         # previous ice mining code, if cargo is not filled up, keep mining
+    #         if unit.cargo.ice < 50:
+    #             ice_tile_distances = np.mean((ice_tile_locations - unit.pos) ** 2, 1)
+    #             closest_ice_tile = ice_tile_locations[np.argmin(ice_tile_distances)]
+    #             if np.all(closest_ice_tile == unit.pos):
+    #                 if unit.power >= unit.dig_cost(game_state) + unit.action_queue_cost(game_state):
+    #                     actions[unit_id] = [unit.dig(repeat=0, n=1)]
+    #             else:
+    #                 direction = direction_to(unit.pos, closest_ice_tile)
+    #                 move_cost = unit.move_cost(game_state, direction)
+    #                 if move_cost is not None and unit.power >= move_cost + unit.action_queue_cost(game_state):
+    #                     actions[unit_id] = [unit.move(direction, repeat=0, n=1)]
+    #         # else if we have enough ice, we go back to the factory and dump it.
+    #         elif unit.cargo.ice >= 50:
+    #             direction = direction_to(unit.pos, closest_factory_tile)
+    #             if adjacent_to_factory:
+    #                 if unit.power >= unit.action_queue_cost(game_state):
+    #                     actions[unit_id] = [unit.transfer(direction, 0, unit.cargo.ice, repeat=0)]
+    #             else:
+    #                 move_cost = unit.move_cost(game_state, direction)
+    #                 if move_cost is not None and unit.power >= move_cost + unit.action_queue_cost(game_state):
+    #                     actions[unit_id] = [unit.move(direction, repeat=0, n=1)]
+    #     else:
+    #         print("No factories left")

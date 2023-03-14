@@ -1,3 +1,5 @@
+import numpy as np
+
 def my_turn_to_place_factory(place_first: bool, step: int):
     if place_first:
         if step % 2 == 1:
@@ -44,4 +46,11 @@ def relative_pos(src, target):
     elif x_diff == 0 and y_diff == 0:
         print("warning: same tile")
         return 0
+
+
+def at_same_spot(loc1, loc2):
+    """
+    return true if loc1 coord the same as loc2 coords
+    """
+    return np.all(loc1 == loc2, axis=1)
 

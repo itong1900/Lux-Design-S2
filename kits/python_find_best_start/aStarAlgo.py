@@ -57,11 +57,6 @@ def initializeNodes(graph):
         nodes.append([])
         for j, value in enumerate(xCol):
             nodes[i].append(Node(i, j, value))   ## value shows which cell is blocked.
-
-    logging.info(f"x in nodes:  {len(nodes)}")
-    logging.info(f"y in nodes:  {len(nodes[0])}")
-    logging.info(f"x in graph:  {len(graph)}")
-    logging.info(f"y in graph:  {len(graph[0])}")
     return nodes
 
 def calculateManhattanDistance(currentNode, endNode):
