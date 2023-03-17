@@ -3,6 +3,7 @@ from lux.config import EnvConfig
 from lux.utils import direction_to, my_turn_to_place_factory, relative_pos
 import numpy as np
 import sys
+import math
 
 import logging
 
@@ -13,12 +14,14 @@ from start_loc import find_resources
 
 from aStarAlgo import aStarAlgorithm
 
+## action_type = {0: "stay_center", 1:"go_up", 2:"go_right", 3:"go_down", 4: "go_left", 
+# 5:"dig", 6:"transfer", 7:"pick_up"} 
 
 class Agent():
     def __init__(self, player: str, env_cfg: EnvConfig) -> None:
         self.player = player
         self.opp_player = "player_1" if self.player == "player_0" else "player_0"
-        np.random.seed(0)
+        np.random.seed(0)  ## 5962256
         self.env_cfg: EnvConfig = env_cfg
             
         self.faction_names = {
@@ -299,7 +302,7 @@ def factory_act(factories, factory_inventory, actions, game_state, env_cfg):
             # self.factory_inventory[unit_id]["total_bots"] += 1
             ## as this bot id is not-known until the next act, will append to "heavy_bots" attribute there.   
             logging.info(f"{unit_id} build a heavy robot")           
-        elif factory.water_cost(game_state) <= factory.cargo.water - 50:
+        elif factory.water_cost(game_state) <= factory.cargo.water - 100:
             actions[unit_id] = factory.water()
             logging.info(f"{unit_id} waters the lichen")   
         factory_tiles += [factory.pos]
@@ -313,6 +316,9 @@ def factory_act(factories, factory_inventory, actions, game_state, env_cfg):
 def unit_act(units, bot_task, bot_affiliations, bot_status, bot_action_queue, factory_tiles, 
              factories_pos, factory_ids, factory_inventory, all_bot_locations,
              ice_tile_locations, ore_tile_locations, map_with_blocks, game_state, actions):
+    
+    bot_loc_next_round = {} ## store the locations of each bot as unit_id: <>,  for CAS use
+
     ## initiate the bot's information
     for unit_id, unit in units.items():
         ## ===== some basic info for the unit ==============
@@ -394,7 +400,9 @@ def unit_act(units, bot_task, bot_affiliations, bot_status, bot_action_queue, fa
             if len(bot_action_queue[unit_id]) == 0:
                 bot_action_queue[unit_id] = path_planning(unit.pos, closest_ice, map_with_blocks, game_state.board)
                 actions[unit_id] = [unit.move(act, repeat=False) for act in bot_action_queue[unit_id]]
-                bot_action_queue[unit_id] = []
+            bot_loc_next_round[unit_id] = get_next_round_loc(unit.pos, bot_action_queue[unit_id][0])
+                # bot_action_queue[unit_id] = [] ## TODO: to be removed
+
             
             # if len(bot_action_queue[unit_id]) > 0:
             #     CAS_status = check_collision(unit.pos, bot_action_queue[unit_id][0], all_bot_locations, "going_to_target", bot_action_queue)
@@ -408,8 +416,15 @@ def unit_act(units, bot_task, bot_affiliations, bot_status, bot_action_queue, fa
             #         pass
 
         elif bot_status[unit_id] == "in_progress":
-            if unit.power >= unit.dig_cost(game_state) + unit.action_queue_cost(game_state):
-                actions[unit_id] = [unit.dig(repeat=False)]
+            if len(bot_action_queue[unit_id]) == 0:
+                rounds_to_dig = math.ceil((81 - unit.cargo.ice) / 20)
+                bot_action_queue[unit_id] = [5 for _ in range(rounds_to_dig)]
+                actions[unit_id] = [unit.dig(repeat=False) for _ in range(rounds_to_dig)]
+            bot_loc_next_round[unit_id] = get_next_round_loc(unit.pos, 0)
+                # bot_action_queue[unit_id] = [] ## TODO: to be removed
+
+            # if unit.power >= unit.dig_cost(game_state) + unit.action_queue_cost(game_state):
+            #     actions[unit_id] = [unit.dig(repeat=False)]
 
             # CAS_status = check_collision(unit.pos, 0, all_bot_locations, "in_progress", bot_action_queue)
 
@@ -425,7 +440,8 @@ def unit_act(units, bot_task, bot_affiliations, bot_status, bot_action_queue, fa
             if len(bot_action_queue[unit_id]) == 0:
                 bot_action_queue[unit_id] = path_planning(unit.pos, home_factory_coord, map_with_blocks, game_state.board)
                 actions[unit_id] = [unit.move(act, repeat=False) for act in bot_action_queue[unit_id]]
-                bot_action_queue[unit_id] = []
+            bot_loc_next_round[unit_id] = get_next_round_loc(unit.pos, bot_action_queue[unit_id][0])
+                # bot_action_queue[unit_id] = [] ## TODO: to be removed
 
             # if len(bot_action_queue[unit_id]) > 0:
             #     CAS_status = check_collision(unit.pos, bot_action_queue[unit_id][0], all_bot_locations, "going_home", bot_action_queue)
@@ -439,15 +455,70 @@ def unit_act(units, bot_task, bot_affiliations, bot_status, bot_action_queue, fa
 
         elif bot_status[unit_id] == "offloading":
             actions[unit_id] = [unit.transfer(0, 0, unit.cargo.ice, repeat=False)]
+            bot_loc_next_round[unit_id] = get_next_round_loc(unit.pos, 0)
         elif bot_status[unit_id] == "pick_up_power":
-            actions[unit_id] = [unit.pickup(4, 500)]
+            actions[unit_id] = [unit.pickup(4, 500-unit.power)]
+            bot_loc_next_round[unit_id] = get_next_round_loc(unit.pos, 0)
         else: 
             pass
+
             # elif bot_task[unit_id] == "ore":
             #     pass
                 
             # elif bot_task[unit_id] == "rubble":
             #     pass 
+
+    ## ============= Global CAS System ==============
+    # validate all the move globally to avoid collisions
+    ## only when bots are 2 manhanttan distiance are likely go into collision in their next move.
+    ## therefore, if the bot is clear 2 manhattan distiance units, directly exectute the queue
+    ## otherwise, go through the CAS system, if collision is detected, modify the queue to avoid the collision.
+    logging.info(f"debug3: bot_loc_next_round {bot_loc_next_round}")
+    potential_collisions = {}
+    for unit_id, loc in bot_loc_next_round.items():
+        if tuple(loc) not in potential_collisions:
+            potential_collisions[tuple(loc)] = []
+        potential_collisions[tuple(loc)].append(unit_id)
+    ## if any loc got 2 or more bots, a potential collision is detected
+    replanned_units = set()
+    for loc, unit_ids in potential_collisions.items():
+        if len(unit_ids) > 1:
+            resolve_conflicts(unit_ids, bot_status, bot_action_queue, replanned_units)
+    logging.info(f"debug1: potential_collisions {potential_collisions}")
+    logging.info(f"debug2: replanned_units {replanned_units}")
+
+
+    ## finally execute the validated moves
+    have_requeue_cost = set()
+    for unit_id, unit in units.items():
+        if unit_id in replanned_units:   ## actions[unit_id] is updated
+            actions[unit_id] = [unit.move(act, repeat=False) for act in bot_action_queue[unit_id]]
+            have_requeue_cost.add(unit_id)
+
+        if bot_status == "in_progress": 
+            total_cost = unit.dig_cost(game_state) + unit.action_queue_cost(game_state) if unit_id in have_requeue_cost else 0
+            if unit.power >= total_cost and len(bot_action_queue[unit_id]) > 0:
+                bot_action_queue[unit_id].pop(0)  # the first action will be executed 
+        elif bot_status == "going_to_target" or bot_status == "going_to_target":
+            total_cost = unit.move_cost(game_state, bot_action_queue[unit_id][0]) + unit.action_queue_cost(game_state) if unit_id in have_requeue_cost else 0
+            if unit.power >= total_cost and len(bot_action_queue[unit_id]) > 0:
+                bot_action_queue[unit_id].pop(0)  # the first action will be executed 
+        else:
+            if len(bot_action_queue[unit_id]) > 0:
+                bot_action_queue[unit_id].pop(0)
+            
+        
+
+def resolve_conflicts(unit_id_list, bot_status, bot_action_queue, replanned_units):
+    for unit_id in unit_id_list:
+        if bot_status[unit_id] == "offloading" or bot_status[unit_id] == "pick_up_power" or bot_status[unit_id] == "in_progress":
+            pass ## for static agent, stay their way
+        else:
+            bot_action_queue[unit_id].insert(0, 0)  ## insert a pause action 
+            replanned_units.add(unit_id)
+
+
+
 
 def check_collision(unit_pos, potential_next_move, all_bot_locations, bot_status, bot_action_queue):
     ## if next pos to move on has an ally bot, stop.
@@ -501,7 +572,18 @@ def getLichenShortage():
     return 0
 
 
-
+def get_next_round_loc(currentPos, dir):
+    xCur, yCur = currentPos
+    if dir == 0:
+        return [xCur, yCur]
+    elif dir == 1:  # up
+        return [xCur, yCur-1]
+    elif dir == 2: # right
+        return [xCur+1, yCur]
+    elif dir == 3: ## down
+        return [xCur, yCur+1]
+    elif dir == 4: ## left
+        return [xCur-1, yCur]
 
 
 
