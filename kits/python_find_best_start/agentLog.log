@@ -1,1296 +1,1164 @@
-INFO:root:==========step in round: 5==========
-INFO:root:factory_1 position: [40 23]
+INFO:root:==========step in round: 9==========
+INFO:root:factory_1 position: [34 13]
 INFO:root:factory_1 build a heavy robot
-INFO:root:factory_3 position: [14 21]
-INFO:root:factory_1 has waterShortage -80.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -40.0, metalShortage 420.0
-INFO:root:map of blockers [[14, 40], [16, 26], [15, 40], [17, 26], [18, 26], [13, 42], [14, 42], [15, 42], [16, 25], [17, 25], [18, 25], [13, 41], [16, 24], [14, 41], [17, 24], [15, 41], [18, 24], [13, 40]]
-INFO:root:size of invalid tiles 18
+INFO:root:factory_3 position: [38 10]
+INFO:root:factory_3 build a heavy robot
+INFO:root:factory_5 position: [8 6]
+INFO:root:factory_5 build a heavy robot
+INFO:root:factory_7 position: [29 15]
+INFO:root:factory_7 build a heavy robot
+INFO:root:factory_1 has waterShortage -60.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -60.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -60.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -60.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [8, 46], [2, 42], [3, 10], [1, 43], [6, 45], [7, 44], [2, 11], [3, 37], [4, 36], [1, 12], [5, 37], [8, 45], [0, 41], [1, 42], [2, 41], [3, 12], [6, 44], [7, 46], [1, 11], [4, 38], [2, 10], [3, 36], [5, 36], [8, 44], [0, 43], [3, 11], [2, 43], [1, 41], [6, 46], [7, 45], [2, 12], [1, 10], [4, 37], [3, 38], [5, 38]]
+INFO:root:size of invalid tiles 36
 INFO:root:debug3: bot_loc_next_round {}
 INFO:root:debug1: potential_collisions {}
 INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 6==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -79.0, metalShortage 480.0
-INFO:root:factory_3 has waterShortage -39.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 19
-INFO:root:unit_4 is affiliated to factory_1, it's activated now.
-INFO:root:unit_4 belongs to factory_1, and the top priority is water
-INFO:root:trimmed graph looks like 
- [array([1.]), array([0.]), array([0.])]
-INFO:root:action quue: [2, 2]
-INFO:root:debug3: bot_loc_next_round {'unit_4': [41, 23]}
-INFO:root:debug1: potential_collisions {(41, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 7==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -37.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -38.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [41, 23], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 8==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -35.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -37.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [16, 41], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [15, 25], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 9==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -33.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -36.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [14, 25], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [17, 41], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 10==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -31.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -35.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [18, 41], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [13, 25], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -59.0, metalShortage 500.0
+INFO:root:factory_3 has waterShortage -59.0, metalShortage 500.0
+INFO:root:factory_5 has waterShortage -59.0, metalShortage 500.0
+INFO:root:factory_7 has waterShortage -59.0, metalShortage 500.0
+INFO:root:map of blockers [[0, 42], [2, 42], [3, 10], [1, 43], [34, 13], [2, 11], [1, 12], [38, 10], [0, 41], [1, 42], [2, 41], [3, 12], [1, 11], [2, 10], [0, 43], [3, 11], [2, 43], [1, 41], [2, 12], [1, 10]]
+INFO:root:size of invalid tiles 20
+INFO:root:unit_8 is affiliated to factory_1, it's activated now.
+INFO:root:unit_8 belongs to factory_1, and the top priority is metal
+INFO:root:trimmed graph looks like 
+ [array([1., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0.])]
+INFO:root:action quue: [2, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2]
+INFO:root:unit_9 is affiliated to factory_3, it's activated now.
+INFO:root:unit_9 belongs to factory_3, and the top priority is metal
+INFO:root:trimmed graph looks like 
+ [array([1., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0.])]
+INFO:root:action quue: [2, 3, 3, 3, 3, 2, 2, 2, 2]
+INFO:root:unit_10 is affiliated to factory_5, it's activated now.
+INFO:root:unit_10 belongs to factory_5, and the top priority is metal
+INFO:root:trimmed graph looks like 
+ [array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0.])]
+INFO:root:action quue: [3, 3, 3, 3, 3, 3, 3, 3, 3]
+INFO:root:unit_11 is affiliated to factory_7, it's activated now.
+INFO:root:unit_11 belongs to factory_7, and the top priority is metal
+INFO:root:trimmed graph looks like 
+ [array([0., 0., 0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0., 0., 0.])]
+INFO:root:action quue: [4, 1, 1, 1, 1, 1, 1, 1, 4]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [35, 13], 'unit_9': [39, 10], 'unit_10': [8, 7], 'unit_11': [28, 15]}
+INFO:root:debug1: potential_collisions {(35, 13): ['unit_8'], (39, 10): ['unit_9'], (8, 7): ['unit_10'], (28, 15): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 11==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -29.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -34.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [12, 25], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [19, 41], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -58.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -58.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -58.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -58.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [3, 10], [1, 43], [2, 11], [1, 12], [0, 41], [1, 42], [2, 41], [3, 12], [1, 11], [35, 13], [2, 10], [39, 10], [0, 43], [3, 11], [2, 43], [1, 41], [2, 12], [1, 10]]
+INFO:root:size of invalid tiles 20
+INFO:root:debug3: bot_loc_next_round {'unit_8': [35, 14], 'unit_9': [39, 11], 'unit_10': [8, 8], 'unit_11': [28, 14]}
+INFO:root:debug1: potential_collisions {(35, 14): ['unit_8'], (39, 11): ['unit_9'], (8, 8): ['unit_10'], (28, 14): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 12==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -27.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -33.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [17, 24], [42, 23], [20, 41], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [11, 25], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -57.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -57.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -57.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -57.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [3, 10], [1, 43], [2, 11], [1, 12], [39, 11], [0, 41], [1, 42], [2, 41], [3, 12], [4, 11], [28, 14], [1, 11], [2, 10], [3, 42], [0, 43], [3, 11], [2, 43], [1, 41], [2, 12], [1, 10]]
+INFO:root:size of invalid tiles 22
+INFO:root:debug3: bot_loc_next_round {'unit_8': [35, 15], 'unit_9': [39, 12], 'unit_10': [8, 9], 'unit_11': [28, 13]}
+INFO:root:debug1: potential_collisions {(35, 15): ['unit_8'], (39, 12): ['unit_9'], (8, 9): ['unit_10'], (28, 13): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 13==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -25.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -32.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [20, 42], [17, 25], [10, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -56.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -56.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -56.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -56.0, metalShortage 400.0
+INFO:root:map of blockers [[39, 12], [0, 42], [2, 42], [3, 10], [1, 43], [2, 11], [1, 12], [4, 42], [0, 41], [1, 42], [2, 41], [3, 12], [1, 11], [2, 10], [3, 42], [0, 43], [3, 11], [2, 43], [1, 41], [5, 11], [28, 13], [2, 9], [2, 12], [1, 10]]
+INFO:root:size of invalid tiles 24
+INFO:root:debug3: bot_loc_next_round {'unit_8': [35, 16], 'unit_9': [39, 13], 'unit_10': [8, 10], 'unit_11': [28, 12]}
+INFO:root:debug1: potential_collisions {(35, 16): ['unit_8'], (39, 13): ['unit_9'], (8, 10): ['unit_10'], (28, 12): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 14==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -23.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -31.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [21, 42], [17, 26], [14, 42], [9, 25], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:trimmed graph looks like 
- [array([0.]), array([0.]), array([1.])]
-INFO:root:action quue: [4, 4]
-INFO:root:debug3: bot_loc_next_round {'unit_4': [41, 23]}
-INFO:root:debug1: potential_collisions {(41, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -55.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -55.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -55.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -55.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [3, 10], [1, 43], [28, 12], [2, 11], [1, 12], [6, 11], [0, 41], [1, 42], [2, 41], [3, 12], [4, 11], [1, 11], [2, 10], [3, 42], [35, 16], [5, 42], [39, 13], [0, 43], [3, 11], [2, 43], [1, 41], [2, 9], [2, 12], [1, 10]]
+INFO:root:size of invalid tiles 26
+INFO:root:debug3: bot_loc_next_round {'unit_8': [35, 17], 'unit_9': [39, 14], 'unit_10': [8, 11], 'unit_11': [28, 11]}
+INFO:root:debug1: potential_collisions {(35, 17): ['unit_8'], (39, 14): ['unit_9'], (8, 11): ['unit_10'], (28, 11): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 15==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -21.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -30.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [21, 42], [17, 26], [41, 23], [14, 42], [9, 25], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -54.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -54.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -54.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -54.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [4, 12], [3, 10], [1, 43], [6, 42], [2, 11], [1, 12], [35, 17], [39, 14], [0, 41], [1, 42], [2, 41], [3, 12], [28, 11], [4, 11], [1, 11], [2, 10], [3, 42], [0, 43], [3, 11], [2, 43], [1, 41], [2, 9], [2, 12], [1, 10], [3, 41], [7, 11]]
+INFO:root:size of invalid tiles 28
+INFO:root:debug3: bot_loc_next_round {'unit_8': [35, 18], 'unit_9': [40, 14], 'unit_10': [8, 12], 'unit_11': [28, 10]}
+INFO:root:debug1: potential_collisions {(35, 18): ['unit_8'], (40, 14): ['unit_9'], (8, 12): ['unit_10'], (28, 10): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 16==========
-INFO:root:factory_1 has waterShortage -19.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -29.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [21, 42], [17, 26], [14, 42], [9, 25], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -53.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -53.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -53.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -53.0, metalShortage 400.0
+INFO:root:map of blockers [[40, 14], [0, 42], [2, 42], [4, 12], [3, 10], [1, 43], [2, 11], [1, 12], [0, 41], [1, 42], [2, 41], [3, 12], [4, 11], [5, 12], [1, 11], [2, 10], [3, 42], [4, 41], [0, 43], [3, 11], [2, 43], [1, 41], [28, 10], [7, 42], [2, 9], [2, 12], [1, 10], [3, 41]]
+INFO:root:size of invalid tiles 28
+INFO:root:debug3: bot_loc_next_round {'unit_8': [36, 18], 'unit_9': [41, 14], 'unit_10': [8, 13], 'unit_11': [28, 9]}
+INFO:root:debug1: potential_collisions {(36, 18): ['unit_8'], (41, 14): ['unit_9'], (8, 13): ['unit_10'], (28, 9): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 17==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -43.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -28.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [21, 42], [17, 26], [14, 42], [9, 25], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -52.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -52.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -52.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -52.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [4, 12], [3, 10], [1, 43], [28, 9], [5, 13], [9, 11], [2, 11], [1, 12], [0, 41], [1, 42], [2, 41], [3, 12], [4, 11], [5, 12], [41, 14], [1, 11], [2, 10], [3, 42], [4, 41], [0, 43], [3, 11], [2, 43], [1, 41], [2, 9], [2, 12], [1, 10], [3, 41], [5, 41]]
+INFO:root:size of invalid tiles 30
+INFO:root:debug3: bot_loc_next_round {'unit_8': [37, 18], 'unit_9': [42, 14], 'unit_10': [8, 14], 'unit_11': [28, 8]}
+INFO:root:debug1: potential_collisions {(37, 18): ['unit_8'], (42, 14): ['unit_9'], (8, 14): ['unit_10'], (28, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 18==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -41.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -27.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [21, 42], [17, 26], [14, 42], [9, 25], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:unit_4 belongs to factory_1, and the top priority is water
-INFO:root:trimmed graph looks like 
- [array([1.]), array([0.]), array([0.])]
-INFO:root:action quue: [2, 2]
-INFO:root:debug3: bot_loc_next_round {'unit_4': [41, 23]}
-INFO:root:debug1: potential_collisions {(41, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -51.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -51.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -51.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -51.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [9, 42], [2, 42], [4, 12], [3, 10], [1, 43], [5, 13], [42, 14], [2, 11], [1, 12], [0, 41], [1, 42], [2, 41], [3, 12], [4, 11], [28, 8], [5, 12], [6, 41], [10, 11], [1, 11], [2, 10], [3, 42], [4, 41], [6, 13], [0, 43], [3, 11], [2, 43], [1, 41], [2, 9], [2, 12], [1, 10], [3, 41], [5, 41]]
+INFO:root:size of invalid tiles 33
+INFO:root:debug3: bot_loc_next_round {'unit_8': [37, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(37, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 19==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -39.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -26.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [21, 42], [17, 26], [41, 23], [14, 42], [9, 25], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -50.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -50.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -50.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -50.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [4, 12], [3, 10], [1, 43], [5, 13], [7, 41], [2, 11], [11, 11], [1, 12], [6, 14], [10, 42], [0, 41], [1, 42], [2, 41], [3, 12], [5, 12], [6, 41], [1, 11], [43, 14], [2, 10], [3, 42], [4, 41], [2, 13], [6, 13], [0, 43], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [2, 9], [2, 12], [1, 10], [3, 41], [5, 41]]
+INFO:root:size of invalid tiles 36
+INFO:root:debug3: bot_loc_next_round {'unit_8': [37, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(37, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 20==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -37.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -25.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [21, 42], [17, 26], [14, 42], [9, 25], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -49.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -49.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -49.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -49.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [11, 42], [2, 42], [3, 10], [1, 43], [5, 13], [7, 41], [2, 11], [1, 12], [6, 14], [0, 41], [1, 42], [2, 41], [3, 12], [5, 12], [6, 41], [1, 11], [43, 14], [2, 10], [4, 41], [2, 13], [6, 13], [12, 11], [0, 43], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [2, 12], [1, 10], [5, 41]]
+INFO:root:size of invalid tiles 32
+INFO:root:debug3: bot_loc_next_round {'unit_8': [37, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(37, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 21==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -35.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -24.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [21, 43], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [9, 25], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -48.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -48.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -48.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -48.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [4, 12], [3, 10], [1, 43], [5, 13], [7, 41], [2, 11], [13, 11], [1, 12], [6, 14], [9, 41], [0, 41], [1, 42], [2, 41], [3, 12], [2, 44], [6, 41], [12, 42], [1, 11], [43, 14], [2, 10], [2, 13], [6, 13], [0, 43], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [2, 12], [1, 10], [5, 41]]
+INFO:root:size of invalid tiles 33
+INFO:root:debug3: bot_loc_next_round {'unit_8': [37, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(37, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 22==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -33.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -23.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [21, 43], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [9, 25], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -47.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -47.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -47.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -47.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [4, 12], [3, 10], [1, 43], [3, 13], [7, 41], [2, 11], [1, 12], [3, 43], [7, 16], [6, 14], [9, 41], [0, 41], [1, 42], [2, 41], [3, 12], [2, 44], [6, 41], [12, 42], [1, 11], [43, 14], [2, 10], [2, 13], [6, 13], [0, 43], [10, 41], [3, 11], [14, 11], [2, 43], [1, 41], [27, 8], [1, 44], [2, 12], [1, 10]]
+INFO:root:size of invalid tiles 35
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.]), array([0.]), array([0.]), array([0.]), array([0.])]
+INFO:root:action quue: [2, 2, 2, 2, 2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [37, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(37, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 23==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -31.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -22.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [8, 25], [21, 43], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -46.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -46.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -46.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -46.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [4, 12], [3, 10], [1, 43], [3, 13], [7, 41], [2, 11], [1, 12], [15, 11], [3, 43], [7, 16], [6, 14], [9, 41], [10, 42], [0, 41], [1, 42], [2, 41], [3, 12], [2, 44], [1, 11], [43, 14], [2, 10], [3, 42], [2, 13], [6, 16], [0, 43], [10, 41], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [2, 9], [12, 41], [2, 12], [1, 10]]
+INFO:root:size of invalid tiles 37
+INFO:root:debug3: bot_loc_next_round {'unit_8': [37, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(37, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 24==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -29.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -21.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [8, 25], [21, 43], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -45.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -45.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -45.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -45.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [9, 42], [2, 42], [4, 12], [3, 10], [1, 43], [3, 13], [2, 11], [1, 12], [3, 43], [7, 16], [9, 41], [10, 42], [0, 41], [1, 42], [2, 41], [3, 12], [2, 44], [4, 11], [1, 11], [43, 14], [2, 10], [3, 42], [2, 13], [6, 16], [0, 43], [10, 41], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [2, 9], [12, 41], [2, 12], [1, 10], [16, 11]]
+INFO:root:size of invalid tiles 37
+INFO:root:debug3: bot_loc_next_round {'unit_8': [37, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(37, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 25==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -27.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -20.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [8, 25], [21, 43], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:trimmed graph looks like 
- [array([0.]), array([0.]), array([1.])]
-INFO:root:action quue: [4, 4]
-INFO:root:debug3: bot_loc_next_round {'unit_4': [41, 23]}
-INFO:root:debug1: potential_collisions {(41, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -44.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -44.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -44.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -44.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [9, 42], [2, 42], [4, 12], [3, 10], [1, 43], [3, 13], [2, 11], [1, 12], [3, 43], [7, 16], [6, 14], [9, 41], [10, 42], [0, 41], [1, 42], [2, 41], [3, 12], [17, 11], [2, 44], [4, 11], [1, 11], [43, 14], [2, 10], [2, 13], [6, 16], [0, 43], [10, 41], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [12, 41], [2, 12], [1, 10]]
+INFO:root:size of invalid tiles 36
+INFO:root:debug3: bot_loc_next_round {'unit_8': [37, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(37, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 26==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -25.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -19.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [8, 25], [21, 43], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [41, 23], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -43.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -43.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -43.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -43.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [9, 42], [2, 42], [1, 40], [4, 12], [3, 10], [1, 43], [3, 13], [2, 11], [1, 12], [3, 43], [6, 14], [10, 42], [0, 41], [1, 42], [3, 9], [2, 41], [3, 12], [17, 11], [2, 44], [4, 11], [1, 11], [43, 14], [2, 10], [2, 13], [6, 16], [0, 43], [10, 41], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [12, 41], [2, 12], [1, 10]]
+INFO:root:size of invalid tiles 36
+INFO:root:debug3: bot_loc_next_round {'unit_8': [37, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(37, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 27==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -23.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -18.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [8, 25], [21, 43], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -42.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -42.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -42.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -42.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [9, 42], [2, 42], [1, 40], [4, 12], [3, 10], [1, 43], [5, 13], [3, 13], [2, 11], [1, 12], [3, 43], [6, 14], [9, 41], [10, 42], [0, 41], [1, 42], [0, 44], [2, 41], [3, 9], [3, 12], [17, 11], [2, 44], [4, 11], [1, 11], [43, 14], [2, 10], [2, 13], [0, 43], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [12, 41], [2, 12], [1, 10]]
+INFO:root:size of invalid tiles 37
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.]), array([0.]), array([0.]), array([0.]), array([0.])]
+INFO:root:action quue: [2, 2, 2, 2, 2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [37, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(37, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 28==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -46.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -17.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [8, 25], [21, 43], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -41.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -41.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -41.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -41.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [9, 42], [2, 42], [1, 40], [4, 12], [3, 10], [1, 43], [5, 13], [3, 13], [2, 11], [1, 12], [3, 43], [6, 14], [9, 41], [0, 41], [1, 42], [3, 9], [2, 41], [3, 12], [17, 11], [2, 44], [4, 11], [1, 11], [43, 14], [2, 10], [3, 42], [0, 43], [10, 41], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [4, 13], [2, 9], [12, 41], [2, 12], [1, 10]]
+INFO:root:size of invalid tiles 38
+INFO:root:debug3: bot_loc_next_round {'unit_8': [37, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(37, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 29==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -44.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -16.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [8, 25], [21, 43], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:unit_4 belongs to factory_1, and the top priority is water
-INFO:root:trimmed graph looks like 
- [array([1.]), array([0.]), array([0.])]
-INFO:root:action quue: [2, 2]
-INFO:root:debug3: bot_loc_next_round {'unit_4': [41, 23]}
-INFO:root:debug1: potential_collisions {(41, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -40.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -40.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -40.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -40.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [1, 40], [2, 45], [3, 10], [1, 43], [5, 13], [3, 13], [2, 11], [1, 12], [6, 14], [9, 41], [10, 42], [0, 41], [1, 42], [3, 9], [2, 41], [4, 14], [3, 12], [17, 11], [4, 11], [1, 11], [43, 14], [2, 10], [3, 42], [0, 43], [10, 41], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [4, 13], [2, 9], [12, 41], [2, 12], [1, 10], [3, 44]]
+INFO:root:size of invalid tiles 38
+INFO:root:debug3: bot_loc_next_round {'unit_8': [37, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(37, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 30==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -42.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -15.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [8, 25], [21, 43], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [41, 23], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -39.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -39.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -39.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -39.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [9, 42], [2, 42], [1, 40], [4, 12], [3, 10], [1, 43], [5, 13], [3, 13], [2, 11], [1, 12], [9, 41], [10, 42], [0, 41], [1, 42], [0, 44], [2, 41], [3, 9], [3, 12], [17, 11], [2, 44], [4, 11], [1, 11], [43, 14], [2, 10], [3, 42], [2, 13], [0, 43], [10, 41], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [4, 13], [2, 9], [12, 41], [2, 12], [1, 10], [3, 44]]
+INFO:root:size of invalid tiles 40
+INFO:root:debug3: bot_loc_next_round {'unit_8': [37, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(37, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 31==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -40.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -14.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [8, 25], [21, 43], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -38.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -38.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -38.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -38.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [9, 42], [2, 42], [1, 40], [4, 12], [3, 10], [1, 43], [5, 13], [2, 11], [1, 12], [9, 41], [10, 42], [0, 41], [1, 42], [0, 44], [2, 41], [3, 9], [3, 12], [17, 11], [4, 11], [5, 12], [1, 11], [43, 14], [2, 10], [3, 42], [2, 13], [0, 43], [10, 41], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [4, 13], [2, 9], [12, 41], [2, 12], [1, 10], [3, 44]]
+INFO:root:size of invalid tiles 39
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 32==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -38.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -13.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [8, 25], [21, 43], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -37.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -37.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -37.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -37.0, metalShortage 400.0
+INFO:root:map of blockers [[6, 12], [0, 42], [9, 42], [2, 42], [1, 40], [4, 12], [3, 10], [1, 43], [3, 13], [2, 11], [1, 12], [3, 43], [10, 42], [0, 41], [1, 42], [0, 44], [2, 41], [3, 9], [3, 12], [17, 11], [5, 12], [1, 11], [43, 14], [2, 10], [3, 42], [2, 13], [0, 43], [10, 41], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [4, 13], [2, 9], [12, 41], [2, 12], [1, 10]]
+INFO:root:size of invalid tiles 38
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.]), array([0.]), array([0.]), array([0.])]
+INFO:root:action quue: [2, 2, 2, 2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 33==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -36.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -12.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [8, 25], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [22, 43], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -36.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -36.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -36.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -36.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [9, 42], [2, 42], [1, 40], [4, 9], [4, 12], [3, 10], [1, 43], [5, 13], [3, 13], [7, 41], [2, 11], [1, 12], [9, 41], [0, 41], [1, 42], [0, 44], [2, 41], [3, 12], [17, 11], [2, 44], [5, 12], [1, 11], [43, 14], [2, 10], [2, 13], [6, 13], [0, 43], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [4, 10], [12, 41], [2, 12], [1, 10]]
+INFO:root:size of invalid tiles 37
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 34==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -34.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -11.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [8, 25], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [22, 43], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -35.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -35.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -35.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -35.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [9, 42], [2, 42], [4, 9], [2, 45], [3, 10], [1, 43], [5, 13], [3, 13], [7, 41], [2, 11], [1, 12], [0, 41], [1, 42], [0, 44], [2, 41], [13, 41], [3, 12], [17, 11], [4, 11], [7, 40], [1, 11], [43, 14], [2, 10], [2, 13], [6, 13], [0, 43], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [4, 10], [2, 12], [1, 10]]
+INFO:root:size of invalid tiles 35
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 35==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -32.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -10.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [7, 25], [15, 41], [17, 26], [14, 42], [22, 43], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -34.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -34.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -34.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -34.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [2, 45], [3, 10], [1, 43], [5, 13], [3, 13], [7, 41], [2, 11], [1, 12], [6, 14], [0, 41], [1, 42], [0, 44], [2, 41], [13, 41], [3, 12], [17, 11], [2, 44], [4, 11], [7, 40], [3, 9], [1, 11], [43, 14], [2, 10], [2, 13], [0, 43], [3, 11], [2, 43], [1, 41], [27, 8], [4, 10], [6, 40], [2, 12], [1, 10]]
+INFO:root:size of invalid tiles 35
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 36==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -30.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -9.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [7, 25], [15, 41], [17, 26], [14, 42], [22, 43], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
+INFO:root:factory_1 has waterShortage -33.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -33.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -33.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -33.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [9, 42], [2, 42], [2, 45], [3, 10], [1, 43], [6, 39], [5, 13], [3, 13], [7, 41], [2, 11], [1, 12], [6, 14], [0, 41], [1, 42], [0, 44], [2, 41], [13, 41], [3, 12], [4, 11], [7, 40], [1, 11], [43, 14], [2, 10], [3, 42], [2, 13], [0, 43], [3, 11], [2, 43], [1, 41], [27, 8], [4, 10], [6, 40], [2, 9], [2, 12], [1, 10], [3, 44], [18, 11]]
+INFO:root:size of invalid tiles 38
 INFO:root:trimmed graph looks like 
- [array([0.]), array([0.]), array([1.])]
-INFO:root:action quue: [4, 4]
-INFO:root:debug3: bot_loc_next_round {'unit_4': [41, 23]}
-INFO:root:debug1: potential_collisions {(41, 23): ['unit_4']}
+ [array([0.]), array([0.]), array([0.]), array([0.]), array([0.])]
+INFO:root:action quue: [2, 2, 2, 2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 37==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -28.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -8.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [7, 25], [15, 41], [17, 26], [41, 23], [14, 42], [22, 43], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -32.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -32.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -32.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -32.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [1, 40], [4, 12], [3, 10], [1, 43], [6, 39], [2, 45], [3, 13], [2, 11], [1, 12], [6, 14], [0, 41], [1, 42], [0, 44], [2, 41], [13, 41], [3, 12], [4, 11], [1, 11], [43, 14], [2, 10], [5, 39], [2, 13], [0, 43], [3, 11], [2, 43], [1, 41], [27, 8], [4, 10], [4, 13], [6, 40], [2, 9], [2, 12], [1, 10], [3, 44], [18, 11]]
+INFO:root:size of invalid tiles 37
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 38==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -26.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -7.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [7, 25], [15, 41], [17, 26], [14, 42], [22, 43], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -31.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -31.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -31.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -31.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [1, 40], [2, 45], [3, 10], [1, 43], [3, 13], [7, 41], [2, 11], [1, 12], [4, 39], [6, 14], [0, 41], [1, 42], [0, 44], [2, 41], [13, 41], [3, 12], [3, 9], [4, 11], [7, 40], [5, 12], [1, 11], [43, 14], [2, 10], [5, 39], [2, 13], [0, 43], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [4, 10], [4, 13], [7, 42], [2, 12], [1, 10], [3, 44], [18, 11]]
+INFO:root:size of invalid tiles 40
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 39==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -49.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -6.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [7, 25], [15, 41], [17, 26], [14, 42], [22, 43], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -30.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -30.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -30.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -30.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [1, 40], [4, 9], [2, 45], [3, 10], [1, 43], [5, 13], [3, 13], [2, 11], [1, 12], [4, 39], [0, 41], [1, 42], [0, 44], [2, 41], [13, 41], [3, 12], [4, 11], [1, 11], [43, 14], [2, 10], [3, 42], [4, 38], [2, 13], [0, 43], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [4, 10], [4, 13], [6, 40], [2, 12], [1, 10], [3, 44], [18, 11]]
+INFO:root:size of invalid tiles 38
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 40==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -47.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -5.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [7, 25], [15, 41], [17, 26], [14, 42], [22, 43], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -29.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -29.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -29.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -29.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [1, 40], [4, 9], [2, 45], [3, 10], [1, 43], [3, 13], [5, 10], [7, 41], [2, 11], [1, 12], [5, 40], [0, 41], [1, 42], [0, 44], [2, 41], [13, 41], [3, 12], [4, 11], [1, 11], [43, 14], [2, 10], [5, 39], [2, 13], [6, 13], [0, 43], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [4, 13], [7, 42], [2, 12], [1, 10], [3, 38], [3, 44], [18, 11]]
+INFO:root:size of invalid tiles 39
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.]), array([0.]), array([0.]), array([0.])]
+INFO:root:action quue: [2, 2, 2, 2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 41==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -45.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -4.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [7, 25], [15, 41], [17, 26], [14, 42], [22, 43], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -28.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -28.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -28.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -28.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [1, 40], [4, 9], [2, 45], [3, 10], [1, 43], [3, 13], [5, 10], [2, 11], [1, 12], [4, 39], [6, 14], [0, 41], [1, 42], [0, 44], [2, 41], [13, 41], [3, 12], [4, 11], [1, 11], [43, 14], [2, 10], [3, 39], [2, 13], [0, 43], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [4, 13], [2, 9], [4, 40], [2, 12], [1, 10], [3, 44], [18, 11]]
+INFO:root:size of invalid tiles 38
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 42==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -43.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -3.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [7, 25], [15, 41], [17, 26], [14, 42], [22, 43], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -27.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -27.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -27.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -27.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [1, 40], [4, 9], [2, 45], [3, 10], [1, 43], [3, 13], [5, 10], [7, 41], [2, 11], [3, 40], [1, 12], [5, 40], [0, 41], [1, 42], [0, 44], [2, 41], [13, 41], [3, 12], [4, 11], [1, 11], [43, 14], [2, 10], [3, 42], [3, 39], [2, 13], [3, 45], [0, 43], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [4, 13], [7, 42], [2, 9], [2, 12], [1, 10], [18, 11]]
+INFO:root:size of invalid tiles 40
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 43==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -41.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -2.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [7, 25], [15, 41], [17, 26], [14, 42], [22, 43], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -26.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -26.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -26.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -26.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [1, 40], [4, 9], [2, 45], [3, 10], [1, 43], [3, 13], [5, 10], [6, 42], [2, 11], [3, 40], [1, 12], [0, 41], [1, 42], [0, 44], [2, 41], [13, 41], [3, 12], [4, 11], [6, 41], [1, 11], [43, 14], [2, 10], [3, 42], [2, 13], [3, 45], [0, 43], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [4, 13], [4, 40], [2, 12], [1, 10], [18, 11]]
+INFO:root:size of invalid tiles 38
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 44==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -39.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage -1.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [7, 25], [15, 41], [17, 26], [14, 42], [22, 43], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -25.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -25.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -25.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -25.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [1, 40], [4, 9], [2, 45], [3, 10], [1, 43], [3, 13], [2, 11], [3, 40], [1, 12], [0, 41], [1, 42], [0, 44], [2, 41], [13, 41], [3, 12], [1, 11], [43, 14], [2, 10], [2, 13], [3, 45], [0, 43], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [4, 10], [4, 13], [7, 42], [2, 12], [1, 10], [18, 11], [5, 41]]
+INFO:root:size of invalid tiles 35
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.]), array([0.]), array([0.]), array([0.])]
+INFO:root:action quue: [2, 2, 2, 2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 45==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -37.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 0.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [7, 25], [15, 41], [17, 26], [14, 42], [22, 43], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -24.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -24.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -24.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -24.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [1, 40], [2, 45], [3, 10], [1, 43], [3, 13], [6, 42], [2, 11], [3, 40], [1, 12], [0, 41], [1, 42], [0, 44], [2, 41], [13, 41], [3, 12], [4, 8], [6, 41], [1, 11], [43, 14], [2, 10], [2, 13], [3, 45], [0, 43], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [4, 13], [2, 12], [1, 10], [18, 11]]
+INFO:root:size of invalid tiles 34
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 46==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -35.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 1.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [7, 25], [15, 41], [17, 26], [14, 42], [22, 43], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -23.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -23.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -23.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -23.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [2, 45], [3, 10], [1, 43], [3, 13], [2, 11], [3, 40], [1, 12], [0, 41], [1, 42], [0, 44], [2, 41], [13, 41], [3, 12], [4, 8], [1, 11], [43, 14], [2, 10], [2, 13], [3, 45], [5, 42], [0, 43], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [4, 13], [2, 9], [2, 12], [1, 10], [18, 11], [5, 41]]
+INFO:root:size of invalid tiles 34
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 47==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -33.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 2.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [7, 25], [15, 41], [17, 26], [14, 42], [22, 43], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -22.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -22.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -22.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -22.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [2, 45], [3, 10], [1, 43], [3, 13], [2, 11], [3, 40], [1, 12], [4, 42], [6, 14], [0, 41], [1, 42], [0, 44], [2, 41], [13, 41], [3, 12], [3, 9], [4, 8], [1, 11], [43, 14], [2, 10], [3, 42], [4, 41], [2, 13], [3, 45], [0, 43], [3, 11], [2, 43], [1, 41], [27, 8], [4, 13], [2, 9], [2, 12], [1, 10], [18, 11]]
+INFO:root:size of invalid tiles 36
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 48==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -31.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 3.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [7, 25], [15, 41], [17, 26], [14, 42], [22, 43], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -21.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -21.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -21.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -21.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [1, 40], [2, 45], [3, 10], [1, 43], [3, 13], [2, 11], [3, 40], [1, 12], [0, 41], [1, 42], [2, 41], [13, 41], [3, 12], [4, 8], [4, 11], [1, 11], [43, 14], [2, 10], [3, 42], [3, 45], [5, 42], [0, 43], [3, 11], [2, 43], [1, 41], [27, 8], [4, 13], [2, 9], [2, 12], [1, 10], [18, 11], [5, 41]]
+INFO:root:size of invalid tiles 34
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.]), array([0.]), array([0.]), array([0.])]
+INFO:root:action quue: [2, 2, 2, 2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 49==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage 12.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 4.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [7, 25], [15, 41], [17, 26], [14, 42], [22, 43], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -20.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -20.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -20.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -20.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [1, 40], [4, 9], [2, 45], [3, 10], [1, 43], [5, 13], [3, 13], [2, 11], [3, 40], [1, 12], [4, 42], [0, 41], [1, 42], [2, 41], [13, 41], [3, 12], [4, 11], [1, 11], [43, 14], [2, 10], [3, 42], [4, 41], [3, 45], [0, 43], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [4, 13], [2, 9], [2, 12], [1, 10], [18, 11]]
+INFO:root:size of invalid tiles 36
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 50==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage 15.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 5.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [7, 25], [15, 41], [17, 26], [14, 42], [22, 43], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -19.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -19.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -19.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -19.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [1, 40], [2, 45], [3, 10], [1, 43], [3, 13], [2, 11], [3, 40], [1, 12], [4, 45], [0, 41], [1, 42], [0, 44], [2, 41], [13, 41], [3, 12], [4, 11], [1, 11], [43, 14], [2, 10], [3, 42], [2, 13], [0, 43], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [4, 10], [4, 13], [2, 12], [1, 10], [4, 43], [18, 11], [5, 41]]
+INFO:root:size of invalid tiles 36
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 51==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage 18.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 6.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [7, 25], [15, 41], [17, 26], [14, 42], [22, 43], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -18.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -18.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -18.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -18.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [1, 40], [4, 12], [3, 10], [1, 43], [2, 45], [2, 11], [3, 40], [1, 12], [4, 45], [3, 43], [0, 41], [1, 42], [0, 44], [2, 41], [13, 41], [3, 12], [4, 11], [1, 11], [43, 14], [2, 10], [4, 41], [2, 13], [0, 43], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [2, 12], [1, 10], [18, 11]]
+INFO:root:size of invalid tiles 33
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 52==========
-INFO:root:factory_1 has waterShortage 21.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 7.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [7, 25], [15, 41], [17, 26], [14, 42], [22, 43], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -17.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -17.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -17.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -17.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [1, 40], [4, 12], [3, 10], [1, 43], [2, 45], [2, 11], [3, 40], [1, 12], [4, 45], [4, 42], [0, 41], [1, 42], [0, 44], [2, 41], [13, 41], [3, 12], [4, 11], [1, 11], [43, 14], [2, 10], [2, 13], [0, 43], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [2, 12], [1, 10], [18, 11]]
+INFO:root:size of invalid tiles 32
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.]), array([0.]), array([0.]), array([0.])]
+INFO:root:action quue: [2, 2, 2, 2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 53==========
-INFO:root:factory_1 has waterShortage 22.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 8.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [7, 25], [15, 41], [17, 26], [14, 42], [22, 43], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -16.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -16.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -16.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -16.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [1, 40], [2, 45], [3, 10], [1, 43], [4, 12], [2, 11], [3, 40], [1, 12], [4, 45], [4, 42], [0, 41], [1, 42], [0, 44], [2, 41], [13, 41], [3, 12], [4, 11], [1, 11], [43, 14], [2, 10], [0, 43], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [2, 12], [1, 10], [18, 11]]
+INFO:root:size of invalid tiles 31
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 54==========
-INFO:root:factory_1 has waterShortage 23.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 9.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [7, 25], [15, 41], [17, 26], [14, 42], [22, 43], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -15.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -15.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -15.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -15.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [1, 40], [2, 45], [3, 10], [1, 43], [4, 12], [2, 11], [3, 40], [1, 12], [4, 45], [4, 42], [0, 41], [1, 42], [0, 44], [2, 41], [13, 41], [3, 12], [4, 11], [1, 11], [43, 14], [2, 10], [3, 42], [0, 43], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [2, 12], [1, 10], [18, 11]]
+INFO:root:size of invalid tiles 32
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 55==========
-INFO:root:factory_1 has waterShortage 24.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 10.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [7, 25], [15, 41], [17, 26], [14, 42], [22, 43], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -14.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -14.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -14.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -14.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [1, 40], [2, 45], [3, 10], [1, 43], [4, 12], [2, 11], [3, 40], [1, 12], [4, 45], [3, 43], [4, 42], [0, 41], [1, 42], [0, 44], [2, 41], [13, 41], [3, 12], [4, 11], [1, 11], [43, 14], [2, 10], [3, 42], [0, 43], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [2, 12], [1, 10], [18, 11]]
+INFO:root:size of invalid tiles 33
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 56==========
-INFO:root:factory_1 has waterShortage -15.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 11.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [7, 25], [15, 41], [17, 26], [14, 42], [22, 43], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:unit_4 belongs to factory_1, and the top priority is water
+INFO:root:factory_1 has waterShortage -13.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -13.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -13.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -13.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [2, 45], [3, 10], [1, 43], [4, 12], [2, 11], [3, 40], [1, 12], [4, 42], [0, 41], [1, 42], [0, 44], [2, 41], [13, 41], [3, 12], [1, 11], [43, 14], [2, 10], [4, 44], [0, 43], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [2, 9], [2, 12], [1, 10], [18, 11]]
+INFO:root:size of invalid tiles 30
 INFO:root:trimmed graph looks like 
- [array([1.]), array([0.]), array([0.])]
-INFO:root:action quue: [2, 2]
-INFO:root:debug3: bot_loc_next_round {'unit_4': [41, 23]}
-INFO:root:debug1: potential_collisions {(41, 23): ['unit_4']}
+ [array([0.]), array([0.]), array([0.]), array([0.]), array([0.])]
+INFO:root:action quue: [2, 2, 2, 2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 57==========
-INFO:root:factory_1 has waterShortage -14.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 12.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [7, 25], [15, 41], [17, 26], [41, 23], [14, 42], [22, 43], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -12.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -12.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -12.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -12.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [2, 45], [3, 10], [1, 43], [4, 12], [2, 11], [1, 9], [3, 40], [1, 12], [3, 43], [4, 42], [0, 41], [1, 42], [0, 44], [2, 41], [13, 41], [3, 12], [1, 11], [43, 14], [2, 10], [0, 43], [3, 11], [2, 43], [1, 41], [27, 8], [2, 12], [1, 10], [3, 44], [18, 11]]
+INFO:root:size of invalid tiles 30
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 58==========
-INFO:root:factory_1 has waterShortage -13.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 13.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [7, 25], [15, 41], [17, 26], [14, 42], [22, 43], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -11.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -11.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -11.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -11.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [1, 40], [2, 45], [3, 10], [1, 43], [4, 12], [2, 11], [3, 40], [1, 12], [3, 43], [4, 42], [0, 41], [1, 42], [2, 41], [13, 41], [3, 12], [4, 11], [1, 11], [43, 14], [2, 10], [0, 43], [3, 11], [2, 43], [1, 41], [27, 8], [2, 12], [1, 10], [4, 43], [18, 11]]
+INFO:root:size of invalid tiles 30
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 59==========
-INFO:root:factory_1 has waterShortage -12.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 14.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [7, 25], [15, 41], [17, 26], [14, 42], [22, 43], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -10.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -10.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -10.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -10.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [1, 40], [4, 12], [3, 10], [1, 43], [2, 11], [3, 40], [1, 12], [3, 43], [4, 42], [5, 43], [0, 41], [1, 42], [2, 41], [13, 41], [3, 12], [2, 44], [4, 11], [1, 11], [43, 14], [2, 10], [3, 42], [0, 43], [3, 11], [2, 43], [1, 41], [27, 8], [2, 12], [1, 10], [18, 11]]
+INFO:root:size of invalid tiles 31
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 60==========
-INFO:root:factory_1 has waterShortage -11.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 15.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [7, 25], [15, 41], [17, 26], [14, 42], [22, 43], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -9.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -9.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -9.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -9.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [1, 40], [4, 12], [3, 10], [1, 43], [2, 11], [3, 40], [1, 12], [3, 43], [4, 42], [0, 41], [1, 42], [0, 44], [2, 41], [13, 41], [3, 12], [4, 11], [0, 10], [1, 11], [43, 14], [2, 10], [0, 43], [3, 11], [2, 43], [1, 41], [27, 8], [6, 43], [2, 12], [1, 10], [18, 11]]
+INFO:root:size of invalid tiles 31
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.]), array([0.]), array([0.]), array([0.])]
+INFO:root:action quue: [2, 2, 2, 2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 61==========
-INFO:root:factory_1 has waterShortage -10.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 16.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [7, 25], [15, 41], [17, 26], [14, 42], [22, 43], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -8.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -8.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -8.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -8.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [1, 40], [4, 12], [3, 10], [1, 43], [2, 11], [1, 12], [0, 41], [1, 42], [0, 44], [2, 41], [13, 41], [3, 12], [4, 11], [7, 43], [0, 10], [1, 11], [43, 14], [2, 10], [3, 42], [0, 43], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [2, 12], [1, 10], [3, 44], [3, 41], [18, 11]]
+INFO:root:size of invalid tiles 32
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 62==========
-INFO:root:factory_1 has waterShortage -9.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 17.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [7, 25], [15, 41], [17, 26], [14, 42], [22, 43], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -7.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -7.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -7.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -7.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [1, 40], [4, 12], [3, 10], [1, 43], [2, 11], [1, 12], [0, 41], [1, 42], [0, 44], [2, 41], [13, 41], [3, 12], [4, 11], [0, 10], [1, 11], [43, 14], [2, 10], [3, 42], [0, 43], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [2, 9], [2, 12], [1, 10], [3, 44], [3, 41], [18, 11]]
+INFO:root:size of invalid tiles 32
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 63==========
-INFO:root:factory_1 has waterShortage -8.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 18.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [7, 25], [15, 41], [17, 26], [14, 42], [22, 43], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:trimmed graph looks like 
- [array([0.]), array([0.]), array([1.])]
-INFO:root:action quue: [4, 4]
-INFO:root:debug3: bot_loc_next_round {'unit_4': [41, 23]}
-INFO:root:debug1: potential_collisions {(41, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -6.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -6.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -6.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -6.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [1, 40], [4, 12], [3, 10], [1, 43], [2, 11], [1, 12], [3, 43], [0, 41], [1, 42], [0, 44], [2, 41], [13, 41], [3, 12], [2, 44], [4, 11], [0, 10], [1, 11], [43, 14], [2, 10], [4, 41], [3, 45], [9, 43], [0, 43], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [2, 9], [2, 12], [1, 10], [18, 11]]
+INFO:root:size of invalid tiles 34
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 64==========
-INFO:root:factory_1 has waterShortage -7.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 19.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [7, 25], [15, 41], [17, 26], [41, 23], [14, 42], [22, 43], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -5.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -5.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -5.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -5.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [1, 40], [2, 45], [3, 10], [1, 43], [4, 12], [2, 11], [1, 12], [3, 43], [0, 41], [1, 42], [0, 44], [2, 41], [13, 41], [3, 12], [4, 11], [0, 10], [1, 11], [43, 14], [2, 10], [4, 41], [3, 45], [0, 43], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [2, 12], [1, 10], [18, 11]]
+INFO:root:size of invalid tiles 32
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.]), array([0.]), array([0.]), array([0.])]
+INFO:root:action quue: [2, 2, 2, 2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 65==========
-INFO:root:factory_1 has waterShortage -6.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 20.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [17, 24], [22, 44], [14, 40], [16, 25], [18, 25], [13, 41], [7, 25], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -4.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -4.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -4.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -4.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [1, 40], [2, 45], [3, 10], [1, 43], [4, 12], [3, 13], [2, 11], [1, 12], [0, 41], [1, 42], [0, 44], [2, 41], [3, 12], [3, 41], [0, 10], [1, 11], [43, 14], [2, 10], [3, 42], [9, 43], [0, 43], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [5, 11], [2, 9], [2, 12], [1, 10], [3, 44], [14, 41], [18, 11]]
+INFO:root:size of invalid tiles 35
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 66==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -30.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 21.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [17, 24], [22, 44], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [6, 25], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -3.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -3.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -3.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -3.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [1, 40], [2, 45], [3, 10], [1, 43], [4, 12], [3, 13], [2, 11], [1, 12], [0, 41], [1, 42], [0, 44], [2, 41], [3, 12], [3, 41], [0, 10], [1, 11], [43, 14], [2, 10], [3, 42], [0, 43], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [5, 11], [2, 12], [1, 10], [3, 44], [14, 41], [18, 11]]
+INFO:root:size of invalid tiles 33
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 67==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -28.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 22.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [17, 24], [22, 44], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [6, 25], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:unit_4 belongs to factory_1, and the top priority is water
-INFO:root:trimmed graph looks like 
- [array([1.]), array([0.]), array([0.])]
-INFO:root:action quue: [2, 2]
-INFO:root:debug3: bot_loc_next_round {'unit_4': [41, 23]}
-INFO:root:debug1: potential_collisions {(41, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -2.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -2.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -2.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -2.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [2, 45], [3, 10], [1, 43], [4, 12], [3, 13], [2, 11], [1, 12], [3, 43], [1, 39], [0, 41], [1, 42], [0, 44], [2, 41], [3, 12], [2, 44], [19, 11], [0, 10], [1, 11], [43, 14], [2, 10], [9, 43], [0, 43], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [5, 11], [2, 12], [1, 10], [14, 41]]
+INFO:root:size of invalid tiles 33
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 68==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -26.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 23.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [17, 24], [22, 44], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [41, 23], [14, 42], [16, 24], [6, 25], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage -1.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage -1.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage -1.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage -1.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [2, 45], [3, 10], [1, 43], [4, 12], [3, 13], [2, 11], [1, 12], [1, 39], [0, 41], [1, 42], [0, 44], [2, 41], [3, 12], [1, 45], [2, 44], [19, 11], [0, 10], [1, 11], [43, 14], [2, 10], [0, 43], [3, 11], [2, 43], [1, 41], [27, 8], [5, 11], [2, 12], [1, 10], [4, 43], [14, 41]]
+INFO:root:size of invalid tiles 32
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.]), array([0.]), array([0.]), array([0.])]
+INFO:root:action quue: [2, 2, 2, 2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 69==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -24.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 24.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [17, 24], [42, 23], [22, 44], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [6, 25], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 0.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 0.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 0.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 0.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [2, 45], [3, 10], [1, 43], [4, 12], [3, 13], [2, 11], [1, 12], [5, 43], [1, 39], [0, 41], [1, 42], [0, 44], [2, 41], [3, 12], [3, 41], [1, 45], [19, 11], [7, 43], [0, 10], [1, 11], [43, 14], [2, 10], [2, 13], [0, 43], [3, 11], [2, 43], [1, 41], [27, 8], [5, 11], [2, 9], [2, 12], [1, 10], [14, 41]]
+INFO:root:size of invalid tiles 35
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 70==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -22.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 25.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [6, 25], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 1.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 1.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 1.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 1.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [2, 45], [3, 10], [1, 43], [4, 12], [2, 11], [1, 12], [1, 39], [0, 41], [1, 42], [2, 41], [3, 12], [1, 45], [19, 11], [0, 10], [1, 11], [43, 14], [2, 10], [3, 42], [4, 41], [0, 43], [3, 11], [2, 43], [1, 41], [27, 8], [5, 11], [6, 43], [2, 9], [2, 12], [1, 10], [14, 41]]
+INFO:root:size of invalid tiles 32
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 71==========
-INFO:root:factory_1 has waterShortage -20.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 26.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [6, 25], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 2.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 2.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 2.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 2.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [2, 45], [3, 10], [1, 43], [4, 12], [2, 11], [1, 12], [1, 39], [0, 41], [1, 42], [2, 41], [3, 12], [2, 44], [19, 11], [7, 43], [0, 10], [1, 11], [43, 14], [2, 10], [0, 43], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [5, 11], [2, 9], [2, 12], [1, 10], [14, 41], [5, 41]]
+INFO:root:size of invalid tiles 32
+INFO:root:debug3: bot_loc_next_round {'unit_8': [38, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(38, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 72==========
-INFO:root:factory_1 has waterShortage -19.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 27.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [6, 25], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 3.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 3.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 3.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 3.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [2, 45], [3, 10], [1, 43], [4, 12], [7, 44], [2, 11], [1, 12], [6, 11], [1, 39], [0, 41], [1, 42], [0, 44], [2, 41], [3, 12], [19, 11], [6, 41], [0, 10], [1, 11], [43, 14], [2, 10], [3, 42], [2, 13], [0, 43], [3, 11], [2, 43], [1, 41], [27, 8], [2, 9], [2, 12], [1, 10], [3, 44], [14, 41]]
+INFO:root:size of invalid tiles 34
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.]), array([0.]), array([0.])]
+INFO:root:action quue: [2, 2, 2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [39, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(39, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 73==========
-INFO:root:factory_1 has waterShortage -18.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 28.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [6, 25], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 4.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 4.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 4.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 4.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [4, 12], [3, 10], [1, 43], [7, 41], [2, 11], [1, 12], [6, 11], [1, 39], [0, 41], [1, 42], [0, 44], [2, 41], [3, 12], [2, 44], [19, 11], [6, 44], [0, 10], [1, 11], [43, 14], [2, 10], [4, 44], [9, 43], [0, 43], [3, 11], [2, 43], [1, 41], [27, 8], [2, 9], [2, 12], [1, 10], [14, 41]]
+INFO:root:size of invalid tiles 33
+INFO:root:debug3: bot_loc_next_round {'unit_8': [39, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(39, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 74==========
-INFO:root:factory_1 has waterShortage -17.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 29.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [6, 25], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:trimmed graph looks like 
- [array([0.]), array([0.]), array([1.])]
-INFO:root:action quue: [4, 4]
-INFO:root:debug3: bot_loc_next_round {'unit_4': [41, 23]}
-INFO:root:debug1: potential_collisions {(41, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 5.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 5.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 5.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 5.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [10, 43], [4, 12], [3, 10], [1, 43], [3, 13], [2, 11], [1, 12], [6, 11], [1, 39], [0, 41], [1, 42], [0, 44], [2, 41], [3, 12], [19, 11], [0, 10], [1, 11], [43, 14], [2, 10], [4, 44], [0, 43], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [2, 12], [1, 10], [14, 41], [5, 44]]
+INFO:root:size of invalid tiles 32
+INFO:root:debug3: bot_loc_next_round {'unit_8': [39, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(39, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 75==========
-INFO:root:factory_1 has waterShortage -16.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 30.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [41, 23], [14, 42], [16, 24], [6, 25], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 6.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 6.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 6.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 6.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [4, 12], [3, 10], [1, 43], [2, 11], [1, 12], [6, 11], [9, 41], [1, 39], [0, 41], [1, 42], [0, 44], [2, 41], [3, 12], [1, 45], [15, 41], [19, 11], [6, 44], [0, 10], [1, 11], [43, 14], [2, 10], [3, 42], [4, 44], [0, 43], [11, 43], [3, 11], [2, 43], [1, 41], [27, 8], [2, 12], [1, 10]]
+INFO:root:size of invalid tiles 33
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.]), array([0.]), array([0.])]
+INFO:root:action quue: [2, 2, 2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [39, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(39, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 76==========
-INFO:root:factory_1 has waterShortage -15.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 31.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [6, 25], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 7.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 7.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 7.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 7.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [0, 45], [2, 42], [3, 10], [1, 43], [2, 11], [12, 43], [1, 12], [6, 11], [1, 39], [0, 41], [1, 42], [2, 41], [3, 12], [1, 45], [2, 44], [15, 41], [19, 11], [0, 10], [1, 11], [43, 14], [2, 10], [4, 44], [0, 43], [10, 41], [3, 11], [2, 43], [1, 41], [27, 8], [4, 13], [2, 12], [1, 10], [5, 44]]
+INFO:root:size of invalid tiles 33
+INFO:root:debug3: bot_loc_next_round {'unit_8': [39, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(39, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 77==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -39.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 32.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [5, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 8.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 8.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 8.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 8.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [0, 45], [2, 42], [2, 45], [3, 10], [1, 43], [2, 11], [1, 12], [6, 11], [1, 39], [0, 41], [11, 41], [1, 42], [2, 41], [3, 12], [1, 45], [15, 41], [19, 11], [0, 10], [1, 11], [43, 14], [2, 10], [4, 44], [5, 45], [0, 43], [3, 11], [2, 43], [1, 41], [27, 8], [13, 43], [4, 13], [2, 9], [2, 12], [1, 10]]
+INFO:root:size of invalid tiles 34
+INFO:root:debug3: bot_loc_next_round {'unit_8': [39, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(39, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 78==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -37.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 33.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [5, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:unit_4 belongs to factory_1, and the top priority is water
+INFO:root:factory_1 has waterShortage 9.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 9.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 9.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 9.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [11, 42], [0, 45], [2, 42], [2, 45], [3, 10], [1, 43], [3, 13], [2, 11], [1, 12], [4, 45], [6, 11], [1, 39], [0, 41], [1, 42], [13, 44], [2, 41], [3, 12], [1, 45], [15, 41], [19, 11], [0, 10], [1, 11], [43, 14], [2, 10], [3, 42], [4, 44], [0, 43], [3, 11], [2, 43], [1, 41], [27, 8], [4, 13], [2, 9], [2, 12], [1, 10]]
+INFO:root:size of invalid tiles 36
 INFO:root:trimmed graph looks like 
- [array([1.]), array([0.]), array([0.])]
+ [array([0.]), array([0.]), array([0.])]
 INFO:root:action quue: [2, 2]
-INFO:root:debug3: bot_loc_next_round {'unit_4': [41, 23]}
-INFO:root:debug1: potential_collisions {(41, 23): ['unit_4']}
+INFO:root:debug3: bot_loc_next_round {'unit_8': [40, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(40, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 79==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -35.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 34.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [5, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [41, 23], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 10.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 10.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 10.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 10.0, metalShortage 400.0
+INFO:root:map of blockers [[20, 11], [0, 42], [0, 45], [2, 42], [2, 45], [3, 10], [1, 43], [2, 11], [1, 12], [1, 39], [0, 41], [1, 42], [2, 41], [3, 12], [1, 45], [15, 41], [0, 10], [12, 42], [1, 11], [43, 14], [2, 10], [3, 42], [3, 45], [4, 44], [6, 10], [0, 43], [3, 11], [2, 43], [1, 41], [27, 8], [4, 13], [2, 9], [2, 12], [1, 10], [12, 44]]
+INFO:root:size of invalid tiles 35
+INFO:root:debug3: bot_loc_next_round {'unit_8': [40, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(40, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 80==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -33.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 35.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [5, 25], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 11.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 11.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 11.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 11.0, metalShortage 400.0
+INFO:root:map of blockers [[20, 11], [0, 42], [0, 45], [2, 42], [2, 45], [3, 10], [1, 43], [4, 12], [2, 11], [12, 43], [1, 12], [4, 45], [1, 39], [0, 41], [1, 42], [13, 44], [2, 41], [3, 12], [1, 45], [15, 41], [0, 10], [1, 11], [43, 14], [2, 10], [6, 10], [0, 43], [3, 11], [2, 43], [1, 41], [27, 8], [2, 9], [2, 12], [1, 10], [3, 44]]
+INFO:root:size of invalid tiles 34
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.]), array([0.])]
+INFO:root:action quue: [2, 2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [40, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(40, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 81==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -31.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 36.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [5, 25], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 12.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 12.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 12.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 12.0, metalShortage 400.0
+INFO:root:map of blockers [[20, 11], [0, 42], [0, 45], [2, 42], [2, 45], [3, 10], [1, 43], [2, 11], [1, 12], [4, 45], [1, 39], [0, 41], [1, 42], [2, 41], [3, 12], [1, 45], [15, 41], [0, 10], [1, 11], [43, 14], [2, 10], [4, 44], [6, 10], [0, 43], [3, 11], [2, 43], [1, 41], [27, 8], [13, 43], [2, 9], [2, 12], [1, 10], [12, 44]]
+INFO:root:size of invalid tiles 33
+INFO:root:debug3: bot_loc_next_round {'unit_8': [40, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(40, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 82==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -29.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 37.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [5, 25], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 13.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 13.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 13.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 13.0, metalShortage 400.0
+INFO:root:map of blockers [[20, 11], [0, 42], [0, 45], [2, 42], [3, 10], [1, 43], [2, 11], [12, 43], [1, 12], [4, 45], [1, 39], [0, 41], [1, 42], [13, 44], [2, 41], [3, 12], [1, 45], [15, 41], [0, 10], [1, 11], [43, 14], [2, 10], [6, 10], [0, 43], [3, 11], [2, 43], [1, 41], [27, 8], [2, 46], [2, 12], [1, 10], [3, 44]]
+INFO:root:size of invalid tiles 32
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.]), array([0.])]
+INFO:root:action quue: [2, 2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [40, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(40, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 83==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -27.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 38.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [5, 25], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 14.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 14.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 14.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 14.0, metalShortage 400.0
+INFO:root:map of blockers [[20, 11], [0, 42], [2, 42], [3, 10], [1, 43], [3, 13], [2, 11], [1, 12], [3, 43], [1, 39], [0, 41], [1, 42], [0, 44], [2, 41], [3, 12], [1, 45], [15, 41], [0, 10], [1, 11], [43, 14], [2, 10], [3, 42], [4, 44], [6, 10], [0, 43], [3, 11], [2, 43], [1, 41], [27, 8], [13, 43], [2, 46], [2, 12], [1, 10], [12, 44]]
+INFO:root:size of invalid tiles 34
+INFO:root:debug3: bot_loc_next_round {'unit_8': [40, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(40, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 84==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -25.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 39.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [5, 25], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 15.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 15.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 15.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 15.0, metalShortage 400.0
+INFO:root:map of blockers [[20, 11], [0, 42], [2, 42], [3, 10], [1, 43], [2, 11], [12, 43], [1, 12], [1, 39], [0, 41], [1, 42], [11, 44], [2, 41], [3, 12], [1, 45], [15, 41], [0, 10], [1, 11], [43, 14], [2, 10], [3, 42], [6, 10], [0, 43], [3, 11], [2, 43], [1, 41], [27, 8], [2, 46], [4, 13], [2, 12], [1, 10], [3, 44]]
+INFO:root:size of invalid tiles 32
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.]), array([0.])]
+INFO:root:action quue: [2, 2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [40, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(40, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 85==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -23.0, metalShortage 380.0
-INFO:root:factory_3 has waterShortage 40.0, metalShortage 420.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [5, 25], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:trimmed graph looks like 
- [array([0.]), array([0.]), array([1.])]
-INFO:root:action quue: [4, 4]
-INFO:root:debug3: bot_loc_next_round {'unit_4': [41, 23]}
-INFO:root:debug1: potential_collisions {(41, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 16.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 16.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 16.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 16.0, metalShortage 400.0
+INFO:root:map of blockers [[20, 11], [0, 42], [2, 42], [3, 10], [1, 43], [2, 11], [1, 12], [3, 43], [1, 39], [0, 41], [1, 42], [2, 41], [3, 12], [1, 45], [15, 41], [0, 10], [1, 11], [43, 14], [2, 10], [3, 42], [1, 14], [6, 10], [0, 43], [11, 43], [3, 11], [2, 43], [1, 41], [27, 8], [2, 46], [4, 13], [2, 9], [2, 12], [1, 10], [12, 44]]
+INFO:root:size of invalid tiles 34
+INFO:root:debug3: bot_loc_next_round {'unit_8': [40, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(40, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 86==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -21.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [5, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [41, 23], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 17.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 17.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 17.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 17.0, metalShortage 400.0
+INFO:root:map of blockers [[20, 11], [0, 42], [2, 42], [3, 10], [1, 43], [5, 10], [2, 11], [12, 43], [1, 12], [1, 39], [0, 41], [1, 42], [11, 44], [2, 41], [0, 44], [3, 12], [1, 45], [15, 41], [0, 10], [1, 11], [43, 14], [2, 10], [3, 42], [1, 14], [0, 43], [3, 11], [2, 43], [1, 41], [27, 8], [2, 46], [4, 13], [2, 9], [2, 12], [1, 10]]
+INFO:root:size of invalid tiles 34
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.])]
+INFO:root:action quue: [2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [41, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(41, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 87==========
-INFO:root:factory_1 has waterShortage -19.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [5, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 18.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 18.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 18.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 18.0, metalShortage 400.0
+INFO:root:map of blockers [[20, 11], [0, 42], [0, 45], [2, 42], [1, 40], [3, 10], [1, 43], [16, 41], [5, 10], [2, 11], [1, 12], [3, 43], [0, 41], [1, 42], [2, 41], [3, 12], [1, 45], [0, 10], [1, 11], [43, 14], [2, 10], [1, 14], [0, 43], [11, 43], [3, 11], [2, 43], [1, 41], [27, 8], [2, 46], [4, 13], [2, 9], [2, 12], [1, 10], [12, 44]]
+INFO:root:size of invalid tiles 34
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.])]
+INFO:root:action quue: [2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [41, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(41, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 88==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -43.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [5, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 19.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 19.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 19.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 19.0, metalShortage 400.0
+INFO:root:map of blockers [[20, 11], [0, 42], [2, 42], [2, 45], [3, 10], [1, 43], [16, 41], [5, 10], [2, 11], [12, 43], [1, 12], [0, 41], [1, 42], [11, 44], [2, 41], [0, 44], [3, 12], [1, 45], [2, 44], [1, 11], [43, 14], [2, 10], [1, 14], [0, 43], [3, 11], [2, 43], [1, 41], [27, 8], [4, 13], [2, 9], [2, 12], [1, 10], [3, 44], [3, 41]]
+INFO:root:size of invalid tiles 34
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.])]
+INFO:root:action quue: [2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [41, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(41, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 89==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -41.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [5, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 20.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 20.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 20.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 20.0, metalShortage 400.0
+INFO:root:map of blockers [[20, 11], [0, 42], [2, 42], [2, 45], [3, 10], [1, 43], [16, 41], [3, 13], [5, 10], [2, 11], [1, 12], [3, 43], [0, 41], [1, 42], [2, 41], [3, 12], [1, 45], [1, 11], [43, 14], [2, 10], [1, 14], [4, 41], [0, 43], [11, 43], [3, 11], [2, 43], [1, 41], [27, 8], [2, 46], [4, 13], [2, 12], [1, 10], [12, 44]]
+INFO:root:size of invalid tiles 33
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.])]
+INFO:root:action quue: [2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [41, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(41, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 90==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -39.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [5, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 21.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 21.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 21.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 21.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [10, 43], [1, 40], [3, 10], [1, 43], [16, 41], [2, 11], [1, 9], [1, 12], [0, 41], [1, 42], [11, 44], [2, 41], [3, 12], [1, 45], [1, 11], [43, 14], [2, 10], [1, 14], [0, 43], [21, 11], [3, 11], [2, 43], [1, 41], [27, 8], [4, 10], [4, 13], [2, 46], [2, 12], [1, 10], [5, 41]]
+INFO:root:size of invalid tiles 32
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.])]
+INFO:root:action quue: [2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [41, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(41, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 91==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage 4.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [5, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 22.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 22.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 22.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 22.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [3, 10], [1, 43], [16, 41], [2, 11], [1, 9], [1, 12], [0, 41], [1, 42], [0, 44], [2, 41], [3, 12], [1, 45], [6, 41], [1, 11], [43, 14], [2, 10], [1, 14], [10, 44], [0, 43], [21, 11], [11, 43], [3, 11], [2, 40], [2, 43], [1, 41], [27, 8], [4, 13], [2, 46], [2, 12], [1, 10]]
+INFO:root:size of invalid tiles 32
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.])]
+INFO:root:action quue: [2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [41, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(41, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 92==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage 7.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [5, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 23.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 23.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 23.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 23.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [0, 45], [2, 42], [10, 43], [3, 10], [1, 43], [16, 41], [7, 41], [2, 11], [1, 9], [1, 12], [0, 41], [1, 42], [11, 44], [2, 41], [3, 12], [1, 45], [1, 11], [43, 14], [2, 10], [1, 14], [0, 43], [21, 11], [2, 40], [3, 11], [2, 43], [1, 41], [27, 8], [4, 13], [2, 46], [2, 9], [2, 12], [1, 10]]
+INFO:root:size of invalid tiles 33
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.])]
+INFO:root:action quue: [2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [41, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(41, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 93==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage 10.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [5, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 24.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 24.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 24.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 24.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [0, 45], [2, 42], [3, 10], [1, 43], [16, 41], [2, 11], [1, 9], [1, 12], [0, 41], [1, 42], [2, 41], [3, 12], [1, 45], [1, 11], [43, 14], [2, 10], [1, 14], [9, 43], [10, 44], [0, 43], [21, 11], [2, 40], [3, 11], [2, 43], [1, 41], [27, 8], [4, 10], [4, 13], [2, 46], [2, 9], [2, 12], [1, 10]]
+INFO:root:size of invalid tiles 33
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.])]
+INFO:root:action quue: [2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [41, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(41, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 94==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage 13.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [5, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 25.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 25.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 25.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 25.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [0, 45], [2, 42], [10, 43], [4, 9], [3, 10], [1, 43], [16, 41], [3, 13], [2, 11], [1, 9], [1, 12], [9, 41], [0, 41], [1, 42], [11, 44], [2, 41], [3, 12], [1, 11], [43, 14], [2, 10], [1, 14], [0, 43], [21, 11], [2, 40], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [4, 13], [2, 46], [2, 9], [2, 12], [1, 10]]
+INFO:root:size of invalid tiles 35
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.])]
+INFO:root:action quue: [2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [41, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(41, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 95==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage 16.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [5, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 26.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 26.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 26.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 26.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [0, 45], [2, 42], [3, 10], [1, 43], [16, 41], [2, 11], [1, 9], [1, 12], [0, 41], [1, 42], [2, 41], [3, 12], [5, 9], [1, 11], [43, 14], [2, 10], [1, 14], [9, 43], [10, 44], [0, 43], [21, 11], [10, 41], [3, 11], [2, 40], [2, 43], [1, 41], [27, 8], [4, 13], [2, 46], [2, 12], [1, 10]]
+INFO:root:size of invalid tiles 32
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.])]
+INFO:root:action quue: [2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [41, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(41, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 96==========
-INFO:root:factory_1 has waterShortage 19.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [5, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 27.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 27.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 27.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 27.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [0, 45], [2, 42], [10, 43], [3, 10], [1, 43], [16, 41], [2, 11], [1, 9], [1, 12], [9, 44], [0, 41], [11, 41], [1, 42], [2, 41], [3, 12], [5, 9], [1, 11], [43, 14], [2, 10], [1, 14], [0, 43], [21, 11], [2, 40], [3, 11], [2, 43], [1, 41], [27, 8], [4, 13], [2, 46], [2, 12], [1, 10]]
+INFO:root:size of invalid tiles 32
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.])]
+INFO:root:action quue: [2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [41, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(41, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 97==========
-INFO:root:factory_1 has waterShortage 20.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [5, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 28.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 28.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 28.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 28.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [11, 42], [0, 45], [2, 42], [3, 10], [1, 43], [16, 41], [2, 11], [1, 9], [1, 12], [0, 41], [1, 42], [2, 41], [3, 12], [5, 9], [1, 11], [43, 14], [2, 10], [1, 14], [9, 43], [10, 44], [0, 43], [21, 11], [2, 40], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [4, 13], [2, 46], [2, 12], [1, 10]]
+INFO:root:size of invalid tiles 33
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.])]
+INFO:root:action quue: [2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [41, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(41, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 98==========
-INFO:root:factory_1 has waterShortage 21.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [5, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 29.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 29.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 29.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 29.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [0, 45], [2, 42], [3, 10], [1, 43], [16, 41], [2, 11], [1, 9], [1, 12], [9, 44], [0, 41], [1, 42], [2, 41], [3, 12], [5, 9], [1, 45], [12, 42], [1, 11], [43, 14], [2, 10], [1, 14], [0, 43], [21, 11], [2, 40], [3, 11], [2, 43], [1, 41], [27, 8], [4, 13], [2, 46], [2, 9], [2, 12], [1, 10]]
+INFO:root:size of invalid tiles 33
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.])]
+INFO:root:action quue: [2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [41, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(41, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 99==========
-INFO:root:factory_1 has waterShortage 22.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [5, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 30.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 30.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 30.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 30.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [0, 45], [2, 42], [3, 10], [1, 43], [16, 41], [2, 11], [1, 9], [12, 43], [1, 12], [0, 41], [1, 42], [2, 41], [3, 12], [5, 9], [1, 45], [1, 11], [43, 14], [2, 10], [1, 14], [9, 43], [0, 43], [21, 11], [2, 40], [3, 11], [2, 43], [1, 41], [27, 8], [4, 13], [2, 46], [2, 9], [2, 12], [1, 10]]
+INFO:root:size of invalid tiles 33
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.])]
+INFO:root:action quue: [2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [41, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(41, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 100==========
-INFO:root:factory_1 has waterShortage 23.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [5, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 31.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 31.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 31.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 31.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [3, 10], [1, 43], [16, 41], [7, 44], [2, 11], [1, 9], [1, 12], [0, 41], [1, 42], [0, 44], [2, 41], [3, 12], [5, 9], [1, 45], [1, 11], [43, 14], [2, 10], [0, 43], [21, 11], [2, 40], [3, 11], [2, 43], [1, 41], [27, 8], [13, 43], [4, 13], [2, 46], [1, 13], [2, 12], [1, 10]]
+INFO:root:size of invalid tiles 32
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.])]
+INFO:root:action quue: [2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [41, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(41, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 101==========
-INFO:root:factory_1 has waterShortage 24.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [5, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 32.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 32.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 32.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 32.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [3, 10], [1, 43], [16, 41], [2, 11], [1, 9], [1, 12], [0, 41], [1, 42], [13, 44], [2, 41], [3, 12], [5, 9], [1, 45], [7, 43], [1, 11], [43, 14], [2, 10], [0, 43], [21, 11], [2, 40], [3, 11], [2, 43], [1, 41], [27, 8], [4, 13], [2, 46], [2, 12], [1, 10]]
+INFO:root:size of invalid tiles 30
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.])]
+INFO:root:action quue: [2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [41, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(41, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 102==========
-INFO:root:factory_1 has waterShortage -15.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [5, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 33.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 33.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 33.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 33.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [4, 9], [3, 10], [1, 43], [16, 41], [7, 44], [2, 11], [1, 9], [1, 12], [0, 41], [1, 42], [2, 41], [3, 12], [1, 45], [1, 11], [43, 14], [2, 10], [0, 43], [21, 11], [2, 40], [3, 11], [2, 43], [1, 41], [27, 8], [4, 13], [2, 46], [2, 12], [1, 10], [14, 44]]
+INFO:root:size of invalid tiles 30
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.])]
+INFO:root:action quue: [2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [41, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(41, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 103==========
-INFO:root:factory_1 has waterShortage -14.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [5, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 34.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 34.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 34.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 34.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [2, 42], [3, 10], [1, 43], [16, 41], [3, 13], [2, 11], [1, 9], [1, 12], [0, 41], [1, 42], [0, 44], [2, 41], [3, 12], [1, 45], [6, 44], [7, 43], [1, 11], [43, 14], [2, 10], [14, 45], [0, 43], [21, 11], [2, 40], [3, 11], [2, 43], [1, 41], [27, 8], [4, 10], [4, 13], [2, 46], [2, 9], [2, 12], [1, 10]]
+INFO:root:size of invalid tiles 34
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.])]
+INFO:root:action quue: [2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [41, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(41, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 104==========
-INFO:root:factory_1 has waterShortage -13.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [5, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 35.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 35.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 35.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 35.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [0, 45], [2, 42], [3, 10], [1, 43], [13, 45], [16, 41], [2, 11], [1, 9], [1, 12], [0, 41], [1, 42], [2, 41], [3, 12], [1, 45], [1, 11], [43, 14], [2, 10], [0, 43], [21, 11], [2, 40], [3, 11], [2, 43], [1, 41], [27, 8], [4, 13], [2, 46], [0, 12], [2, 9], [2, 12], [1, 10], [5, 44]]
+INFO:root:size of invalid tiles 32
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.])]
+INFO:root:action quue: [2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [41, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(41, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 105==========
-INFO:root:factory_1 has waterShortage -12.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [5, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 36.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 36.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 36.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 36.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [0, 45], [2, 42], [3, 10], [1, 43], [16, 41], [2, 11], [1, 9], [1, 12], [0, 41], [1, 42], [2, 41], [3, 12], [1, 45], [7, 43], [1, 11], [43, 14], [2, 10], [14, 45], [4, 44], [0, 43], [21, 11], [2, 40], [3, 11], [2, 43], [1, 41], [27, 8], [4, 13], [2, 46], [0, 12], [2, 9], [2, 12], [1, 10]]
+INFO:root:size of invalid tiles 33
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.])]
+INFO:root:action quue: [2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [41, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(41, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 106==========
-INFO:root:factory_1 has waterShortage -11.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [5, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:unit_4 belongs to factory_1, and the top priority is water
+INFO:root:factory_1 has waterShortage 37.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 37.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 37.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 37.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [0, 45], [2, 42], [2, 45], [3, 10], [1, 43], [13, 45], [16, 41], [2, 11], [1, 9], [1, 12], [0, 41], [1, 42], [3, 9], [2, 41], [3, 12], [1, 45], [1, 11], [43, 14], [2, 10], [0, 43], [21, 11], [2, 40], [3, 11], [2, 43], [1, 41], [27, 8], [4, 13], [6, 43], [0, 12], [2, 9], [2, 12], [1, 10], [3, 44]]
+INFO:root:size of invalid tiles 34
 INFO:root:trimmed graph looks like 
- [array([1.]), array([0.]), array([0.])]
-INFO:root:action quue: [2, 2]
-INFO:root:debug3: bot_loc_next_round {'unit_4': [41, 23]}
-INFO:root:debug1: potential_collisions {(41, 23): ['unit_4']}
+ [array([0.]), array([0.])]
+INFO:root:action quue: [2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [41, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(41, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 107==========
-INFO:root:factory_1 has waterShortage -10.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [41, 23], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [4, 25], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 38.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 38.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 38.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 38.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [0, 45], [2, 42], [3, 10], [1, 43], [16, 41], [3, 13], [2, 11], [1, 9], [1, 12], [3, 43], [5, 43], [0, 41], [1, 42], [2, 41], [3, 12], [1, 45], [2, 44], [1, 11], [43, 14], [2, 10], [12, 45], [0, 43], [21, 11], [3, 11], [2, 43], [1, 41], [27, 8], [4, 13], [0, 12], [2, 12], [1, 10]]
+INFO:root:size of invalid tiles 32
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.])]
+INFO:root:action quue: [2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [41, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(41, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 108==========
-INFO:root:factory_1 has waterShortage -9.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [4, 25], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
+INFO:root:factory_1 has waterShortage 39.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 39.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 39.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 39.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [11, 45], [2, 42], [0, 45], [3, 10], [1, 43], [16, 41], [2, 11], [1, 9], [1, 12], [0, 41], [1, 42], [2, 41], [4, 8], [3, 12], [1, 45], [1, 11], [43, 14], [2, 10], [0, 43], [21, 11], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [4, 13], [6, 43], [0, 12], [2, 12], [1, 10], [3, 44]]
+INFO:root:size of invalid tiles 32
+INFO:root:trimmed graph looks like 
+ [array([0.]), array([0.])]
+INFO:root:action quue: [2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [41, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(41, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
 INFO:root:==========step in round: 109==========
-INFO:root:factory_1 has waterShortage -8.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [4, 25], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 110==========
-INFO:root:factory_1 has waterShortage -7.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [4, 25], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 111==========
-INFO:root:factory_1 has waterShortage -6.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [4, 25], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 112==========
-INFO:root:factory_1 has waterShortage -5.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 113==========
-INFO:root:factory_1 has waterShortage -4.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
+INFO:root:factory_1 has waterShortage 40.0, metalShortage 400.0
+INFO:root:factory_3 has waterShortage 40.0, metalShortage 400.0
+INFO:root:factory_5 has waterShortage 40.0, metalShortage 400.0
+INFO:root:factory_7 has waterShortage 40.0, metalShortage 400.0
+INFO:root:map of blockers [[0, 42], [0, 45], [2, 42], [4, 12], [3, 10], [1, 43], [16, 41], [2, 11], [1, 9], [1, 12], [3, 43], [5, 43], [0, 41], [1, 42], [2, 41], [4, 8], [3, 12], [1, 45], [1, 11], [43, 14], [2, 10], [12, 45], [0, 43], [21, 11], [2, 40], [3, 11], [1, 44], [2, 43], [1, 41], [27, 8], [0, 12], [2, 12], [1, 10]]
+INFO:root:size of invalid tiles 33
 INFO:root:trimmed graph looks like 
- [array([0.]), array([0.]), array([1.])]
-INFO:root:action quue: [4, 4]
-INFO:root:debug3: bot_loc_next_round {'unit_4': [41, 23]}
-INFO:root:debug1: potential_collisions {(41, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 114==========
-INFO:root:factory_1 has waterShortage -3.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [41, 23], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 115==========
-INFO:root:factory_1 has waterShortage -2.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 116==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -26.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 117==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -24.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:unit_4 belongs to factory_1, and the top priority is water
-INFO:root:trimmed graph looks like 
- [array([1.]), array([0.]), array([0.])]
-INFO:root:action quue: [2, 2]
-INFO:root:debug3: bot_loc_next_round {'unit_4': [41, 23]}
-INFO:root:debug1: potential_collisions {(41, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 118==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -22.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [41, 23], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 119==========
-INFO:root:factory_1 has waterShortage -20.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 120==========
-INFO:root:factory_1 has waterShortage -19.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 121==========
-INFO:root:factory_1 has waterShortage -18.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 122==========
-INFO:root:factory_1 has waterShortage -17.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [23, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 123==========
-INFO:root:factory_1 has waterShortage -16.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [42, 23], [22, 44], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 124==========
-INFO:root:factory_1 has waterShortage -15.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [42, 23], [22, 44], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:trimmed graph looks like 
- [array([0.]), array([0.]), array([1.])]
-INFO:root:action quue: [4, 4]
-INFO:root:debug3: bot_loc_next_round {'unit_4': [41, 23]}
-INFO:root:debug1: potential_collisions {(41, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 125==========
-INFO:root:factory_1 has waterShortage -14.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [22, 44], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [41, 23], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 126==========
-INFO:root:factory_1 has waterShortage -13.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [22, 44], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 127==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -37.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [22, 44], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 128==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -35.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [22, 44], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:unit_4 belongs to factory_1, and the top priority is water
-INFO:root:trimmed graph looks like 
- [array([1.]), array([0.]), array([0.])]
-INFO:root:action quue: [2, 2]
-INFO:root:debug3: bot_loc_next_round {'unit_4': [41, 23]}
-INFO:root:debug1: potential_collisions {(41, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 129==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -33.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [22, 44], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [41, 23], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 130==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -31.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [42, 23], [22, 44], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 131==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -29.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [42, 23], [22, 44], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 132==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -27.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [42, 23], [22, 44], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 133==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -25.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [42, 23], [22, 44], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 134==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -23.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [42, 23], [22, 44], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [42, 23]}
-INFO:root:debug1: potential_collisions {(42, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 135==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -21.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [42, 23], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [21, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:trimmed graph looks like 
- [array([0.]), array([0.]), array([1.])]
-INFO:root:action quue: [4, 4]
-INFO:root:debug3: bot_loc_next_round {'unit_4': [41, 23]}
-INFO:root:debug1: potential_collisions {(41, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 136==========
-INFO:root:factory_1 has waterShortage -19.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [41, 23], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [21, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 137==========
-INFO:root:factory_1 has waterShortage -18.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [21, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 138==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -42.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [21, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 139==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -40.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [21, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 140==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -38.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [21, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 141==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -36.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [21, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 142==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -34.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [21, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 143==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -32.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [21, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 144==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -30.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [21, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 145==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -28.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [21, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 146==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -26.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [21, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 147==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -24.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [21, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 148==========
-INFO:root:factory_1 waters the lichen
-INFO:root:factory_1 has waterShortage -22.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [21, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 149==========
-INFO:root:factory_1 has waterShortage -20.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [21, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 150==========
-INFO:root:factory_1 has waterShortage -19.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [21, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 151==========
-INFO:root:factory_1 has waterShortage -18.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [21, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 152==========
-INFO:root:factory_1 has waterShortage -17.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [21, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 153==========
-INFO:root:factory_1 has waterShortage -16.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [21, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 154==========
-INFO:root:factory_1 has waterShortage -15.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [21, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 155==========
-INFO:root:factory_1 has waterShortage -14.0, metalShortage 380.0
-INFO:root:map of blockers [[16, 26], [40, 23], [18, 26], [13, 42], [15, 42], [3, 25], [17, 24], [14, 40], [16, 25], [18, 25], [13, 41], [15, 41], [17, 26], [14, 42], [16, 24], [18, 24], [13, 40], [15, 40], [21, 44], [17, 25], [14, 41]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_4': [40, 23]}
-INFO:root:debug1: potential_collisions {(40, 23): ['unit_4']}
+ [array([0.]), array([0.])]
+INFO:root:action quue: [2]
+INFO:root:debug3: bot_loc_next_round {'unit_8': [41, 18], 'unit_9': [43, 14], 'unit_10': [8, 15], 'unit_11': [27, 8]}
+INFO:root:debug1: potential_collisions {(41, 18): ['unit_8'], (43, 14): ['unit_9'], (8, 15): ['unit_10'], (27, 8): ['unit_11']}
 INFO:root:debug2: replanned_units set()
