@@ -1,4 +1,5 @@
 import logging
+import math
 
 class Node:
     def __init__(self, x, y, value):
@@ -10,15 +11,15 @@ class Node:
         self.estimatedDistanceToEnd = float("inf")
         self.cameFrom = None
 
-def aStarAlgorithm(startX, startY, endX, endY, graph):
+def aStarAlgorithm(startX, startY, endX, endY, graph, power_cost_map = []):
     # Write your code here.
     nodes = initializeNodes(graph)  # return an array same dim as graph 
 
-    startNode = nodes[startX][startY]  ## TODO: notes from Mar8 th, very likely this part is flipped here.
+    startNode = nodes[startX][startY] 
     endNode = nodes[endX][endY]
 
     startNode.distanceFromStart = 0
-    startNode.estimatedDistanceToEnd = calculateManhattanDistance(startNode, endNode)
+    startNode.estimatedDistanceToEnd = calculateHeuristicCost(startNode, endNode, power_cost_map)
 
     nodesToVisit = MinHeap([startNode])
 
@@ -33,23 +34,25 @@ def aStarAlgorithm(startX, startY, endX, endY, graph):
             if neighbor.value == 1: 
                 continue
 
-            tentativeDistanceToNeighbor = currentMinDistanceNode.distanceFromStart + 1
+            tentativeDistanceToNeighbor = currentMinDistanceNode.distanceFromStart + math.floor(20+power_cost_map[neighbor.x][neighbor.y])  # 1 update made here for weighted A*star
 
             if tentativeDistanceToNeighbor >= neighbor.distanceFromStart:
                 continue
 
             neighbor.cameFrom = currentMinDistanceNode
             neighbor.distanceFromStart = tentativeDistanceToNeighbor
-            neighbor.estimatedDistanceToEnd = tentativeDistanceToNeighbor + calculateManhattanDistance(
-                neighbor, endNode
+            neighbor.estimatedDistanceToEnd = tentativeDistanceToNeighbor + calculateHeuristicCost(
+                neighbor, endNode, power_cost_map
             )
 
             if not nodesToVisit.containsNode(neighbor):
                 nodesToVisit.insert(neighbor)
             else:
                 nodesToVisit.update(neighbor)
+    
+    final_path, total_cost = reconstructPath(endNode, power_cost_map)
 
-    return reconstructPath(endNode)
+    return final_path, total_cost
 
 def initializeNodes(graph):
     nodes = []
@@ -58,6 +61,22 @@ def initializeNodes(graph):
         for j, value in enumerate(xCol):
             nodes[i].append(Node(i, j, value))   ## value shows which cell is blocked.
     return nodes
+
+def calculateHeuristicCost(currentNode, endNode, power_cost_map):
+    currentX = currentNode.x
+    currentY = currentNode.y
+    endX = endNode.x
+    endY = endNode.y
+    total_cost = 0
+    # using pixel average cost as heuristic.
+    minX, maxX, minY, maxY = min(currentX, endX), max(currentX, endX), min(currentY, endY), max(currentY, endY)
+    total_tiles = (maxX + 1 - minX) * (maxY + 1 - minY)
+
+    for x in range(minX, maxX + 1):
+        for y in range(minY, maxY + 1):
+            total_cost += power_cost_map[x][y]
+
+    return (total_cost / total_tiles) # * calculateManhattanDistance(currentNode, endNode)
 
 def calculateManhattanDistance(currentNode, endNode):
     currentX = currentNode.x
@@ -91,18 +110,22 @@ def getNeighboringNodes(node, nodes):
 
     return neighbors
 
-def reconstructPath(endNode):
+def reconstructPath(endNode, power_cost_map):
     if not endNode.cameFrom:
         return []
 
     currentNode = endNode
     path = []
 
+    total_cost = 0
     while currentNode is not None:
         path.append([currentNode.x, currentNode.y])
+        ## if it's the first step, don't add 
+        if currentNode.cameFrom is not None:
+            total_cost += power_cost_map[currentNode.x][currentNode.y]
         currentNode = currentNode.cameFrom
-
-    return path[::-1]
+        
+    return path[::-1], total_cost
     
 class MinHeap:
 	def __init__(self, array):

@@ -42,6 +42,7 @@ class Agent():
         self.all_bot_locations = {} ## {unit_id: [0/1, coord]}  0 if ally bot, 1 if enemy bot.
         self.bot_mission = {}  ## keep track of bot's mission <ice, ore, rubble>
         self.bot_target_tile = {}  ## keep track of the bot's target tile 
+        self.rubble_conditions = {}  ## keep track of the rubble to clean up for each factory id
 
     def early_setup(self, step: int, obs, remainingOverageTime: int = 60):
         '''
@@ -189,6 +190,10 @@ class Agent():
             waterExpectToGain = min(ally_factory.cargo.ice, LOOKAHEAD * 100) * 0.25
             metalExpectToGan = min(ally_factory.cargo.ore, LOOKAHEAD * 50) * 0.2
 
+            targetRubbleTiles, layer_reaching_target_tile = searchRubbleTiles(game_state.board.rubble, ally_factory.pos)
+            self.rubble_conditions[factory_id] = targetRubbleTiles
+            logging.info(f"debug target rubble {factory_id}: {targetRubbleTiles}")
+
             waterShortage = waterNeeded - (ally_factory.cargo.water + waterExpectToGain)
             metalShortage = metalNeeded - (ally_factory.cargo.metal + metalExpectToGan)
             lichenShortage = getLichenShortage()
@@ -215,7 +220,7 @@ class Agent():
         for unit_id, unit in ally_units.items():
             self.all_bot_locations[unit_id] = [0, unit.pos]
             ## if bot steps on resources tile, still consider as valid tile
-            if unit.pos in ice_tile_locations and unit.pos in ore_tile_locations:
+            if unit.pos in ice_tile_locations or unit.pos in ore_tile_locations:
                 continue
             invalid_tiles += [unit.pos]
             
@@ -223,7 +228,7 @@ class Agent():
         for unit_id, unit in enemy_units.items():
             self.all_bot_locations[unit_id] = [1, unit.pos]
             ## if bot steps on resources tile, still consider as valid tile
-            if unit.pos in ice_tile_locations and unit.pos in ore_tile_locations:
+            if unit.pos in ice_tile_locations or unit.pos in ore_tile_locations:
                 continue
             invalid_tiles += [unit.pos]
 
@@ -248,9 +253,25 @@ def path_planning(startLoc, targetLoc, map_with_blocks, game_state_board):
     startX, startY = startLoc
     endX, endY = targetLoc
 
-    minX, maxX, minY, maxY = min(startX, endX), max(startX, endX), min(startY, endY), max(startY, endY)
+    ## expand one unit for broader path search, but shouldn't exceed boundaries
+    expansion = 1
+    minX, maxX, minY, maxY = max(0, min(startX, endX)-expansion), \
+        min(48, max(startX, endX)+expansion), max(0, min(startY, endY)-expansion), \
+            min(48, max(startY, endY)+expansion)
 
     trimmedGraph = [xCol[minY: maxY+1] for xCol in map_with_blocks[minX: maxX+1]]
+
+    dimGraphX, dimGraphY = len(trimmedGraph), len(trimmedGraph[0])
+    power_cost = np.zeros([dimGraphX, dimGraphY])
+    for x in range(minX, maxX+1):
+        for y in range(minY, maxY+1):
+            ## need offset here
+            power_cost[x-minX][y-minY] = math.floor(20 + game_state_board.rubble[x][y])
+        
+
+    logging.info(f"trimmed_graph {trimmedGraph}")
+    logging.info(f"power_cost_map {power_cost}")    
+    
     # np.zeros((maxX - minX + 1, maxY - minY + 1))  ## placeholder
     # np.abs(
     #     np.array([xCol[minY: maxY+1] for xCol in game_state_board.valid_spawns_mask[minX: maxX+1]]) - 1
@@ -261,14 +282,10 @@ def path_planning(startLoc, targetLoc, map_with_blocks, game_state_board):
     startX_offset, startY_offset = startX - offsetX, startY - offsetY
     endX_offset, endY_offset = endX - offsetX, endY - offsetY
 
-    # logging.info(f"startX: {startX_offset}")
-    # logging.info(f"startY: {startY_offset}")
-    # logging.info(f"endX: {endX_offset}")
-    # logging.info(f"endY: {endY_offset}")
-
-
-    logging.info(f"trimmed graph looks like \n {trimmedGraph}")
-    path = aStarAlgorithm(startX_offset, startY_offset, endX_offset, endY_offset, trimmedGraph)
+    path, total_cost = aStarAlgorithm(startX_offset, startY_offset, endX_offset, endY_offset, trimmedGraph, power_cost)
+    
+    if len(path) > 20:
+        return [0]
 
     ## resume original path
     actual_path = []
@@ -285,6 +302,7 @@ def path_planning(startLoc, targetLoc, map_with_blocks, game_state_board):
         i += 1
         
     logging.info(f"action quue: {action_queues}")
+    logging.info(f"total cost of this route {total_cost}")
 
     return action_queues
 
@@ -326,7 +344,7 @@ def factory_act(factories, factory_inventory, actions, game_state, env_cfg, step
 
 
 def unit_act(units, bot_mission, bot_affiliations, bot_status, bot_target_tile, bot_action_queue, factory_tiles, 
-             factories_pos, factory_ids, factory_inventory, all_bot_locations,
+             factories_pos, factory_ids, factory_inventory, all_bot_locations, 
              ice_tile_locations, ore_tile_locations, map_with_blocks, game_state, actions):
     
     bot_loc_next_round = {} ## store the locations of each bot as unit_id: <>,  for CAS use
@@ -345,6 +363,8 @@ def unit_act(units, bot_mission, bot_affiliations, bot_status, bot_target_tile, 
         ore_distances = np.mean((ore_tile_locations - unit.pos) ** 2, 1)
         sorted_ore= [ore_tile_locations[k] for k in np.argsort(ore_distances)]
         closest_ore = sorted_ore[0]
+
+        ## find the rubble needs to be cleaned
 
 
         ## ========= ACTIVATION ==========
@@ -385,7 +405,7 @@ def unit_act(units, bot_mission, bot_affiliations, bot_status, bot_target_tile, 
                 if np.all(bot_target_tile[unit_id] == unit.pos):
                     bot_status[unit_id] = "in_progress"
             elif bot_status[unit_id] == "in_progress":
-                if unit.cargo.ice > 80 or unit.cargo.ore > 80: ## if collect enougth resources, change status to go home. ## TODO need to be dynamic here
+                if unit.cargo.ice > 80 or unit.cargo.ore > 60: ## if collect enougth resources, change status to go home. ## TODO need to be dynamic here
                     bot_status[unit_id] = "going_home"
             elif bot_status[unit_id] == "going_home":
                 if np.all(home_factory_coord == unit.pos):  ## if arrives home, change status to offloading.
@@ -418,6 +438,10 @@ def unit_act(units, bot_mission, bot_affiliations, bot_status, bot_target_tile, 
                 bot_mission[unit_id] = "ore"
                 bot_status[unit_id] = "going_to_target"
                 bot_target_tile[unit_id] = closest_ore
+            elif priority_task_this_factory == "rubble":
+                bot_mission[unit_id] = "rubble"
+                bot_status[unit_id] = "going_to_target"
+
         
         ## ======== CONTROL TASK QUEUEING ==========
         if bot_status[unit_id] == "going_to_target":
@@ -512,6 +536,7 @@ def unit_act(units, bot_mission, bot_affiliations, bot_status, bot_target_tile, 
     logging.info(f"debug3: bot_loc_next_round {bot_loc_next_round}")
     potential_collisions = {}
     for unit_id, loc in bot_loc_next_round.items():
+        ## TODO: exist Nonetype error here. due to [x,y]: None in bot_loc_next_round
         if tuple(loc) not in potential_collisions:
             potential_collisions[tuple(loc)] = []
         potential_collisions[tuple(loc)].append(unit_id)
@@ -602,6 +627,24 @@ def manhattan_distance(loc1, loc2):
     
     return abs(x2-x1) + abs(y2-y1)
 
+def searchRubbleTiles(rubble_map, factory_pos, min_target_num_tiles = 5):
+    targetHit = False
+    rubble_tile_to_clean = {}
+    layer = 1
+
+    center_x, center_y = factory_pos[0], factory_pos[1]
+    while not targetHit:
+        for x in range(max(0, center_x - 1 - layer), min(48, center_x + 2 + layer)):
+            for y in range(max(0, center_y - 1 - layer), min(48, center_y + 2 + layer)):
+                ## skip if inside the factory:
+                if x <= center_x + 1 and x >= center_x - 1 and y <= center_y + 1 and y >= center_y - 1:
+                    continue
+                if rubble_map[x][y] > 0:
+                    rubble_tile_to_clean[tuple([x, y])] = rubble_map[x][y]
+        if len(rubble_tile_to_clean) >= min_target_num_tiles:
+            targetHit = True
+        layer += 1
+    return rubble_tile_to_clean, layer
 
 
 def getLichenShortage():
