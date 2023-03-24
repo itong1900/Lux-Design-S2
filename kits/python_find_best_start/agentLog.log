@@ -1,1578 +1,737 @@
-INFO:root:==========step in round: 7==========
-INFO:root:factory_1 position: [23 30]
-INFO:root:factory_1 build a heavy robot
-INFO:root:factory_3 position: [28 28]
-INFO:root:factory_3 build a heavy robot
-INFO:root:factory_5 position: [17  7]
-INFO:root:factory_5 build a heavy robot
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -60.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -60.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -60.0, metalShortage 400.0
-INFO:root:map of blockers [[34, 1], [46, 33], [42, 2], [41, 3], [33, 2], [35, 2], [45, 34], [47, 34], [40, 4], [34, 0], [46, 35], [42, 4], [41, 2], [33, 1], [45, 33], [35, 1], [47, 33], [40, 3], [34, 2], [46, 34], [41, 4], [42, 3], [33, 0], [45, 35], [35, 0], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 27
-INFO:root:debug3: bot_loc_next_round {}
-INFO:root:debug1: potential_collisions {}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 8==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -59.0, metalShortage 500.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -59.0, metalShortage 500.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -59.0, metalShortage 500.0
-INFO:root:map of blockers [[47, 34], [45, 33], [40, 4], [46, 33], [41, 4], [47, 33], [42, 3], [45, 35], [42, 2], [46, 35], [40, 3], [47, 35], [41, 3], [40, 2], [42, 4], [41, 2], [45, 34], [46, 34]]
+INFO:root:==========step in round: 5==========
+INFO:root:map of blockers [[18, 27], [40, 4], [19, 27], [41, 4], [17, 26], [42, 3], [18, 26], [19, 26], [42, 2], [40, 3], [17, 28], [18, 28], [41, 3], [19, 28], [40, 2], [42, 4], [41, 2], [17, 27]]
 INFO:root:size of invalid tiles 18
-INFO:root:unit_6 is affiliated to factory_1, it's activated now.
-INFO:root:unit_6 belongs to factory_1, and the top priority is metal
-INFO:root:trimmed_graph [array([0., 0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0., 0.])]
-INFO:root:power_cost_map [[ 20.  20.  20.  20.  37.  37.  38.]
- [ 20.  20.  20.  20.  37. 107. 108.]
- [ 20.  20.  20.  20.  37. 105. 107.]
- [ 20.  20.  20.  20.  36. 104. 106.]
- [ 20.  20.  20.  20.  36.  36.  37.]]
-INFO:root:action quue: [4, 4, 3, 3, 3, 3]
-INFO:root:total cost of this route 224.0
-INFO:root:unit_7 is affiliated to factory_3, it's activated now.
-INFO:root:unit_7 belongs to factory_3, and the top priority is metal
-INFO:root:trimmed_graph [array([0., 0., 0., 0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0., 0., 0., 0.])]
-INFO:root:power_cost_map [[ 20.  20.  20.  20.  20.  20.  37. 109. 110.]
- [ 20.  20.  20.  20.  20.  20.  38. 112. 112.]
- [ 20.  20.  20.  20.  20.  20.  39.  39. 115.]]
-INFO:root:action quue: [3, 3, 3, 3, 3, 3]
-INFO:root:total cost of this route 230.0
-INFO:root:unit_8 is affiliated to factory_5, it's activated now.
-INFO:root:unit_8 belongs to factory_5, and the top priority is metal
-INFO:root:trimmed_graph [array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.])]
-INFO:root:power_cost_map [[ 20.  20.  20.  37.  37.  37.  37.  37.  37.  37.  37. 105. 105.]
- [ 20.  20.  20.  37. 107. 107.  37.  37.  36.  36.  36. 104. 105.]
- [ 20.  20.  20.  37. 106. 106. 106.  37.  36.  20.  36. 103. 103.]
- [ 38.  20.  20.  36.  37. 105.  37.  37.  36.  20.  36. 102. 101.]
- [ 37.  20.  20.  36.  36.  36.  37.  37.  37.  36.  36. 100.  99.]
- [ 37.  20.  20.  20.  36.  36.  37.  37.  37.  37. 102.  99.  97.]
- [ 37.  20.  20.  20.  20.  36.  37.  37. 108.  37.  36.  98.  94.]
- [ 37.  20.  20.  35.  35.  36. 106. 108. 108.  37.  36.  35.  34.]]
-INFO:root:action quue: [2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 2, 3, 3]
-INFO:root:total cost of this route 511.0
-INFO:root:debug3: bot_loc_next_round {'unit_6': [22, 30], 'unit_7': [28, 29], 'unit_8': [18, 7]}
-INFO:root:debug1: potential_collisions {(22, 30): ['unit_6'], (28, 29): ['unit_7'], (18, 7): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 9==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -58.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -58.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -58.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [18, 7], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 30], 'unit_7': [28, 30], 'unit_8': [19, 7]}
-INFO:root:debug1: potential_collisions {(21, 30): ['unit_6'], (28, 30): ['unit_7'], (19, 7): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 10==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -57.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -57.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -57.0, metalShortage 400.0
-INFO:root:map of blockers [[47, 34], [45, 33], [40, 4], [46, 33], [41, 4], [47, 33], [42, 3], [45, 35], [42, 2], [46, 35], [40, 3], [47, 35], [41, 3], [40, 2], [42, 4], [41, 2], [45, 34], [46, 34]]
-INFO:root:size of invalid tiles 18
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 31], 'unit_7': [28, 31], 'unit_8': [20, 7]}
-INFO:root:debug1: potential_collisions {(21, 31): ['unit_6'], (28, 31): ['unit_7'], (20, 7): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 11==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -56.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -56.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -56.0, metalShortage 400.0
-INFO:root:map of blockers [[47, 34], [45, 33], [40, 4], [46, 33], [41, 4], [47, 33], [42, 3], [45, 35], [42, 2], [46, 35], [40, 3], [47, 35], [41, 3], [40, 2], [42, 4], [41, 2], [45, 34], [46, 34]]
-INFO:root:size of invalid tiles 18
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 32], 'unit_7': [28, 32], 'unit_8': [21, 7]}
-INFO:root:debug1: potential_collisions {(21, 32): ['unit_6'], (28, 32): ['unit_7'], (21, 7): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 12==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -55.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -55.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -55.0, metalShortage 400.0
-INFO:root:map of blockers [[47, 34], [45, 33], [40, 4], [46, 33], [41, 4], [47, 33], [42, 3], [45, 35], [42, 2], [46, 35], [40, 3], [47, 35], [41, 3], [40, 2], [42, 4], [41, 2], [45, 34], [46, 34]]
-INFO:root:size of invalid tiles 18
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 33], 'unit_7': [28, 33], 'unit_8': [21, 8]}
-INFO:root:debug1: potential_collisions {(21, 33): ['unit_6'], (28, 33): ['unit_7'], (21, 8): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 13==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -54.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -54.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -54.0, metalShortage 400.0
-INFO:root:map of blockers [[47, 34], [45, 33], [40, 4], [46, 33], [41, 4], [47, 33], [42, 3], [45, 35], [42, 2], [46, 35], [40, 3], [47, 35], [41, 3], [40, 2], [42, 4], [41, 2], [45, 34], [46, 34]]
-INFO:root:size of invalid tiles 18
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [21, 9]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (21, 9): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 14==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -53.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -53.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -53.0, metalShortage 400.0
-INFO:root:map of blockers [[47, 34], [45, 33], [40, 4], [46, 33], [41, 4], [47, 33], [42, 3], [45, 35], [42, 2], [46, 35], [40, 3], [47, 35], [41, 3], [40, 2], [42, 4], [41, 2], [45, 34], [46, 34]]
-INFO:root:size of invalid tiles 18
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [21, 10]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (21, 10): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 15==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -52.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -52.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -52.0, metalShortage 400.0
-INFO:root:map of blockers [[47, 34], [45, 33], [40, 4], [46, 33], [41, 4], [47, 33], [42, 3], [45, 35], [42, 2], [46, 35], [40, 3], [47, 35], [41, 3], [40, 2], [42, 4], [41, 2], [45, 34], [46, 34]]
-INFO:root:size of invalid tiles 18
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [21, 11]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (21, 11): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 16==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -51.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -51.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -51.0, metalShortage 400.0
-INFO:root:map of blockers [[47, 34], [45, 33], [40, 4], [46, 33], [41, 4], [47, 33], [42, 3], [45, 35], [42, 2], [46, 35], [40, 3], [47, 35], [41, 3], [40, 2], [42, 4], [41, 2], [45, 34], [46, 34]]
-INFO:root:size of invalid tiles 18
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [21, 12]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (21, 12): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 17==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -50.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -50.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -50.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [21, 13]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (21, 13): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 18==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -49.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -49.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -49.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [21, 14]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (21, 14): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 19==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -48.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -48.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -48.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [21, 15]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (21, 15): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 20==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -47.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -47.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -47.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 15]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 15): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 21==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -46.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -46.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -46.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 16]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 16): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 22==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -45.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -45.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -45.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 23==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -44.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -44.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -44.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 24==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -43.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -43.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -43.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 25==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -42.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -42.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -42.0, metalShortage 400.0
-INFO:root:map of blockers [[47, 34], [45, 33], [40, 4], [46, 33], [41, 4], [47, 33], [42, 3], [45, 35], [42, 2], [46, 35], [40, 3], [47, 35], [41, 3], [40, 2], [42, 4], [41, 2], [45, 34], [46, 34]]
-INFO:root:size of invalid tiles 18
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 26==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -41.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -41.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -41.0, metalShortage 400.0
-INFO:root:map of blockers [[47, 34], [45, 33], [40, 4], [46, 33], [41, 4], [47, 33], [42, 3], [45, 35], [42, 2], [46, 35], [40, 3], [47, 35], [41, 3], [40, 2], [42, 4], [41, 2], [45, 34], [46, 34]]
-INFO:root:size of invalid tiles 18
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 27==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -40.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -40.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -40.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 28==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -39.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -39.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -39.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [43, 33], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 20
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 29==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -38.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -38.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -38.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 30==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -37.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -37.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -37.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 31==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -36.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -36.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -36.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 32==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -35.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -35.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -35.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 33==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -34.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -34.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -34.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 34==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -33.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -33.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -33.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 35==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -32.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -32.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -32.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 36==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -31.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -31.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -31.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [34, 6], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 20
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 37==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -30.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -30.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -30.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 38==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -29.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -29.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -29.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 39==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -28.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -28.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -28.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 40==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -27.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -27.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -27.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 41==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -26.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -26.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -26.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 42==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -25.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -25.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -25.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 43==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -24.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -24.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -24.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 44==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -23.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -23.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -23.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 45==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -22.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -22.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -22.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [29, 10], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 20
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 46==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -21.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -21.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -21.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 47==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -20.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -20.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -20.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 48==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -19.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -19.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -19.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 49==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -18.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -18.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -18.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 50==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -17.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -17.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -17.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 51==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -16.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -16.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -16.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 52==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -15.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -15.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -15.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 53==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -14.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -14.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -14.0, metalShortage 400.0
-INFO:root:map of blockers [[47, 34], [45, 33], [40, 4], [46, 33], [41, 4], [47, 33], [42, 3], [45, 35], [42, 2], [46, 35], [40, 3], [47, 35], [41, 3], [40, 2], [42, 4], [41, 2], [45, 34], [46, 34]]
-INFO:root:size of invalid tiles 18
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 54==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -13.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -13.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -13.0, metalShortage 400.0
-INFO:root:map of blockers [[47, 34], [45, 33], [40, 4], [46, 33], [41, 4], [47, 33], [42, 3], [45, 35], [42, 2], [46, 35], [40, 3], [47, 35], [41, 3], [40, 2], [42, 4], [41, 2], [45, 34], [46, 34]]
-INFO:root:size of invalid tiles 18
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 55==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -12.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -12.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -12.0, metalShortage 400.0
-INFO:root:map of blockers [[47, 34], [45, 33], [40, 4], [46, 33], [41, 4], [47, 33], [42, 3], [45, 35], [42, 2], [46, 35], [40, 3], [47, 35], [41, 3], [40, 2], [42, 4], [41, 2], [45, 34], [46, 34]]
-INFO:root:size of invalid tiles 18
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 56==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -11.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -11.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -11.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 57==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -10.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -10.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -10.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 58==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -9.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -9.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -9.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 59==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -8.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -8.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -8.0, metalShortage 400.0
-INFO:root:map of blockers [[47, 34], [45, 33], [40, 4], [46, 33], [41, 4], [47, 33], [42, 3], [45, 35], [42, 2], [46, 35], [40, 3], [47, 35], [41, 3], [40, 2], [42, 4], [41, 2], [45, 34], [46, 34]]
-INFO:root:size of invalid tiles 18
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 60==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -7.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -7.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -7.0, metalShortage 400.0
-INFO:root:map of blockers [[47, 34], [45, 33], [40, 4], [46, 33], [41, 4], [47, 33], [42, 3], [45, 35], [42, 2], [46, 35], [40, 3], [47, 35], [41, 3], [40, 2], [42, 4], [41, 2], [45, 34], [46, 34]]
-INFO:root:size of invalid tiles 18
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 61==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -6.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -6.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -6.0, metalShortage 400.0
-INFO:root:map of blockers [[47, 34], [45, 33], [40, 4], [46, 33], [41, 4], [47, 33], [42, 3], [45, 35], [42, 2], [46, 35], [40, 3], [47, 35], [41, 3], [40, 2], [42, 4], [41, 2], [45, 34], [46, 34]]
-INFO:root:size of invalid tiles 18
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 62==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -5.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -5.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -5.0, metalShortage 400.0
-INFO:root:map of blockers [[47, 34], [45, 33], [40, 4], [46, 33], [41, 4], [47, 33], [42, 3], [45, 35], [42, 2], [46, 35], [40, 3], [47, 35], [41, 3], [40, 2], [42, 4], [41, 2], [45, 34], [46, 34]]
-INFO:root:size of invalid tiles 18
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 63==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -4.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -4.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -4.0, metalShortage 400.0
-INFO:root:map of blockers [[47, 34], [45, 33], [40, 4], [46, 33], [41, 4], [47, 33], [42, 3], [45, 35], [42, 2], [46, 35], [40, 3], [47, 35], [41, 3], [40, 2], [42, 4], [41, 2], [45, 34], [46, 34]]
-INFO:root:size of invalid tiles 18
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 64==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -3.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -3.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -3.0, metalShortage 400.0
-INFO:root:map of blockers [[47, 34], [45, 33], [40, 4], [46, 33], [41, 4], [47, 33], [42, 3], [45, 35], [42, 2], [46, 35], [40, 3], [47, 35], [41, 3], [40, 2], [42, 4], [41, 2], [45, 34], [46, 34]]
-INFO:root:size of invalid tiles 18
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 65==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -2.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -2.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -2.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 66==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage -1.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage -1.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage -1.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [34, 10], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 67==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 0.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 0.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 0.0, metalShortage 400.0
-INFO:root:map of blockers [[47, 34], [45, 33], [40, 4], [46, 33], [41, 4], [47, 33], [42, 3], [45, 35], [42, 2], [46, 35], [40, 3], [47, 35], [41, 3], [40, 2], [42, 4], [41, 2], [45, 34], [46, 34]]
-INFO:root:size of invalid tiles 18
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 68==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 1.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 1.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 1.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [34, 10], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 34], 'unit_7': [28, 34], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 34): ['unit_6'], (28, 34): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 69==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 2.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 2.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 2.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [43, 33], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:trimmed_graph [array([0., 0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0., 0.])]
-INFO:root:power_cost_map [[ 20.  20.  20.  20.  37.  37.  38.]
- [ 20.  20.  20.  20.  37.  20. 108.]
- [ 20.  20.  20.  20.  37. 105. 107.]
- [ 20.  20.  20.  20.  36. 104. 106.]
- [ 20.  20.  20.  20.  36.  36.  37.]]
-INFO:root:action quue: [1, 1, 1, 2, 1, 2]
-INFO:root:total cost of this route 137.0
-INFO:root:trimmed_graph [array([0., 0., 0., 0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0., 0., 0., 0.])]
-INFO:root:power_cost_map [[ 20.  20.  20.  20.  20.  20.  37. 109. 110.]
- [ 20.  20.  20.  20.  20.  20.  38.  20. 112.]
- [ 20.  20.  20.  20.  20.  20.  39.  39. 115.]]
-INFO:root:action quue: [1, 1, 1, 1, 1, 1]
-INFO:root:total cost of this route 138.0
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 33], 'unit_7': [28, 33], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 33): ['unit_6'], (28, 33): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 70==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 3.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 3.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 3.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [43, 33], [46, 32], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 20
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 33], 'unit_7': [28, 33], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 33): ['unit_6'], (28, 33): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 71==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 4.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 4.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 4.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [43, 33], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 20
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 33], 'unit_7': [28, 33], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 33): ['unit_6'], (28, 33): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 72==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 5.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 5.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 5.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [43, 33], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [36, 8], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_6': [22, 34], 'unit_7': [28, 33], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(22, 34): ['unit_6'], (28, 33): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 73==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 6.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 6.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 6.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [43, 33], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 20
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 33], 'unit_7': [28, 33], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 33): ['unit_6'], (28, 33): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 74==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 7.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 7.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 7.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [43, 33], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [36, 8], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_6': [22, 33], 'unit_7': [28, 32], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(22, 33): ['unit_6'], (28, 32): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 75==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 8.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 8.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 8.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [36, 7], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [43, 33], [34, 6], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 22
-INFO:root:trimmed_graph [array([0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0.])]
-INFO:root:power_cost_map [[ 20.  20.  20.  20.  37.  37.]
- [ 20.  20.  20.  20.  37.  20.]
- [ 20.  20.  20.  20.  37. 105.]
- [ 20.  20.  20.  20.  36. 104.]
- [ 20.  20.  20.  20.  36.  36.]]
-INFO:root:action quue: [1, 2, 2, 1, 1]
-INFO:root:total cost of this route 100.0
-INFO:root:trimmed_graph [array([0., 0., 0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0., 0., 0.])]
-INFO:root:power_cost_map [[ 20.  20.  20.  20.  20.  20.  37. 109.]
- [ 20.  20.  20.  20.  20.  20.  38.  20.]
- [ 20.  20.  20.  20.  20.  20.  39.  39.]]
-INFO:root:action quue: [1, 1, 1, 1, 1]
-INFO:root:total cost of this route 100.0
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 32], 'unit_7': [28, 32], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 32): ['unit_6'], (28, 32): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 76==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 9.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 9.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 9.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [43, 33], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [37, 7], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2], [39, 15]]
-INFO:root:size of invalid tiles 22
-INFO:root:debug3: bot_loc_next_round {'unit_6': [22, 33], 'unit_7': [28, 32], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(22, 33): ['unit_6'], (28, 32): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 77==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 10.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 10.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 10.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [37, 6], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [43, 33], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2], [39, 15]]
-INFO:root:size of invalid tiles 22
-INFO:root:debug3: bot_loc_next_round {'unit_6': [22, 32], 'unit_7': [28, 31], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(22, 32): ['unit_6'], (28, 31): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 78==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 11.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 11.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 11.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [43, 33], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [38, 6], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2], [39, 15]]
-INFO:root:size of invalid tiles 22
-INFO:root:debug3: bot_loc_next_round {'unit_6': [21, 31], 'unit_7': [28, 31], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(21, 31): ['unit_6'], (28, 31): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 79==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 12.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 12.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 12.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [43, 33], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [38, 15], [46, 34], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_6': [22, 31], 'unit_7': [28, 30], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(22, 31): ['unit_6'], (28, 30): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
-INFO:root:==========step in round: 80==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 13.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 13.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 13.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [43, 33], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [38, 15], [46, 34], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 21
-INFO:root:trimmed_graph [array([0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20. 37.]
- [20. 20. 20. 20. 37.]
- [20. 20. 20. 20. 36.]
- [20. 20. 20. 20. 36.]]
-INFO:root:action quue: [2, 1, 1]
-INFO:root:total cost of this route 60.0
+INFO:root:==========step in round: 6==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:unit_4 is affiliated to factory_1, it's activated now.
+INFO:root:unit_4 belongs to factory_1, and the top priority is water
 INFO:root:trimmed_graph [array([0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20. 20. 20.]
- [20. 20. 20. 20. 20. 20.]
- [20. 20. 20. 20. 20. 20.]]
-INFO:root:action quue: [1, 1, 1]
-INFO:root:total cost of this route 60.0
-INFO:root:debug3: bot_loc_next_round {'unit_6': [23, 32], 'unit_7': [28, 30], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(23, 32): ['unit_6'], (28, 30): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
+INFO:root:power_cost_map [[ 20.  20.  20.  20.  20.  37.]
+ [ 20.  20.  20.  20.  36.  37.]
+ [ 20.  20.  20.  36.  36. 105.]]
+INFO:root:action quue: [3, 3, 3]
+INFO:root:total cost of this route 76.0
+INFO:root:debug task_prep3: unit_4 bot_action_queue [3, 3, 3]
+INFO:root:unit_5 is affiliated to factory_3, it's activated now.
+INFO:root:unit_5 belongs to factory_3, and the top priority is water
+INFO:root:trimmed_graph [array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.])]
+INFO:root:power_cost_map [[104.  36.  37.]
+ [ 37.  37.  37.]
+ [ 20.  20.  20.]
+ [ 20.  20.  20.]
+ [ 20.  20.  20.]]
+INFO:root:action quue: [4, 4]
+INFO:root:total cost of this route 57.0
+INFO:root:debug task_prep3: unit_5 bot_action_queue [4, 4]
+INFO:root:==========step in round: 7==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 8==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 9==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 10==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 11==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 12==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 13==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [18, 32], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 11
+INFO:root:==========step in round: 14==========
+INFO:root:map of blockers [[18, 27], [18, 33], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [18, 32], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 12
+INFO:root:trimmed_graph [array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.])]
+INFO:root:power_cost_map [[104.  36.  37.]
+ [ 37.  20.  37.]
+ [ 20.  20.  20.]
+ [ 20.  20.  20.]
+ [ 20.  20.  20.]]
+INFO:root:action quue: [2, 2]
+INFO:root:total cost of this route 40.0
+INFO:root:==========step in round: 15==========
+INFO:root:map of blockers [[18, 27], [18, 33], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 11
+INFO:root:==========step in round: 16==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [18, 32], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 11
+INFO:root:==========step in round: 17==========
+INFO:root:map of blockers [[17, 33], [18, 27], [18, 33], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [18, 32], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 13
+INFO:root:==========step in round: 18==========
+INFO:root:map of blockers [[17, 33], [18, 27], [18, 33], [19, 27], [17, 26], [18, 26], [17, 29], [19, 26], [18, 29], [17, 32], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 14
+INFO:root:unit_5 belongs to factory_3, and the top priority is water
+INFO:root:trimmed_graph [array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.])]
+INFO:root:power_cost_map [[104.  36.  37.]
+ [ 37.  20.  37.]
+ [ 20.  20.  20.]
+ [ 20.  20.  20.]
+ [ 20.  20.  20.]]
+INFO:root:action quue: [4, 4]
+INFO:root:total cost of this route 40.0
+INFO:root:factory_power 1150 should be an integer
+INFO:root:power_needed 420.0 
+INFO:root:unit_5's power 123 
+INFO:root:amount to pick up 297.0
+INFO:root:debug task_prep3: unit_5 bot_action_queue [6, 4, 4]
+INFO:root:==========step in round: 19==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [17, 29], [19, 26], [18, 29], [17, 32], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 12
+INFO:root:==========step in round: 20==========
+INFO:root:map of blockers [[17, 33], [18, 27], [18, 33], [19, 27], [17, 26], [18, 26], [17, 29], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 13
+INFO:root:==========step in round: 21==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [17, 29], [19, 26], [18, 29], [17, 32], [18, 32], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 13
+INFO:root:==========step in round: 22==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [17, 29], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 11
+INFO:root:==========step in round: 23==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [17, 29], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 11
+INFO:root:==========step in round: 24==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [17, 29], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 25==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [17, 29], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 26==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [17, 29], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 11
+INFO:root:trimmed_graph [array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.])]
+INFO:root:power_cost_map [[104.  36.  37.]
+ [ 37.  20.  37.]
+ [ 20.  20.  20.]
+ [ 20.  20.  20.]
+ [ 20.  20.  20.]]
+INFO:root:action quue: [2, 2]
+INFO:root:total cost of this route 40.0
+INFO:root:==========step in round: 27==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 28==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 29==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 30==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [17, 29], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:unit_5 belongs to factory_3, and the top priority is water
+INFO:root:trimmed_graph [array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.])]
+INFO:root:power_cost_map [[104.  36.  37.]
+ [ 37.  20.  37.]
+ [ 20.  20.  20.]
+ [ 20.  20.  20.]
+ [ 20.  20.  20.]]
+INFO:root:action quue: [4, 4]
+INFO:root:total cost of this route 40.0
+INFO:root:factory_power 1453 should be an integer
+INFO:root:power_needed 420.0 
+INFO:root:unit_5's power 120 
+INFO:root:amount to pick up 300.0
+INFO:root:debug task_prep3: unit_5 bot_action_queue [6, 4, 4]
+INFO:root:==========step in round: 31==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [17, 29], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 32==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 32], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 33==========
+INFO:root:map of blockers [[18, 27], [18, 33], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 34==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 35==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 36==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 37==========
+INFO:root:map of blockers [[18, 27], [18, 33], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 38==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 32], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:trimmed_graph [array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.])]
+INFO:root:power_cost_map [[104.  36.  37.]
+ [ 37.  20.  37.]
+ [ 20.  20.  20.]
+ [ 20.  20.  20.]
+ [ 20.  20.  20.]]
+INFO:root:action quue: [2, 2]
+INFO:root:total cost of this route 40.0
+INFO:root:==========step in round: 39==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 40==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [17, 29], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 41==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 42==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:unit_5 belongs to factory_3, and the top priority is water
+INFO:root:trimmed_graph [array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.])]
+INFO:root:power_cost_map [[104.  36.  37.]
+ [ 37.  20.  37.]
+ [ 20.  20.  20.]
+ [ 20.  20.  20.]
+ [ 20.  20.  20.]]
+INFO:root:action quue: [4, 4]
+INFO:root:total cost of this route 40.0
+INFO:root:factory_power 1753 should be an integer
+INFO:root:power_needed 420.0 
+INFO:root:unit_5's power 50 
+INFO:root:amount to pick up 370.0
+INFO:root:debug task_prep3: unit_5 bot_action_queue [6, 4, 4]
+INFO:root:==========step in round: 43==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 44==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 45==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 46==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 47==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 48==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 49==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 50==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:trimmed_graph [array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.])]
+INFO:root:power_cost_map [[104.  36.  37.]
+ [ 37.  20.  37.]
+ [ 20.  20.  20.]
+ [ 20.  20.  20.]
+ [ 20.  20.  20.]]
+INFO:root:action quue: [2, 2]
+INFO:root:total cost of this route 40.0
+INFO:root:==========step in round: 51==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 52==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 53==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 54==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:unit_5 belongs to factory_3, and the top priority is water
+INFO:root:trimmed_graph [array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.])]
+INFO:root:power_cost_map [[104.  36.  37.]
+ [ 37.  20.  37.]
+ [ 20.  20.  20.]
+ [ 20.  20.  20.]
+ [ 20.  20.  20.]]
+INFO:root:action quue: [4, 4]
+INFO:root:total cost of this route 40.0
+INFO:root:factory_power 1983 should be an integer
+INFO:root:power_needed 420.0 
+INFO:root:unit_5's power 0 
+INFO:root:amount to pick up 420.0
+INFO:root:debug task_prep3: unit_5 bot_action_queue [6, 4, 4]
+INFO:root:==========step in round: 55==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:trimmed_graph [array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.])]
+INFO:root:power_cost_map [[104.  36.  37.]
+ [ 37.  20.  37.]
+ [ 20.  20.  20.]
+ [ 20.  20.  20.]
+ [ 20.  20.  20.]]
+INFO:root:action quue: [4, 4]
+INFO:root:total cost of this route 40.0
+INFO:root:factory_power 2033 should be an integer
+INFO:root:power_needed 420.0 
+INFO:root:unit_5's power 0 
+INFO:root:amount to pick up 420.0
+INFO:root:debug task_prep3: unit_5 bot_action_queue [6, 4, 4]
+INFO:root:==========step in round: 56==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:trimmed_graph [array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.]), array([0., 0., 0.])]
+INFO:root:power_cost_map [[104.  36.  37.]
+ [ 37.  20.  37.]
+ [ 20.  20.  20.]
+ [ 20.  20.  20.]
+ [ 20.  20.  20.]]
+INFO:root:action quue: [4, 4]
+INFO:root:total cost of this route 40.0
+INFO:root:factory_power 2083 should be an integer
+INFO:root:power_needed 420.0 
+INFO:root:unit_5's power 10 
+INFO:root:amount to pick up 410.0
+INFO:root:debug task_prep3: unit_5 bot_action_queue [6, 4, 4]
+INFO:root:==========step in round: 57==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 58==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 59==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 60==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 61==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 62==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 63==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 64==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 32], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 65==========
+INFO:root:map of blockers [[18, 27], [18, 33], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 66==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 67==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 68==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 69==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 70==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 71==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 24], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 72==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 24], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 73==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 24], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 74==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 24], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 75==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [17, 29], [19, 26], [17, 28], [18, 28], [19, 28], [17, 24], [17, 27]]
+INFO:root:size of invalid tiles 11
+INFO:root:==========step in round: 76==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 77==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 78==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 32], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 79==========
+INFO:root:map of blockers [[17, 33], [18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 80==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 24], [17, 27]]
+INFO:root:size of invalid tiles 10
 INFO:root:==========step in round: 81==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 14.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 14.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 14.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [43, 33], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [38, 15], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 20
-INFO:root:debug3: bot_loc_next_round {'unit_6': [22, 31], 'unit_7': [28, 30], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(22, 31): ['unit_6'], (28, 30): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [17, 29], [19, 26], [17, 28], [18, 28], [19, 28], [17, 24], [17, 27]]
+INFO:root:size of invalid tiles 11
 INFO:root:==========step in round: 82==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 15.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 15.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 15.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [38, 15], [46, 34], [41, 4], [42, 3], [45, 35], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:debug3: bot_loc_next_round {'unit_6': [23, 31], 'unit_7': [28, 29], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(23, 31): ['unit_6'], (28, 29): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 24], [17, 27]]
+INFO:root:size of invalid tiles 10
 INFO:root:==========step in round: 83==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 16.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 16.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 16.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [38, 16], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 20
-INFO:root:trimmed_graph [array([0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20. 37.]
- [20. 20. 20. 20. 36.]
- [20. 20. 20. 20. 36.]]
-INFO:root:action quue: [1, 1]
-INFO:root:total cost of this route 40.0
-INFO:root:trimmed_graph [array([0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0.]), array([0., 0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20. 20.]
- [20. 20. 20. 20. 20.]
- [20. 20. 20. 20. 20.]]
-INFO:root:action quue: [1, 1]
-INFO:root:total cost of this route 40.0
-INFO:root:debug3: bot_loc_next_round {'unit_6': [23, 31], 'unit_7': [28, 29], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(23, 31): ['unit_6'], (28, 29): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 24], [17, 27]]
+INFO:root:size of invalid tiles 10
 INFO:root:==========step in round: 84==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 17.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 17.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 17.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [38, 16], [29, 10], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 21
-INFO:root:debug3: bot_loc_next_round {'unit_6': [23, 31], 'unit_7': [28, 29], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(23, 31): ['unit_6'], (28, 29): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 32], [17, 28], [18, 28], [19, 28], [17, 24], [17, 27]]
+INFO:root:size of invalid tiles 11
 INFO:root:==========step in round: 85==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 18.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 18.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 18.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [38, 16], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 20
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:debug3: bot_loc_next_round {'unit_6': [23, 30], 'unit_7': [28, 28], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(23, 30): ['unit_6'], (28, 28): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
+INFO:root:map of blockers [[17, 33], [18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [18, 24], [17, 27]]
+INFO:root:size of invalid tiles 11
 INFO:root:==========step in round: 86==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 19.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 19.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 19.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [38, 16], [29, 10], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 21
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:debug3: bot_loc_next_round {'unit_6': [23, 30], 'unit_7': [28, 28], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(23, 30): ['unit_6'], (28, 28): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [18, 24], [17, 27]]
+INFO:root:size of invalid tiles 10
 INFO:root:==========step in round: 87==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 20.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 20.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 20.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [38, 16], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2], [39, 6]]
-INFO:root:size of invalid tiles 21
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:debug3: bot_loc_next_round {'unit_6': [23, 30], 'unit_7': [28, 28], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(23, 30): ['unit_6'], (28, 28): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
+INFO:root:map of blockers [[17, 33], [18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [18, 24], [17, 27]]
+INFO:root:size of invalid tiles 11
 INFO:root:==========step in round: 88==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 21.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 21.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 21.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [29, 10], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [38, 6], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 21
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:debug3: bot_loc_next_round {'unit_6': [23, 30], 'unit_7': [28, 28], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(23, 30): ['unit_6'], (28, 28): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 32], [17, 28], [18, 28], [19, 28], [18, 24], [17, 27]]
+INFO:root:size of invalid tiles 11
 INFO:root:==========step in round: 89==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 22.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 22.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 22.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [37, 6], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 20
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:debug3: bot_loc_next_round {'unit_6': [23, 30], 'unit_7': [28, 28], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(23, 30): ['unit_6'], (28, 28): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [18, 24], [17, 27]]
+INFO:root:size of invalid tiles 10
 INFO:root:==========step in round: 90==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 23.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 23.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 23.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 35], [36, 6], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 20
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:debug3: bot_loc_next_round {'unit_6': [23, 30], 'unit_7': [28, 28], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(23, 30): ['unit_6'], (28, 28): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [18, 24], [17, 27]]
+INFO:root:size of invalid tiles 10
 INFO:root:==========step in round: 91==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 24.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 24.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 24.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:debug3: bot_loc_next_round {'unit_6': [23, 30], 'unit_7': [28, 28], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(23, 30): ['unit_6'], (28, 28): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [17, 29], [19, 26], [17, 28], [18, 28], [19, 28], [18, 24], [17, 27]]
+INFO:root:size of invalid tiles 11
 INFO:root:==========step in round: 92==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 25.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 25.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 25.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [34, 6], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 20
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:debug3: bot_loc_next_round {'unit_6': [23, 30], 'unit_7': [28, 28], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(23, 30): ['unit_6'], (28, 28): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [18, 24], [17, 27]]
+INFO:root:size of invalid tiles 10
 INFO:root:==========step in round: 93==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 26.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 26.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 26.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:debug3: bot_loc_next_round {'unit_6': [23, 30], 'unit_7': [28, 28], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(23, 30): ['unit_6'], (28, 28): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [18, 24], [17, 27]]
+INFO:root:size of invalid tiles 10
 INFO:root:==========step in round: 94==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 27.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 27.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 27.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:debug3: bot_loc_next_round {'unit_6': [23, 30], 'unit_7': [28, 28], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(23, 30): ['unit_6'], (28, 28): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [17, 29], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
 INFO:root:==========step in round: 95==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 28.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 28.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 28.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:debug3: bot_loc_next_round {'unit_6': [23, 30], 'unit_7': [28, 28], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(23, 30): ['unit_6'], (28, 28): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
 INFO:root:==========step in round: 96==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 29.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 29.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 29.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:debug3: bot_loc_next_round {'unit_6': [23, 30], 'unit_7': [28, 28], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(23, 30): ['unit_6'], (28, 28): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
 INFO:root:==========step in round: 97==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 30.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 30.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 30.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:debug3: bot_loc_next_round {'unit_6': [23, 30], 'unit_7': [28, 28], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(23, 30): ['unit_6'], (28, 28): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 32], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
 INFO:root:==========step in round: 98==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 31.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 31.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 31.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:debug3: bot_loc_next_round {'unit_6': [23, 30], 'unit_7': [28, 28], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(23, 30): ['unit_6'], (28, 28): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
+INFO:root:map of blockers [[17, 33], [18, 27], [19, 27], [17, 26], [18, 26], [17, 29], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 11
 INFO:root:==========step in round: 99==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 32.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 32.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 32.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:debug3: bot_loc_next_round {'unit_6': [23, 30], 'unit_7': [28, 28], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(23, 30): ['unit_6'], (28, 28): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
 INFO:root:==========step in round: 100==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 33.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 33.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 33.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:debug3: bot_loc_next_round {'unit_6': [23, 30], 'unit_7': [28, 28], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(23, 30): ['unit_6'], (28, 28): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
 INFO:root:==========step in round: 101==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 34.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 34.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 34.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:debug3: bot_loc_next_round {'unit_6': [23, 30], 'unit_7': [28, 28], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(23, 30): ['unit_6'], (28, 28): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
 INFO:root:==========step in round: 102==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 35.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 35.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 35.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:debug3: bot_loc_next_round {'unit_6': [23, 30], 'unit_7': [28, 28], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(23, 30): ['unit_6'], (28, 28): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
 INFO:root:==========step in round: 103==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 36.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 36.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 36.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [34, 10], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 20
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:debug3: bot_loc_next_round {'unit_6': [23, 30], 'unit_7': [28, 28], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(23, 30): ['unit_6'], (28, 28): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
 INFO:root:==========step in round: 104==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 37.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 37.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 37.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:debug3: bot_loc_next_round {'unit_6': [23, 30], 'unit_7': [28, 28], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(23, 30): ['unit_6'], (28, 28): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
 INFO:root:==========step in round: 105==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 38.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 38.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 38.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:debug3: bot_loc_next_round {'unit_6': [23, 30], 'unit_7': [28, 28], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(23, 30): ['unit_6'], (28, 28): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
 INFO:root:==========step in round: 106==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 39.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 39.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 39.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 19
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:debug3: bot_loc_next_round {'unit_6': [23, 30], 'unit_7': [28, 28], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(23, 30): ['unit_6'], (28, 28): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
 INFO:root:==========step in round: 107==========
-INFO:root:debug target rubble factory_1: {(21, 28): 16, (22, 28): 16, (23, 28): 16, (24, 28): 16, (25, 28): 16}
-INFO:root:factory_1 has waterShortage 40.0, metalShortage 400.0
-INFO:root:debug target rubble factory_3: {(26, 26): 75, (26, 27): 15, (26, 28): 16, (27, 26): 14, (28, 26): 14, (29, 26): 14, (30, 26): 15}
-INFO:root:factory_3 has waterShortage 40.0, metalShortage 400.0
-INFO:root:debug target rubble factory_5: {(16, 9): 17, (17, 9): 17, (18, 5): 18, (18, 9): 17, (19, 5): 18, (19, 6): 18, (19, 9): 16}
-INFO:root:factory_5 has waterShortage 40.0, metalShortage 400.0
-INFO:root:map of blockers [[46, 33], [42, 2], [41, 3], [45, 34], [47, 34], [40, 4], [46, 35], [42, 4], [41, 2], [45, 33], [47, 33], [40, 3], [46, 34], [36, 8], [41, 4], [42, 3], [45, 35], [47, 32], [47, 35], [40, 2]]
-INFO:root:size of invalid tiles 20
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:trimmed_graph [array([0., 0., 0., 0.]), array([0., 0., 0., 0.]), array([0., 0., 0., 0.])]
-INFO:root:power_cost_map [[20. 20. 20. 20.]
- [20. 20. 20. 20.]
- [20. 20. 20. 20.]]
-INFO:root:action quue: [1]
-INFO:root:total cost of this route 20.0
-INFO:root:debug3: bot_loc_next_round {'unit_6': [23, 30], 'unit_7': [28, 28], 'unit_8': [22, 17]}
-INFO:root:debug1: potential_collisions {(23, 30): ['unit_6'], (28, 28): ['unit_7'], (22, 17): ['unit_8']}
-INFO:root:debug2: replanned_units set()
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [17, 29], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 108==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 109==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 110==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 111==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 112==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 113==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 114==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 115==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [17, 29], [19, 26], [18, 29], [18, 32], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 12
+INFO:root:==========step in round: 116==========
+INFO:root:map of blockers [[18, 27], [18, 33], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 117==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 118==========
+INFO:root:map of blockers [[18, 27], [18, 33], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 11
+INFO:root:==========step in round: 119==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 32], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 120==========
+INFO:root:map of blockers [[18, 27], [18, 33], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 121==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 32], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 122==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 123==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 124==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 125==========
+INFO:root:map of blockers [[18, 27], [18, 33], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 126==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 32], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 127==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [18, 32], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 11
+INFO:root:==========step in round: 128==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [17, 29], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 129==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 130==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 32], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 131==========
+INFO:root:map of blockers [[18, 27], [18, 33], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 132==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 133==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 134==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 135==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 136==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 137==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 138==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 139==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 140==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 32], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 141==========
+INFO:root:map of blockers [[18, 27], [18, 33], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [18, 24], [17, 27]]
+INFO:root:size of invalid tiles 11
+INFO:root:==========step in round: 142==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [17, 29], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 143==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 22], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 144==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 22], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 145==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 146==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [18, 24], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 147==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 148==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 149==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 150==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 151==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 152==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 153==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 154==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 155==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [17, 29], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 156==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 157==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 158==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 159==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 160==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 161==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 162==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 163==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 164==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 165==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 166==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 167==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 168==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [17, 29], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 169==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 170==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 171==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 172==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 173==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [17, 29], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 174==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 175==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 176==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 177==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 178==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 179==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 180==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 181==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 182==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 183==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 184==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 185==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 9
+INFO:root:==========step in round: 186==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 187==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 188==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [17, 29], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 11
+INFO:root:==========step in round: 189==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 190==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 191==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 192==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 193==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 194==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 195==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 196==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 197==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 198==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 199==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 200==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 201==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 202==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 203==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 204==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
+INFO:root:==========step in round: 205==========
+INFO:root:map of blockers [[18, 27], [19, 27], [17, 26], [18, 26], [19, 26], [18, 29], [17, 28], [18, 28], [19, 28], [17, 27]]
+INFO:root:size of invalid tiles 10
