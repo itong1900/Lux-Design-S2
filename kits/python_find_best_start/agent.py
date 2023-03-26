@@ -27,6 +27,10 @@ class Agent():
         ## magic number 3606906, another deadlock 3046035+1676694
         ## good example for stand alone factories 7773979
         ## 1:1 pk 9104075: good example of water shortage is not well captured.
+        ## magic number two 2335761
+        ## magic number three self defence 5629335
+
+
         self.env_cfg: EnvConfig = env_cfg
             
         self.faction_names = {
@@ -44,7 +48,7 @@ class Agent():
         self.tile_cost = [] ## 2d array shows the cost of each tile. 
         self.bot_action_queue = {}  ## store the action to proceed for each bot, 0-4 move, 5 dig, 6 pickup. 
         self.bot_status = {} ## <unit_id: in_progress, going_to_target, going_home>
-        self.all_bot_locations = {} ## {unit_id: [0/1, coord]}  0 if ally bot, 1 if enemy bot.
+        self.all_bot_locations = {} ## {unit_id: [0/1, coord], LIGHT/HEAVY}  0 if ally bot, 1 if enemy bot.
         self.bot_mission = {}  ## keep track of bot's mission <ice, ore, rubble>
         self.bot_target_tile = {}  ## keep track of the bot's target tile 
         self.bot_power_need_cache = {}
@@ -159,10 +163,11 @@ class Agent():
         """
         logging.info(f"==========step in round: {step}==========")
 
-        logging.info(f"general debug: status at start of round {self.bot_status}")
-        logging.info(f"general debug: mission at start of round {self.bot_mission}")
-        logging.info(f"general debug: action_queue at start of round {self.bot_action_queue}")
-        logging.info(f"general debug: bot_target_tile at start of round {self.bot_target_tile}")
+        logging.info(f"start general debug: status at start of round {self.bot_status}")
+        logging.info(f"start general debug: mission at start of round {self.bot_mission}")
+        logging.info(f"start general debug: action_queue at start of round {self.bot_action_queue}")
+        logging.info(f"start general debug: bot_target_tile at start of round {self.bot_target_tile}")
+        logging.info(f"-----------------------------")
 
         game_state = obs_to_game_state(step, self.env_cfg, obs)
 
@@ -204,7 +209,6 @@ class Agent():
 
             targetRubbleTiles, layer_reaching_target_tile = searchRubbleTiles(game_state.board.rubble, ally_factory.pos)
             self.rubble_conditions[factory_id] = targetRubbleTiles
-            logging.info(f"debug target rubble {factory_id}: {targetRubbleTiles}")
 
             waterShortage = waterNeeded - (ally_factory.cargo.water + waterExpectToGain)
             metalShortage = metalNeeded - (ally_factory.cargo.metal + metalExpectToGan)
@@ -228,9 +232,11 @@ class Agent():
         ore_map = game_state.board.ore
         ore_tile_locations = np.argwhere(ore_map == 1)
 
+        ## refresh every rounds
+        self.all_bot_locations = {}
 
         for unit_id, unit in ally_units.items():
-            self.all_bot_locations[unit_id] = [0, unit.pos]
+            self.all_bot_locations[unit_id] = [0, unit.pos, unit.unit_type]
             ## if bot steps on resources tile, still consider as valid tile
             if unit.pos in ice_tile_locations or unit.pos in ore_tile_locations:
                 continue
@@ -238,15 +244,15 @@ class Agent():
             
 
         for unit_id, unit in enemy_units.items():
-            self.all_bot_locations[unit_id] = [1, unit.pos]
+            self.all_bot_locations[unit_id] = [1, unit.pos, unit.unit_type]
             ## if bot steps on resources tile, still consider as valid tile
             if unit.pos in ice_tile_locations or unit.pos in ore_tile_locations:
                 continue
             invalid_tiles += [unit.pos]
 
         invalid_tiles = [list(t) for t in set(tuple(element) for element in invalid_tiles)]
-        logging.info(f"map of blockers {invalid_tiles}")
-        logging.info(f"size of invalid tiles {len(invalid_tiles)}")
+        # logging.info(f"map of blockers {invalid_tiles}")
+        # logging.info(f"size of invalid tiles {len(invalid_tiles)}")
         map_with_blocks = np.zeros((48, 48))
         for x, y in invalid_tiles:
             map_with_blocks[x][y] = 1
@@ -260,7 +266,11 @@ class Agent():
                  self.rubble_conditions, self.rubble_bot_target_tiles,
                  game_state, actions, step)
 
-        
+        logging.info(f"round ends general debug: status at end of round {self.bot_status}")
+        logging.info(f"round ends generaldebug: mission at end of round {self.bot_mission}")
+        logging.info(f"round ends general debug: action_queue at end of round {self.bot_action_queue}")
+        logging.info(f"round ends general debug: bot_target_tile at end of round {self.bot_target_tile}")
+
         return actions
 
 
@@ -347,8 +357,8 @@ def path_planning(startLoc, targetLoc, map_with_blocks, game_state_board):
     startX_offset, startY_offset = startX - offsetX, startY - offsetY
     endX_offset, endY_offset = endX - offsetX, endY - offsetY
 
-    logging.info(f"path planning non test debug {startLoc}")
-    logging.info(f"path planning non test debug {targetLoc}")  
+    logging.info(f"path planning non test debug startloc {startLoc}")
+    logging.info(f"path planning non test debug endloc {targetLoc}")  
 
     path, total_cost = aStarAlgorithm(startX_offset, startY_offset, endX_offset, endY_offset, trimmedGraph, power_cost)
     
@@ -421,6 +431,18 @@ def unit_act(units, bot_mission, bot_target_tile, bot_affiliations, bot_status, 
         ## ===== some basic info for the unit ==============
         move_cost = None
 
+        ## check if there's enemy bot at the surroundings (up, dowm, left, right)
+        defend_coords = get_adjacent_tile(unit.pos)
+        bot_under_attack = None
+        for enemy_unit_id, [is_enemy, enemy_pos, _] in all_bot_locations.items():
+            if is_enemy:
+                if [enemy_pos[0], enemy_pos[1]] in defend_coords:
+                    bot_under_attack = [enemy_unit_id, direction_to(unit.pos, enemy_pos)] ## store defend info.
+                    break ## potentially encounting a few attacks, but will defend the first one. 
+            else:
+                continue
+
+
         ## find nearest ice resource for this unit
         ice_distances = np.mean((ice_tile_locations - unit.pos) ** 2, 1)
         sorted_ice = [ice_tile_locations[k] for k in np.argsort(ice_distances)]
@@ -428,7 +450,7 @@ def unit_act(units, bot_mission, bot_target_tile, bot_affiliations, bot_status, 
 
         ## find nearest ore resource for this unit
         ore_distances = np.mean((ore_tile_locations - unit.pos) ** 2, 1)
-        sorted_ore= [ore_tile_locations[k] for k in np.argsort(ore_distances)]
+        sorted_ore = [ore_tile_locations[k] for k in np.argsort(ore_distances)]
         closest_ore = sorted_ore[0]
 
         ## find the rubble needs to be cleaned
@@ -514,7 +536,7 @@ def unit_act(units, bot_mission, bot_target_tile, bot_affiliations, bot_status, 
         ## if unit_id hasn't been involved in tasks(just activated), or finish task. 
         if bot_status[unit_id] == "pending_mission":
             ## TODO: replace with when factory_inventory[bot_affiliations[unit_id]]["priority"] is ready
-            water_or_rubble = "water" if random.random() < 0.7 else "rubble"
+            water_or_rubble = "water"#"water" if random.random() < 0.7 else "rubble"
             priority_task_this_factory = water_or_rubble
             logging.info(f"{unit_id} belongs to {bot_affiliations[unit_id]}, and the top priority is {priority_task_this_factory}")
 
@@ -615,7 +637,13 @@ def unit_act(units, bot_mission, bot_target_tile, bot_affiliations, bot_status, 
 
             ## plan path again when doing long distance travel, it happens when queue run out but still not at target. 
             if len(bot_action_queue[unit_id]) == 0:
-                bot_action_queue[unit_id] = path_planning(unit.pos, bot_target_tile[unit_id], map_with_blocks, game_state.board)
+                ## in case target tile is blocked.
+                if map_with_blocks[bot_target_tile[unit_id][0]][bot_target_tile[unit_id][1]] == 1:
+                    map_with_block_copy = map_with_blocks.copy()
+                    map_with_block_copy[bot_target_tile[unit_id][0]][bot_target_tile[unit_id][1]] = 0
+                    bot_action_queue[unit_id] = path_planning(unit.pos, bot_target_tile[unit_id], map_with_block_copy, game_state.board)
+                else:
+                    bot_action_queue[unit_id] = path_planning(unit.pos, bot_target_tile[unit_id], map_with_blocks, game_state.board)
                 actions[unit_id] = [unit.move(act, repeat=False) for act in bot_action_queue[unit_id]]
             # in case of way blocked, or can't figure out path
             try:
@@ -662,14 +690,29 @@ def unit_act(units, bot_mission, bot_target_tile, bot_affiliations, bot_status, 
         # else: 
         #     pass
 
+        ## =============== Self Defence System ======================
+        ## self defence system prevent robots from being destroyed by enemey bots,
+        ## it works as whenever a bot detects an enemy bot in one of the surrounding tile, 
+        ## it first evaluate its weight comparing to the enemy's weight, then decide to counter-attack or escape.
+        if bot_under_attack is not None:
+            logging.info(f"self defence system debug: mybot {unit_id} under attack {bot_under_attack}")
+            enemy_id, enemy_dir = bot_under_attack
+            ## inserting the defense move
+            if all_bot_locations[enemy_id][2] == "HEAVY":
+                _, counter_dir = attack_and_resume(enemy_dir)
+                bot_action_queue[unit_id].insert(0, counter_dir) 
+                bot_action_queue[unit_id].insert(0, enemy_dir) 
+                
+                actions[unit_id] = action_translation(bot_action_queue[unit_id], unit)
+            else:
+                pass ## ignore if the attack comes from LIGHT.
+
+
     ## ============= Global CAS System ==============
-    # validate all the move globally to avoid collisions
-    ## only when bots are 2 manhanttan distiance are likely go into collision in their next move.
-    ## therefore, if the bot is clear 2 manhattan distiance units, directly exectute the queue
-    ## otherwise, go through the CAS system, if collision is detected, modify the queue to avoid the collision.
-    logging.info(f"debug3: bot_action_queue {bot_action_queue}")
-    logging.info(f"debug3: bot_status {bot_status}")
-    logging.info(f"debug3: bot_loc_next_round {bot_loc_next_round}")
+    ## validate all the move globally to avoid collisions between ally bots
+    ## Collisions only occur when bots moving onto a same tile at the same round. 
+    ## To avoid this from happening, when more than 1 bots will move on the same tile next round, 
+    ## these bots go through the CAS system, so they can go onto the conflict tile in order without collisions. 
     potential_collisions = {}
     for unit_id, loc in bot_loc_next_round.items():
         ## TODO: exist Nonetype error here. due to [x,y]: None in bot_loc_next_round
@@ -677,18 +720,23 @@ def unit_act(units, bot_mission, bot_target_tile, bot_affiliations, bot_status, 
             potential_collisions[tuple(loc)] = []
         potential_collisions[tuple(loc)].append(unit_id)
     ## if any loc got 2 or more bots, a potential collision is detected
-    replanned_units = set()
+    standby_units = set()
     for loc, unit_ids in potential_collisions.items():
         if len(unit_ids) > 1:
-            resolve_conflicts(unit_ids, bot_status, bot_action_queue, replanned_units)
+            resolve_conflicts(list(loc), unit_ids, bot_status, bot_action_queue, all_bot_locations, standby_units)
     # logging.info(f"debug1: potential_collisions {potential_collisions}")
     # logging.info(f"debug2: replanned_units {replanned_units}")
 
+    logging.info(f"before exe general debug: status at end of round {bot_status}")
+    logging.info(f"before exe generaldebug: mission at end of round {bot_mission}")
+    logging.info(f"before exe general debug: action_queue at end of round {bot_action_queue}")
+    logging.info(f"before exe general debug: bot_target_tile at end of round {bot_target_tile}")
+    logging.info(f"-----------------------------")
 
     ## finally execute the validated moves
     have_requeue_cost = set()
     for unit_id, unit in units.items():
-        if unit_id in replanned_units:   ## actions[unit_id] is updated
+        if unit_id in standby_units:   ## actions[unit_id] is updated
             actions[unit_id] = [unit.move(act, repeat=False) for act in bot_action_queue[unit_id]]
             have_requeue_cost.add(unit_id)
 
@@ -705,13 +753,43 @@ def unit_act(units, bot_mission, bot_target_tile, bot_affiliations, bot_status, 
                 bot_action_queue[unit_id].pop(0)
         
 
-def resolve_conflicts(unit_id_list, bot_status, bot_action_queue, replanned_units):
+def resolve_conflicts(conflict_loc, unit_id_list, bot_status, bot_action_queue, all_bots_locations, standby_units):
+    ## when multiple agents going onto the same tile, follow the principal,
+    ## 1. if there's already a bot on that tile and will keep in that tile on the next round,
+    ## most likely in these "offload" "task_prep" "in_progress" status, all others standby.
+    ## 2. if none such bot, let the first 
+
+    exist_bot_already_on_spot = None
     for unit_id in unit_id_list:
-        if bot_status[unit_id] == "offloading" or bot_status[unit_id] == "pick_up_power" or bot_status[unit_id] == "in_progress":
-            pass ## for static agent, stay their way
-        else:
-            bot_action_queue[unit_id].insert(0, 0)  ## insert a pause action 
-            replanned_units.add(unit_id)
+        if np.all(all_bots_locations[unit_id][1] == conflict_loc):
+            exist_bot_already_on_spot = unit_id
+            break
+
+    ## case 1, except for the one on spot, all others stand by
+    if exist_bot_already_on_spot is not None:
+        for unit_id in unit_id_list:
+            if unit_id == exist_bot_already_on_spot:
+                continue
+            else:
+                bot_action_queue[unit_id].insert(0, 0)  ## insert a pause action 
+                standby_units.add(unit_id)
+    else: ## case 2, none bot is on the spot, the first bot entered, others standby.
+        spot_filled = False
+        for unit_id in unit_id_list:
+            if not spot_filled:
+                spot_filled = True
+                continue
+            else:
+                bot_action_queue[unit_id].insert(0, 0) 
+                standby_units.add(unit_id)
+
+
+    # for unit_id in unit_id_list:
+    #     if bot_status[unit_id] == "offloading" or bot_status[unit_id] == "task_prep" or bot_status[unit_id] == "in_progress":
+    #         pass ## for static agent, stay their way
+    #     else:
+    #         bot_action_queue[unit_id].insert(0, 0)  ## insert a pause action 
+    #         replanned_units.add(unit_id)
 
 
 def check_collision(unit_pos, potential_next_move, all_bot_locations, bot_status, bot_action_queue):
@@ -728,7 +806,7 @@ def check_collision(unit_pos, potential_next_move, all_bot_locations, bot_status
         next_pos = [unit_pos[0] - 1, unit_pos[1]]
 
     #action_temp = "clear"
-    for unit_id, [is_enemy, loc] in all_bot_locations.items():
+    for unit_id, [is_enemy, loc, _] in all_bot_locations.items():
         # if manhattan_distance(unit_pos, loc) == 1:
         #     pass
 
@@ -803,3 +881,55 @@ def manhattan_distance(start, end):
     startX, startY = start
     endX, endY = end
     return abs(startX - endX) + abs(startY- endY)
+
+
+def get_adjacent_tile(loc):
+    """
+    Return the adjacent coordinates
+    """
+    x, y = loc[0], loc[1]
+    result = []
+    if x > 0:  ## not at left most
+        result.append([x-1, y]) ## get left 
+    if x < 47: ## not at right most
+        result.append([x+1, y])  ## get right
+    if y > 0: ## not at top
+        result.append([x, y-1])  ## get one unit up
+    if y < 47: ## not at bottom
+        result.append([x, y+1])  ## get one unit down
+
+    return result
+
+def attack_and_resume(dir):
+    """
+    return a pair of move actions attacking the "dir" and 
+    resume position by going counter direction of "dir"
+    """
+    if dir == 1: 
+        next = 3
+    elif dir == 2:
+        next = 4
+    elif dir == 3:
+        next = 1
+    elif dir == 4: 
+        next = 2
+    
+    return [dir, next]
+
+
+def action_translation(action_queue, unit):
+    """
+    translate the action to actual command, 
+    0-4: move action exactly same
+    5: dig:
+    6: pick up, 
+    """
+    result = []
+    for act in action_queue:
+        if act >= 0 and act <= 4:
+            result.append(unit.move(act, repeat=False))
+        elif act == 5:
+            result.append(unit.dig(repeat=False))
+        else:
+            pass ## cannot handle yet
+    return result
