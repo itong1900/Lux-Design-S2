@@ -19,17 +19,21 @@ from aStarAlgo import aStarAlgorithm
 ## action_type = {0: "stay_center", 1:"go_up", 2:"go_right", 3:"go_down", 4: "go_left", 
 # 5:"dig", 6:"transfer", 7:"pick_up"} 
 
+## 5962256, good example for smart moving 7047892, deadlock example 842862, scenario debug 5130822 
+## magic number 3606906, another deadlock 3046035+1676694
+## good example for stand alone factories 7773979
+## 1:1 pk 9104075: good example of water shortage is not well captured.
+## magic number two 2335761
+## magic number three self defence 5629335
+## interesting case: 3191402
+## 3/26 saved id 4162342
+
+
 class Agent():
     def __init__(self, player: str, env_cfg: EnvConfig) -> None:
         self.player = player
         self.opp_player = "player_1" if self.player == "player_0" else "player_0"
-        np.random.seed(0)  ## 5962256, good example for smart moving 7047892, deadlock example 842862, scenario debug 5130822 
-        ## magic number 3606906, another deadlock 3046035+1676694
-        ## good example for stand alone factories 7773979
-        ## 1:1 pk 9104075: good example of water shortage is not well captured.
-        ## magic number two 2335761
-        ## magic number three self defence 5629335
-
+        np.random.seed(0)  
 
         self.env_cfg: EnvConfig = env_cfg
             
@@ -38,21 +42,23 @@ class Agent():
             'player_1': 'FirstMars' 
         }
         
-        # self.bots = {}
-        # self.botpos = []
-        # self.bot_factory = {}
+        ## === factory related objects =====
+        self.factory_inventory = {}    ## keep track of total # of bots under each factory
 
+        self.ally_factory_center_tiles = []   ## <center coords> These following 3 objects keep track of the up-to-date available ally factories in'column based' manner, refresh completely each round.
+        self.factory_units = []    ## <factory unit obj>, 
+        self.ally_factory_ids = []  ## <factory unit id> in the same order.
+        
+        ## === bot related objects ==========
         self.bot_affiliations = {}
-        self.factory_inventory = {}   ## keep track of total # of bots under each factory
-        self.factory_pos_dict = {}
-        self.tile_cost = [] ## 2d array shows the cost of each tile. 
         self.bot_action_queue = {}  ## store the action to proceed for each bot, 0-4 move, 5 dig, 6 pickup. 
         self.bot_status = {} ## <unit_id: in_progress, going_to_target, going_home>
         self.all_bot_locations = {} ## {unit_id: [0/1, coord], LIGHT/HEAVY}  0 if ally bot, 1 if enemy bot.
         self.bot_mission = {}  ## keep track of bot's mission <ice, ore, rubble>
         self.bot_target_tile = {}  ## keep track of the bot's target tile 
         self.bot_power_need_cache = {}
-        self.rubble_conditions = {}  ## keep track of the rubble to clean up for each factory id
+
+        self.rubble_conditions = {}  ## keep track of the rubble to clean up for each factory id {factory_id_1: (x,y): rub_num, ...}
         self.rubble_bot_target_tiles = {}
 
     def early_setup(self, step: int, obs, remainingOverageTime: int = 60):
@@ -94,63 +100,11 @@ class Agent():
 
                 spawn_loc = best_loc
                 actions['spawn']=spawn_loc
-                actions['metal']=min(100, metal_left)
-                actions['water']=min(100, water_left)
+                actions['metal']=min(200, metal_left)
+                actions['water']=min(200, water_left)
             
         return actions
     
-
-    ## =========== DEPRECATED ======================
-    def check_collision(self, pos, direction, unitpos, unit_type = 'LIGHT'):
-        move_deltas = np.array([[0, 0], [0, -1], [1, 0], [0, 1], [-1, 0]])
-#         move_deltas = np.array([[0, 0], [-1, 0], [0, 1], [1, 0], [0, -1]])
-        
-        new_pos = pos + move_deltas[direction]
-        
-        # if unit_type == "LIGHT":
-        #     return str(new_pos) in unitpos or str(new_pos) in self.botposheavy.values()
-        # else:
-        return str(new_pos) in unitpos
-
-    def find_path(self, unit, target_tile):
-        """
-        based on unit pos and target_tile, return the path to target_tile with lowest cost in a list of coords format. 
-        Use A* algorithm along with the cost map. Retrict the A* search space by reducing the size of path. 
-
-        heuristic is mostly determined by distance to target and rubble.
-
-        """
-        pass
-   
-    
-    def get_direction(self, unit, closest_tile, sorted_tiles):
-                
-        closest_tile = np.array(closest_tile)
-        direction = direction_to(np.array(unit.pos), closest_tile)
-        k=0
-        # all_unit_positions = set(self.botpos.values())
-        unit_type = unit.unit_type
-        while k < min(len(sorted_tiles)-1, 500):
-            k += 1
-            closest_tile = sorted_tiles[k]
-            closest_tile = np.array(closest_tile)
-            direction = direction_to(np.array(unit.pos), closest_tile)
-        
-        # if self.check_collision(unit.pos, direction, all_unit_positions, unit_type):
-        #     for direction_x in np.arange(4,-1,-1):
-        #         if not self.check_collision(np.array(unit.pos), direction_x, all_unit_positions, unit_type):
-        #             direction = direction_x
-        #             break
-
-        # if self.check_collision(np.array(unit.pos), direction, all_unit_positions, unit_type):
-        #     direction = np.random.choice(np.arange(5))
-        
-        
-        # self.botpos[unit.unit_id] = str(np.array(unit.pos) + move_deltas[direction])
-            
-        return direction
-    ## ===============================================
-
 
     def act(self, step: int, obs, remainingOverageTime: int = 60):
         actions = dict()
@@ -173,13 +127,11 @@ class Agent():
 
         ## factory acts
         ally_factories = game_state.factories[self.player]
-        for factory_id, ally_factory in ally_factories.items():
-            if factory_id not in self.factory_pos_dict:
-                self.factory_pos_dict[factory_id] = ally_factory.pos
-        enemy_factories = game_state.factories[self.opp_player]
+
+        ## add enemy factories area to unavailable tiles. 
         invalid_tiles = []
-        for factory_id, enemy_factory in enemy_factories.items():
-            ## whole enemy factory region is not movable
+        for factory_id, enemy_factory in game_state.factories[self.opp_player].items():
+            ## whole enemy factory region is not valid to move onto
             invalid_tiles += [enemy_factory.pos]
             invalid_tiles += [[enemy_factory.pos[0]+1, enemy_factory.pos[1]]]
             invalid_tiles += [[enemy_factory.pos[0]-1, enemy_factory.pos[1]]]
@@ -191,35 +143,37 @@ class Agent():
             invalid_tiles += [[enemy_factory.pos[0]-1, enemy_factory.pos[1]-1]]
 
         ## allied factories coordinates, facttories 
-        ally_factory_tiles, factory_units, ally_factory_ids = factory_act(ally_factories, self.factory_inventory, actions, game_state, self.env_cfg, step)
-        
-        LOOKAHEAD = 40
-        BASELINE_HEAVY_BOT_CHARGE = 30 ## per extra recharge made to each heavy robot. 
+        self.ally_factory_center_tiles, self.factory_units, self.ally_factory_ids  = factory_act(ally_factories, self.factory_inventory, actions, game_state, self.env_cfg, step)
+        # ally_factory_tiles, factory_units, ally_factory_ids
 
-        TARGET_QUANTITY_HEAVY_BOT = 5
+
+        # LOOKAHEAD = 40
+        # BASELINE_HEAVY_BOT_CHARGE = 30 ## per extra recharge made to each heavy robot. 
+
+        # TARGET_QUANTITY_HEAVY_BOT = 5
         ## evaluate the resources needed in the next 50 rounds, 
         for factory_id, ally_factory in ally_factories.items():
-            waterNeeded = LOOKAHEAD * (ally_factory.water_cost(game_state) + 1)
-            powerNeeded = len(self.factory_inventory[factory_id]["heavy_bots"]) * BASELINE_HEAVY_BOT_CHARGE
-            metalNeeded = (TARGET_QUANTITY_HEAVY_BOT - len(self.factory_inventory[factory_id]["heavy_bots"])) * 100
+            # waterNeeded = LOOKAHEAD * (ally_factory.water_cost(game_state) + 1)
+            # powerNeeded = len(self.factory_inventory[factory_id]["heavy_bots"]) * BASELINE_HEAVY_BOT_CHARGE
+            # metalNeeded = (TARGET_QUANTITY_HEAVY_BOT - len(self.factory_inventory[factory_id]["heavy_bots"])) * 100
             
 
-            waterExpectToGain = min(ally_factory.cargo.ice, LOOKAHEAD * 100) * 0.25
-            metalExpectToGan = min(ally_factory.cargo.ore, LOOKAHEAD * 50) * 0.2
+            # waterExpectToGain = min(ally_factory.cargo.ice, LOOKAHEAD * 100) * 0.25
+            # metalExpectToGan = min(ally_factory.cargo.ore, LOOKAHEAD * 50) * 0.2
 
             targetRubbleTiles, layer_reaching_target_tile = searchRubbleTiles(game_state.board.rubble, ally_factory.pos)
             self.rubble_conditions[factory_id] = targetRubbleTiles
 
-            waterShortage = waterNeeded - (ally_factory.cargo.water + waterExpectToGain)
-            metalShortage = metalNeeded - (ally_factory.cargo.metal + metalExpectToGan)
-            lichenShortage = getLichenShortage()
+            # waterShortage = waterNeeded - (ally_factory.cargo.water + waterExpectToGain)
+            # metalShortage = metalNeeded - (ally_factory.cargo.metal + metalExpectToGan)
+            # lichenShortage = getLichenShortage()
 
             # logging.info(f"{factory_id} has waterShortage {waterShortage}, metalShortage {metalShortage}")
 
-            if waterShortage > metalShortage:
-                self.factory_inventory[factory_id]["priority"] = "water"
-            else:
-                self.factory_inventory[factory_id]["priority"] = "metal"
+            # if waterShortage > metalShortage:
+            #     self.factory_inventory[factory_id]["priority"] = "water"
+            # else:
+            #     self.factory_inventory[factory_id]["priority"] = "metal"
         
 
         ## Robots acts
@@ -258,10 +212,10 @@ class Agent():
             map_with_blocks[x][y] = 1
 
 
-        unit_act(ally_units, self.bot_mission, self.bot_target_tile, self.bot_affiliations, self.bot_status, self.bot_action_queue,
-                 self.bot_power_need_cache,
-                 ally_factory_tiles, self.factory_pos_dict, ally_factory_ids, 
-                 self.factory_inventory, factory_units, self.all_bot_locations,
+        unit_act(ally_units, self.bot_mission, self.bot_target_tile, self.bot_affiliations, 
+                 self.bot_status, self.bot_action_queue, self.bot_power_need_cache,
+                 self.ally_factory_center_tiles, self.ally_factory_ids, 
+                 self.factory_inventory, self.factory_units, self.all_bot_locations,
                  ice_tile_locations, ore_tile_locations, map_with_blocks, 
                  self.rubble_conditions, self.rubble_bot_target_tiles,
                  game_state, actions, step)
@@ -309,7 +263,7 @@ def path_planning_test(startLoc, targetLoc, map_with_blocks, game_state_board):
     path, total_cost = aStarAlgorithm(startX_offset, startY_offset, endX_offset, endY_offset, trimmedGraph, power_cost)
     
     if len(path) > 20:
-        return [0]
+        path = path[ :20]
 
     ## resume original path
     actual_path = []
@@ -363,7 +317,7 @@ def path_planning(startLoc, targetLoc, map_with_blocks, game_state_board):
     path, total_cost = aStarAlgorithm(startX_offset, startY_offset, endX_offset, endY_offset, trimmedGraph, power_cost)
     
     if len(path) > 20:
-        return [0]
+        path = path[ :20]
 
     ## resume original path
     actual_path = []
@@ -382,13 +336,13 @@ def path_planning(startLoc, targetLoc, map_with_blocks, game_state_board):
     return action_queues
 
 
-def factory_act(factories, factory_inventory, actions, game_state, env_cfg, step):
+def factory_act(ally_factories, factory_inventory, actions, game_state, env_cfg, step):
 
     factory_tiles, factory_units, factory_ids = [], [], []
     
-    for unit_id, factory in factories.items():
+    for unit_id, factory in ally_factories.items():
         if unit_id not in factory_inventory.keys():
-            ## TODO: initiate factory's inventory, declearing total bots, HEAVY/LIGHT, task_distribution,
+            ## TODO: initiate factory's inventory, declaring total bots, HEAVY/LIGHT, task_distribution,
             factory_inventory[unit_id] = {
                 "total_bots": 0, 
                 "heavy_bots": [], 
@@ -401,7 +355,7 @@ def factory_act(factories, factory_inventory, actions, game_state, env_cfg, step
             # logging.info(f"{unit_id} position: {factory.pos}")
         if factory.power >= env_cfg.ROBOTS["HEAVY"].POWER_COST and \
             factory.cargo.metal >= env_cfg.ROBOTS["HEAVY"].METAL_COST:
-
+            ## TODO: ensure the center is not occupied
             actions[unit_id] = factory.build_heavy()
             ## TODO: update the 
             # self.factory_inventory[unit_id]["total_bots"] += 1
@@ -415,11 +369,20 @@ def factory_act(factories, factory_inventory, actions, game_state, env_cfg, step
         factory_ids += [unit_id]
     factory_tiles = np.array(factory_tiles)
 
+    ## deep copy to avoid factory_inventory length change dynamically.
+    factory_ids_list_old = list(factory_inventory.keys())
+
+    for factory_id_in_record in factory_ids_list_old:
+        ## not in the up-to-date factory id list, that means the factory no longer exisits
+        if factory_id_in_record not in factory_ids:
+            # affected_bots = factory_inventory[factory_id_in_record]["heavy_bots"]
+            del factory_inventory[factory_id_in_record]
+
     return factory_tiles, factory_units, factory_ids
 
 
 def unit_act(units, bot_mission, bot_target_tile, bot_affiliations, bot_status, bot_action_queue, bot_power_need_cache,
-             factory_tiles, factories_pos, factory_ids, factory_inventory, factory_units, all_bot_locations, 
+             factory_tiles, factory_ids, factory_inventory, factory_units, all_bot_locations, 
              ice_tile_locations, ore_tile_locations, map_with_blocks, rubble_conditions, rubble_bot_target_tiles, 
              game_state, actions, round):
     
@@ -453,14 +416,22 @@ def unit_act(units, bot_mission, bot_target_tile, bot_affiliations, bot_status, 
         sorted_ore = [ore_tile_locations[k] for k in np.argsort(ore_distances)]
         closest_ore = sorted_ore[0]
 
-        ## find the rubble needs to be cleaned
 
-
-        ## ========= ACTIVATION ==========
+        ## ========= ACTIVATION / REBASE ==========
         ## if bot not have any affiliations, it means it just got created.
-        if unit_id not in bot_affiliations:
+        ## rebase a bot in case its affilicated factory destroyed, rebase to the nearest factory
+        rebased = False
+        if unit_id not in bot_affiliations or bot_affiliations[unit_id] not in factory_ids:
             ## trace the home factory, then assign affiliation for the bot. TODO: make it easier, the closest one will be affiliated, in case
             ## some factory is destroyed halfway, need to reassign affiliation. 
+            ## label case as this part handles two conditions. 
+            case = None
+            if unit_id not in bot_affiliations:
+                case = 0
+            elif bot_affiliations[unit_id] not in factory_ids:
+                case = 1
+                rebased = True
+
             factory_distances = np.mean((factory_tiles - unit.pos) ** 2, 1)
             nearest_factory_indexes = np.argsort(factory_distances)
             #sorted_factory = [factory_tiles[k] for k in np.argsort(factory_distances)]
@@ -479,9 +450,12 @@ def unit_act(units, bot_mission, bot_target_tile, bot_affiliations, bot_status, 
 
             factory_inventory[closest_factory_id]["total_bots"] += 1
 
-            bot_status[unit_id] = "pending_mission"
-
-            logging.info(f"{unit_id} is affiliated to {bot_affiliations[unit_id]}, it's activated now.")
+            if case == 0:
+                bot_status[unit_id] = "pending_mission"
+                logging.info(f"{unit_id} is affiliated to {bot_affiliations[unit_id]}, it's activated now.")
+            elif case == 1:
+                bot_status[unit_id] = "going_home"  ## go to the new home factory first immediately.
+                logging.info(f"{unit_id} rebased to {bot_affiliations[unit_id]}.")
 
 
         ## one more basic info to add
@@ -526,17 +500,12 @@ def unit_act(units, bot_mission, bot_target_tile, bot_affiliations, bot_status, 
             elif bot_status[unit_id] == "offloading":
                 if unit.cargo.ice == 0 and unit.cargo.ore == 0: ## if cargo empty, means offload finishes, mission complete
                     bot_status[unit_id] = "pending_mission"
-            # elif bot_status[unit_id] == "pick_up_power":
-            #     if unit.power < 500:
-            #         pass
-            #     else:
-            #         bot_status[unit_id] = "pending_mission"
         
         ## ======== TASK ASSIGNMENT ==========
         ## if unit_id hasn't been involved in tasks(just activated), or finish task. 
         if bot_status[unit_id] == "pending_mission":
             ## TODO: replace with when factory_inventory[bot_affiliations[unit_id]]["priority"] is ready
-            water_or_rubble = "water"#"water" if random.random() < 0.7 else "rubble"
+            water_or_rubble = "water" if random.random() < 0.7 else "rubble"
             priority_task_this_factory = water_or_rubble
             logging.info(f"{unit_id} belongs to {bot_affiliations[unit_id]}, and the top priority is {priority_task_this_factory}")
 
@@ -565,7 +534,14 @@ def unit_act(units, bot_mission, bot_target_tile, bot_affiliations, bot_status, 
             
             if bot_mission[unit_id] != "rubble":
                 # get the move_actions to queue and the expected cost to the target
-                move_acts, cost_to_target = path_planning_test(unit.pos, bot_target_tile[unit_id], map_with_blocks, game_state.board)
+
+                ## in case target tile is blocked.
+                if map_with_blocks[bot_target_tile[unit_id][0]][bot_target_tile[unit_id][1]] == 1:
+                    map_with_block_copy = map_with_blocks.copy()
+                    map_with_block_copy[bot_target_tile[unit_id][0]][bot_target_tile[unit_id][1]] = 0
+                    move_acts, cost_to_target = path_planning_test(unit.pos, bot_target_tile[unit_id], map_with_block_copy, game_state.board)
+                else:
+                    move_acts, cost_to_target = path_planning_test(unit.pos, bot_target_tile[unit_id], map_with_blocks, game_state.board)
                 power_needed = cost_to_target * 2 + 60 * 4 + 40 + 100   ## cost for move + dig + queue cost + buffer
                 bot_power_need_cache[unit_id] = power_needed
                 ## append a power pick up act if power is not enough
@@ -609,7 +585,12 @@ def unit_act(units, bot_mission, bot_target_tile, bot_affiliations, bot_status, 
                 
                 bot_target_tile[unit_id] = rubble_tile_to_dig[0]
                 # cost
-                move_acts, cost_to_target = path_planning_test(unit.pos, bot_target_tile[unit_id], map_with_blocks, game_state.board)
+                if map_with_blocks[bot_target_tile[unit_id][0]][bot_target_tile[unit_id][1]] == 1:
+                    map_with_block_copy = map_with_blocks.copy()
+                    map_with_block_copy[bot_target_tile[unit_id][0]][bot_target_tile[unit_id][1]] = 0
+                    move_acts, cost_to_target = path_planning_test(unit.pos, bot_target_tile[unit_id], map_with_block_copy, game_state.board)
+                else:
+                    move_acts, cost_to_target = path_planning_test(unit.pos, bot_target_tile[unit_id], map_with_blocks, game_state.board)
                 estimated_power_needed = round_digging_needed * 60 + total_distance_within_rubble_tiles * 30 + cost_to_target * 2 + 10 * 5 + 100
                 bot_power_need_cache[unit_id] = estimated_power_needed
                 ## append a power pick up act if power is not enough
@@ -666,8 +647,8 @@ def unit_act(units, bot_mission, bot_target_tile, bot_affiliations, bot_status, 
 
 
         elif bot_status[unit_id] == "going_home":
-            ## plan path if it doesn't have path in plan
-            if len(bot_action_queue[unit_id]) == 0:
+            ## plan path if it doesn't have path in plan, or it just got rebased, update actions to new home.
+            if len(bot_action_queue[unit_id]) == 0 or rebased:
                 bot_action_queue[unit_id] = path_planning(unit.pos, home_factory_coord, map_with_blocks, game_state.board)
                 actions[unit_id] = [unit.move(act, repeat=False) for act in bot_action_queue[unit_id]]
             
@@ -684,17 +665,13 @@ def unit_act(units, bot_mission, bot_target_tile, bot_affiliations, bot_status, 
                 actions[unit_id] = [unit.transfer(0, 1, unit.cargo.ore, repeat=False)]
             bot_loc_next_round[unit_id] = get_next_round_loc(unit.pos, 0)
 
-        # elif bot_status[unit_id] == "pick_up_power":
-        #     actions[unit_id] = [unit.pickup(4, 500-unit.power)]
-        #     bot_loc_next_round[unit_id] = get_next_round_loc(unit.pos, 0)
-        # else: 
-        #     pass
 
         ## =============== Self Defence System ======================
         ## self defence system prevent robots from being destroyed by enemey bots,
         ## it works as whenever a bot detects an enemy bot in one of the surrounding tile, 
         ## it first evaluate its weight comparing to the enemy's weight, then decide to counter-attack or escape.
-        if bot_under_attack is not None:
+        if bot_under_attack is not None and \
+        (len(bot_action_queue[unit_id]) == 0 or bot_action_queue[unit_id][0] == 0 or bot_action_queue[unit_id][0] > 4) :
             logging.info(f"self defence system debug: mybot {unit_id} under attack {bot_under_attack}")
             enemy_id, enemy_dir = bot_under_attack
             ## inserting the defense move
@@ -705,7 +682,7 @@ def unit_act(units, bot_mission, bot_target_tile, bot_affiliations, bot_status, 
                 
                 actions[unit_id] = action_translation(bot_action_queue[unit_id], unit)
             else:
-                pass ## ignore if the attack comes from LIGHT.
+                pass ## ignore if the attack comes from LIGHT or the bot is already moving.
 
 
     ## ============= Global CAS System ==============
@@ -874,6 +851,8 @@ def get_next_round_loc(currentPos, dir):
         return [xCur, yCur+1]
     elif dir == 4: ## left
         return [xCur-1, yCur]
+    else:
+        return [xCur, yCur]
 
 
 
