@@ -27,6 +27,8 @@ from aStarAlgo import aStarAlgorithm
 ## magic number three self defence 5629335
 ## interesting case: 3191402
 ## 3/26 saved id 4162342
+## 3/28 debug example 7717980 good example of cannot moveinto enemy factory, 9135040 earlier
+## 3/28 lose due to infinite fight 5365301, defence 完回头撞7925541, bug here 9964357, perfect example of 3 robots. 
 
 
 class Agent():
@@ -220,7 +222,7 @@ class Agent():
                  self.ally_factory_center_tiles, self.ally_factory_ids, 
                  self.factory_inventory, self.factory_units, self.all_bot_locations,
                  ice_tile_locations, ore_tile_locations, map_with_blocks, 
-                 self.rubble_conditions, self.rubble_bot_target_tiles,
+                 self.rubble_conditions, self.rubble_bot_target_tiles, invalid_tiles,
                  game_state, actions, step)
 
         logging.info(f"round ends general debug: status at end of round {self.bot_status}")
@@ -242,6 +244,7 @@ def path_planning_test(startLoc, targetLoc, map_with_blocks, game_state_board):
             min(47, max(startY, endY)+expansion)
 
     trimmedGraph = [xCol[minY: maxY+1] for xCol in map_with_blocks[minX: maxX+1]]
+    logging.info(f"super_debug, walkable graph {trimmedGraph}")
 
     dimGraphX, dimGraphY = len(trimmedGraph), len(trimmedGraph[0])
     power_cost = np.zeros([dimGraphX, dimGraphY])
@@ -387,7 +390,7 @@ def factory_act(ally_factories, factory_inventory, ally_botpos_validate_build_bo
 def unit_act(units, bot_mission, bot_target_tile, bot_affiliations, bot_status, bot_action_queue, bot_power_need_cache,
              factory_tiles, factory_ids, factory_inventory, factory_units, all_bot_locations, 
              ice_tile_locations, ore_tile_locations, map_with_blocks, rubble_conditions, rubble_bot_target_tiles, 
-             game_state, actions, round):
+             invalid_tiles ,game_state, actions, round):
     
     bot_loc_next_round = {} ## store the locations of each bot as unit_id: <>,  for CAS use
 
@@ -397,6 +400,7 @@ def unit_act(units, bot_mission, bot_target_tile, bot_affiliations, bot_status, 
         ## ===== some basic info for the unit ==============
         move_cost = None
         new_queue_added = False ## flip to true if the new actions added to actions[unit_id]
+        unexpected_return = False ## flip to true, if the bot has to abort mission and return home. 
 
         ## check if there's enemy bot at the surroundings (up, dowm, left, right)
         defend_coords = get_adjacent_tile(unit.pos)
@@ -478,6 +482,16 @@ def unit_act(units, bot_mission, bot_target_tile, bot_affiliations, bot_status, 
                 ## if bot already arrives, change to status to in progress, otherwise keep going to target.
                 if  list([bot_target_tile[unit_id][0], bot_target_tile[unit_id][1]]) == list([unit.pos[0], unit.pos[1]]): #np.all(bot_target_tile[unit_id] == unit.pos):
                     bot_status[unit_id] = "in_progress"
+                ## in case short of power due to fight or whatever reason, go home, 
+                if map_with_blocks[home_factory_coord[0]][home_factory_coord[1]] == 1:
+                    map_with_block_copy = map_with_blocks.copy()
+                    map_with_block_copy[home_factory_coord[0]][home_factory_coord[1]] = 0
+                    _, cost_to_back_home = path_planning_test(unit.pos, home_factory_coord, map_with_block_copy, game_state.board)
+                else:
+                    _, cost_to_back_home = path_planning_test(unit.pos, home_factory_coord, map_with_blocks, game_state.board)
+                if unit.power < cost_to_back_home + 50:
+                    bot_status[unit_id] = "going_home"
+                    unexpected_return = True
 
             elif bot_status[unit_id] == "in_progress":
             
@@ -497,6 +511,18 @@ def unit_act(units, bot_mission, bot_target_tile, bot_affiliations, bot_status, 
                             bot_target_tile[unit_id] = rubble_bot_target_tiles[unit_id][0]
                         else:
                             bot_status[unit_id] = "going_home"
+                
+                ## in case short of power due to fight or whatever reason, go home, 
+                if map_with_blocks[home_factory_coord[0]][home_factory_coord[1]] == 1:
+                    map_with_block_copy = map_with_blocks.copy()
+                    map_with_block_copy[home_factory_coord[0]][home_factory_coord[1]] = 0
+                    _, cost_to_back_home = path_planning_test(unit.pos, home_factory_coord, map_with_block_copy, game_state.board)
+                else:
+                    _, cost_to_back_home = path_planning_test(unit.pos, home_factory_coord, map_with_blocks, game_state.board)
+                if unit.power < cost_to_back_home + 50:
+                    bot_status[unit_id] = "going_home"
+                    unexpected_return = True
+
 
             elif bot_status[unit_id] == "going_home":
                 if list([home_factory_coord[0], home_factory_coord[1]]) == list([unit.pos[0], unit.pos[1]]):  # np.all(home_factory_coord == unit.pos):<-troublesome command  ## if arrives home, change status to offloading.
@@ -512,7 +538,14 @@ def unit_act(units, bot_mission, bot_target_tile, bot_affiliations, bot_status, 
             if round < 300:
                 water_or_rubble = "water"
             else:
-                water_or_rubble = "water" if random.random() < 0.7 else "rubble"
+                # radn = random.random()
+                # if radn < 0.6: 
+                #     water_or_rubble = "water"
+                # elif radn < 0.8:
+                #     water_or_rubble = "rubble"
+                # else:
+                #     water_or_rubble = "metal"
+                water_or_rubble = "water" if random.random() < 0.6 else "rubble"
             priority_task_this_factory = water_or_rubble
             logging.info(f"{unit_id} belongs to {bot_affiliations[unit_id]}, and the top priority is {priority_task_this_factory}")
 
@@ -637,7 +670,7 @@ def unit_act(units, bot_mission, bot_target_tile, bot_affiliations, bot_status, 
                 else:  ## running out of queue or other reasons needs new path
                     bot_action_queue[unit_id] = path_planning(unit.pos, bot_target_tile[unit_id], map_with_blocks, game_state.board)
                 actions[unit_id] = [unit.move(act, repeat=False) for act in bot_action_queue[unit_id]]
-            move_cost = unit.move_cost(game_state, bot_action_queue[unit_id][0])
+            move_cost = move_cost_complete(unit, game_state, bot_action_queue[unit_id]) #unit.move_cost(game_state, bot_action_queue[unit_id][0])
             total_power_needed = (move_cost + 10) if new_queue_added else move_cost 
             
             try:
@@ -667,12 +700,17 @@ def unit_act(units, bot_mission, bot_target_tile, bot_affiliations, bot_status, 
 
         elif bot_status[unit_id] == "going_home":
             ## plan path if it doesn't have path in plan, or it just got rebased, update actions to new home.
-            if len(bot_action_queue[unit_id]) == 0 or rebased:
+            if len(bot_action_queue[unit_id]) == 0 or rebased or unexpected_return:
                 new_queue_added = True
-                bot_action_queue[unit_id] = path_planning(unit.pos, home_factory_coord, map_with_blocks, game_state.board)
+                if map_with_blocks[home_factory_coord[0]][home_factory_coord[1]] == 1:
+                    map_with_block_copy = map_with_blocks.copy()
+                    map_with_block_copy[home_factory_coord[0]][home_factory_coord[1]] = 0
+                    bot_action_queue[unit_id] = path_planning(unit.pos, home_factory_coord, map_with_block_copy, game_state.board)
+                else:
+                    bot_action_queue[unit_id] = path_planning(unit.pos, home_factory_coord, map_with_blocks, game_state.board)
                 actions[unit_id] = [unit.move(act, repeat=False) for act in bot_action_queue[unit_id]]
             
-            move_cost = unit.move_cost(game_state, bot_action_queue[unit_id][0])
+            move_cost = move_cost_complete(unit, game_state, bot_action_queue[unit_id])
             total_power_needed = (move_cost + 10) if new_queue_added else move_cost
             
             try:
@@ -697,31 +735,50 @@ def unit_act(units, bot_mission, bot_target_tile, bot_affiliations, bot_status, 
         ## it works as whenever a bot detects an enemy bot in one of the surrounding tile, 
         ## it first evaluate its weight comparing to the enemy's weight, then decide to counter-attack or escape.
         if bot_under_attack is not None and \
-        (len(bot_action_queue[unit_id]) == 0 or bot_action_queue[unit_id][0] == 0 or bot_action_queue[unit_id][0] > 4) :
+        (len(bot_action_queue[unit_id]) == 0 or bot_action_queue[unit_id][0] == 0 or bot_action_queue[unit_id][0] > 4):
             logging.info(f"self defence system debug: mybot {unit_id} under attack {bot_under_attack}")
             enemy_id, enemy_dir = bot_under_attack
-            ## inserting the defense move
-            if all_bot_locations[enemy_id][2] == "HEAVY":
-                new_queue_added = True
-                _, counter_dir = attack_and_resume(enemy_dir)
-                bot_action_queue[unit_id].insert(0, counter_dir) 
-                bot_action_queue[unit_id].insert(0, enemy_dir) 
-                ## TODO: FIX 3/27: bot_loc_next_round update
-                actions[unit_id] = action_translation(bot_action_queue[unit_id], unit)
-                move_cost = unit.move_cost(game_state, bot_action_queue[unit_id][0])
-                total_power_needed = (move_cost + 10) if new_queue_added else move_cost
-                try:
-                    if unit.power >= total_power_needed: 
-                        bot_loc_next_round[unit_id] = get_next_round_loc(unit.pos, bot_action_queue[unit_id][0])
-                    else:
-                        bot_loc_next_round[unit_id] = get_next_round_loc(unit.pos, 0)
-                except:
-                    bot_loc_next_round[unit_id] = get_next_round_loc(unit.pos, 0)
-            else:
-                pass ## ignore if the attack comes from LIGHT or the bot is already moving.
+            enemy_pos = [all_bot_locations[enemy_id][1][0], all_bot_locations[enemy_id][1][1]]
 
-            ## TODO: FIX 3/27, if power below XXX, change status to go home. 
-            ## To add
+            if enemy_pos not in invalid_tiles:  ## if enemy not at enemy factory, 
+
+                ## inserting the defense move
+                if all_bot_locations[enemy_id][2] == "HEAVY":
+                    new_queue_added = True
+                    _, counter_dir = attack_and_resume(enemy_dir)
+                    bot_action_queue[unit_id].insert(0, counter_dir) 
+                    bot_action_queue[unit_id].insert(0, enemy_dir) 
+                    ## TODO: FIX 3/27: bot_loc_next_round update
+                    actions[unit_id] = action_translation(bot_action_queue[unit_id], unit)
+                    move_cost = move_cost_complete(unit, game_state, bot_action_queue[unit_id])
+                    total_power_needed = (move_cost + 10) if new_queue_added else move_cost
+                    try:
+                        if unit.power >= total_power_needed: 
+                            bot_loc_next_round[unit_id] = get_next_round_loc(unit.pos, bot_action_queue[unit_id][0])
+                        else:
+                            bot_loc_next_round[unit_id] = get_next_round_loc(unit.pos, 0)
+                    except:
+                        bot_loc_next_round[unit_id] = get_next_round_loc(unit.pos, 0)
+                else:
+                    pass ## ignore if the attack comes from LIGHT or the bot is already moving.
+
+            else: ## if enemy bot is adjacent to its home factory, escape.
+                if all_bot_locations[enemy_id][2] == "HEAVY":
+                    new_queue_added = True
+                    _, counter_dir = attack_and_resume(enemy_dir)
+                    ## nudge away and come back.
+                    bot_action_queue[unit_id].insert(0, enemy_dir) 
+                    bot_action_queue[unit_id].insert(0, counter_dir) 
+                    actions[unit_id] = action_translation(bot_action_queue[unit_id], unit)
+                    move_cost = move_cost_complete(unit, game_state, bot_action_queue[unit_id])
+                    total_power_needed = (move_cost + 10) if new_queue_added else move_cost
+                    try:
+                        if unit.power >= total_power_needed: 
+                            bot_loc_next_round[unit_id] = get_next_round_loc(unit.pos, bot_action_queue[unit_id][0])
+                        else:
+                            bot_loc_next_round[unit_id] = get_next_round_loc(unit.pos, 0)
+                    except:
+                        bot_loc_next_round[unit_id] = get_next_round_loc(unit.pos, 0)
 
     ## ============= Global CAS System ==============
     ## validate all the move globally to avoid collisions between ally bots
@@ -761,9 +818,8 @@ def unit_act(units, bot_mission, bot_target_tile, bot_affiliations, bot_status, 
             if unit.power >= total_cost and len(bot_action_queue[unit_id]) > 0:
                 bot_action_queue[unit_id].pop(0)  # the first action will be executed 
         elif bot_status[unit_id] == "going_to_target" or bot_status[unit_id] == "going_home":
-            move_cost = 0 if bot_action_queue[unit_id][0] == 0 else unit.move_cost(game_state, bot_action_queue[unit_id][0])
+            move_cost = move_cost_complete(unit, game_state, bot_action_queue[unit_id]) # 0 if bot_action_queue[unit_id][0] == 0 else unit.move_cost(game_state, bot_action_queue[unit_id][0])
             total_cost = move_cost + (unit.action_queue_cost(game_state) if unit_id in have_requeue_cost else 0)
-            logging.info(f"super debug: {unit_id}; move_cost {unit.move_cost(game_state, bot_action_queue[unit_id][0])}; queue_cost{unit.action_queue_cost(game_state) if unit_id in have_requeue_cost else 0}; unit.power{unit.power}")
             
             if unit.power >= total_cost and len(bot_action_queue[unit_id]) > 0:
                 bot_action_queue[unit_id].pop(0)  # the first action will be executed 
@@ -964,3 +1020,18 @@ def tell_day_night(round):
         return 0
     elif modulus <= 30:
         return 1
+    
+def move_cost_complete(unit, game_state, unit_action_queue):
+    """
+    return the move_cost when more context is given, 
+    i.e. when first_next_act is none or 0 or > 4
+    """
+    if len(unit_action_queue) == 0:
+        return 0
+    
+    first_next_act = unit_action_queue[0]
+    if first_next_act >= 1 and first_next_act <= 4:
+        value_to_return = unit.move_cost(game_state, first_next_act)
+        return value_to_return if value_to_return is not None else 0
+    else:
+        return 0

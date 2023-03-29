@@ -13,6 +13,9 @@ class Node:
 
 def aStarAlgorithm(startX, startY, endX, endY, graph, power_cost_map = []):
     # Write your code here.
+    if startX == endX and startY == endY:
+        return [], 0
+
     nodes = initializeNodes(graph)  # return an array same dim as graph 
 
     startNode = nodes[startX][startY] 
