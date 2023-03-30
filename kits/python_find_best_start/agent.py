@@ -244,7 +244,6 @@ def path_planning_test(startLoc, targetLoc, map_with_blocks, game_state_board):
             min(47, max(startY, endY)+expansion)
 
     trimmedGraph = [xCol[minY: maxY+1] for xCol in map_with_blocks[minX: maxX+1]]
-    logging.info(f"super_debug, walkable graph {trimmedGraph}")
 
     dimGraphX, dimGraphY = len(trimmedGraph), len(trimmedGraph[0])
     power_cost = np.zeros([dimGraphX, dimGraphY])
@@ -367,7 +366,7 @@ def factory_act(ally_factories, factory_inventory, ally_botpos_validate_build_bo
             # self.factory_inventory[unit_id]["total_bots"] += 1
             ## as this bot id is not-known until the next act, will append to "heavy_bots" attribute there.   
             
-        elif factory.can_water(game_state) and step > 900 and factory.cargo.water > (1000-step)+100:
+        elif factory.can_water(game_state) and step > 850 and factory.cargo.water > (1000-step)+100:
             actions[unit_id] = factory.water()
             
         factory_tiles += [factory.pos]
@@ -535,7 +534,7 @@ def unit_act(units, bot_mission, bot_target_tile, bot_affiliations, bot_status, 
         ## if unit_id hasn't been involved in tasks(just activated), or finish task. 
         if bot_status[unit_id] == "pending_mission":
             ## TODO: replace with when factory_inventory[bot_affiliations[unit_id]]["priority"] is ready
-            if round < 300:
+            if round < 260:
                 water_or_rubble = "water"
             else:
                 # radn = random.random()
@@ -545,7 +544,7 @@ def unit_act(units, bot_mission, bot_target_tile, bot_affiliations, bot_status, 
                 #     water_or_rubble = "rubble"
                 # else:
                 #     water_or_rubble = "metal"
-                water_or_rubble = "water" if random.random() < 0.6 else "rubble"
+                water_or_rubble = "water" if random.random() < 0.7 else "rubble"
             priority_task_this_factory = water_or_rubble
             logging.info(f"{unit_id} belongs to {bot_affiliations[unit_id]}, and the top priority is {priority_task_this_factory}")
 
@@ -694,8 +693,12 @@ def unit_act(units, bot_mission, bot_target_tile, bot_affiliations, bot_status, 
                 bot_action_queue[unit_id] = [5 for _ in range(rounds_to_dig)]
                 actions[unit_id] = [unit.dig(repeat=False) for _ in range(rounds_to_dig)]
 
-            ## when doing self defense: maybe buggy here. TODO: FIX 3/27
-            bot_loc_next_round[unit_id] = get_next_round_loc(unit.pos, 0)
+            ## magic num 3/29 6537196
+            ## when doing self defense, bot can be moving
+            if len(bot_action_queue[unit_id]) > 0 and bot_action_queue[unit_id][0] >= 1 and bot_action_queue[unit_id][0] <= 4:
+                bot_loc_next_round[unit_id] = get_next_round_loc(unit.pos, bot_action_queue[unit_id][0])
+            else:
+                bot_loc_next_round[unit_id] = get_next_round_loc(unit.pos, 0)
 
 
         elif bot_status[unit_id] == "going_home":
@@ -780,24 +783,41 @@ def unit_act(units, bot_mission, bot_target_tile, bot_affiliations, bot_status, 
                     except:
                         bot_loc_next_round[unit_id] = get_next_round_loc(unit.pos, 0)
 
+    logging.info(f"general debug: pre CAS, bot_loc_next_round {bot_loc_next_round}")
     ## ============= Global CAS System ==============
     ## validate all the move globally to avoid collisions between ally bots
     ## Collisions only occur when bots moving onto a same tile at the same round. 
     ## To avoid this from happening, when more than 1 bots will move on the same tile next round, 
     ## these bots go through the CAS system, so they can go onto the conflict tile in order without collisions. 
-    potential_collisions = {}
-    for unit_id, loc in bot_loc_next_round.items():
-        ## TODO: exist Nonetype error here. due to [x,y]: None in bot_loc_next_round
-        if tuple(loc) not in potential_collisions:
-            potential_collisions[tuple(loc)] = []
-        potential_collisions[tuple(loc)].append(unit_id)
-    ## if any loc got 2 or more bots, a potential collision is detected
-    standby_units = set()
-    for loc, unit_ids in potential_collisions.items():
-        if len(unit_ids) > 1:
-            resolve_conflicts(list(loc), unit_ids, bot_status, bot_action_queue, all_bot_locations, standby_units)
-    # logging.info(f"debug1: potential_collisions {potential_collisions}")
-    # logging.info(f"debug2: replanned_units {replanned_units}")
+    iter = 0
+    all_clear = False
+    units_ever_replanned = set()  ## keep track of the units ever go through replanned
+    #potential_collisions = {}
+    while not all_clear:  ## either all_clear or reach max_iter, escape the CAS
+        handle_some_conflict = False
+        potential_collisions = {}
+        for unit_id, loc in bot_loc_next_round.items():
+            ## TODO: exist Nonetype error here. due to [x,y]: None in bot_loc_next_round
+            if tuple(loc) not in potential_collisions:
+                potential_collisions[tuple(loc)] = []
+            potential_collisions[tuple(loc)].append(unit_id)
+        ## if any loc got 2 or more bots, a potential collision is detected
+        # standby_units = set()
+        for loc, unit_ids in potential_collisions.items():
+            if len(unit_ids) > 1:
+                handle_some_conflict = True
+                resolve_conflicts(list(loc), unit_ids, bot_loc_next_round, bot_action_queue, all_bot_locations, units_ever_replanned)
+        
+        if not handle_some_conflict:  ## if not agent is replanned, means all celar
+            all_clear = True 
+        
+        iter += 1
+        if iter >= 4:  ## fully stuck, avoid sending a lot of ally bots to the same target at the same time. 
+            break
+        # logging.info(f"debug3: iter {iter}")
+        # logging.info(f"debug1: potential_collisions {potential_collisions}")
+        # logging.info(f"debug2: replanned_units {units_ever_replanned}")
+
 
     logging.info(f"before exe general debug: status at end of round {bot_status}")
     logging.info(f"before exe general debug: mission at end of round {bot_mission}")
@@ -809,8 +829,8 @@ def unit_act(units, bot_mission, bot_target_tile, bot_affiliations, bot_status, 
     ## finally execute the validated moves
     have_requeue_cost = set()
     for unit_id, unit in units.items():
-        if unit_id in standby_units:   ## actions[unit_id] is updated
-            actions[unit_id] = [unit.move(act, repeat=False) for act in bot_action_queue[unit_id]]
+        if unit_id in units_ever_replanned:   ## actions[unit_id] is updated
+            actions[unit_id] = action_translation(bot_action_queue[unit_id], unit) #[unit.move(act, repeat=False) for act in bot_action_queue[unit_id]]
             have_requeue_cost.add(unit_id)
 
         if bot_status[unit_id] == "in_progress": 
@@ -828,7 +848,7 @@ def unit_act(units, bot_mission, bot_target_tile, bot_affiliations, bot_status, 
                 bot_action_queue[unit_id].pop(0)
         
 
-def resolve_conflicts(conflict_loc, unit_id_list, bot_status, bot_action_queue, all_bots_locations, standby_units):
+def resolve_conflicts(conflict_loc, unit_id_list, bot_loc_next_round, bot_action_queue, all_bots_locations, units_ever_replanned):
     ## when multiple agents going onto the same tile, follow the principal,
     ## 1. if there's already a bot on that tile and will keep in that tile on the next round,
     ## most likely in these "offload" "task_prep" "in_progress" status, all others standby.
@@ -847,7 +867,8 @@ def resolve_conflicts(conflict_loc, unit_id_list, bot_status, bot_action_queue, 
                 continue
             else:
                 bot_action_queue[unit_id].insert(0, 0)  ## insert a pause action 
-                standby_units.add(unit_id)
+                units_ever_replanned.add(unit_id)
+                bot_loc_next_round[unit_id] = [all_bots_locations[unit_id][1][0], all_bots_locations[unit_id][1][1]] ## standby unit next loc will the same
     else: ## case 2, none bot is on the spot, the first bot entered, others standby.
         spot_filled = False
         for unit_id in unit_id_list:
@@ -856,15 +877,8 @@ def resolve_conflicts(conflict_loc, unit_id_list, bot_status, bot_action_queue, 
                 continue
             else:
                 bot_action_queue[unit_id].insert(0, 0) 
-                standby_units.add(unit_id)
-
-
-    # for unit_id in unit_id_list:
-    #     if bot_status[unit_id] == "offloading" or bot_status[unit_id] == "task_prep" or bot_status[unit_id] == "in_progress":
-    #         pass ## for static agent, stay their way
-    #     else:
-    #         bot_action_queue[unit_id].insert(0, 0)  ## insert a pause action 
-    #         replanned_units.add(unit_id)
+                units_ever_replanned.add(unit_id)
+                bot_loc_next_round[unit_id] = [all_bots_locations[unit_id][1][0], all_bots_locations[unit_id][1][1]] ## standby unit next loc will the same
 
 
 def check_collision(unit_pos, potential_next_move, all_bot_locations, bot_status, bot_action_queue):
